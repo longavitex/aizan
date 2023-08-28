@@ -1,0 +1,25 @@
+extends base/layout.pug
+block title
+    title FAQs
+block header 
+    div(class="style-purple")
+        include components/header/menu/menu-one.pug
+block content
+    include mixins/breadcrum.pug
+    +breadcrum({classname: 'pt-80 pb-80', nav:'Home', nav1:'Page', nav2:'FAQs', heading:'FAQs', subHeading:"Find answers to the most commonly asked questions. We have compiled a comprehensive list of FAQs to provide you with the information you need, quickly and effortlessly."})
+    include mixins/questionItem.pug
+    .faqs-block.pt-100.pb-100
+        .container
+            .row.flex-center 
+                .col-lg-6.col-md-9.col-sm-10
+                    .heading3.text-white.text-center Get Started with Our Easy Setup Process
+                .col-12.col-lg-9.col-sm-10.mt-40
+                    .list-question 
+                        +questionItem({title:'How does AI Generation Create Image work?', content:'You can access our service from any device with an internet connection.'})
+                        +questionItem({title:'What is AI Generation Create Image?', content:'Our products and services include [describe your products/services briefly].'})
+                        +questionItem({title:'Can AI-generated images match human-created art?', content:'You can contact our customer support department by [provide contact information such as phone number or email] during our business hours. Our team is ready to assist you with any inquiries or concerns.'})
+                        +questionItem({title:"What are the applications of AI Generation Create Image?", content:'Yes, you can return items within [specify time frame] if you are not satisfied. Please review our return policy for further instructions.'})
+                        +questionItem({title:"Can I customize the AI-generated images?", content:'Yes, you can return items within [specify time frame] if you are not satisfied. Please review our return policy for further instructions.'})
+                        +questionItem({title:"Is there any ethical concern with AI-generated images?", content:'Yes, you can return items within [specify time frame] if you are not satisfied. Please review our return policy for further instructions.'})
+block footer 
+    include components/footer.pug

@@ -1,0 +1,95 @@
+
+/*
+List pricing: Start
+*/
+.section-pricing {
+    .container {
+        >.row {
+            >div:first-child {
+                button.active {
+                    background-color: var(--purple);
+                }
+            }
+
+            .list-pricing {
+                .price {
+                    align-items: flex-end;
+                }
+
+                .pricing-item {
+                    border: 2px solid transparent;
+                    cursor: pointer;
+                    transition: all ease 0.3s;
+
+                    a {
+                        transition: all ease 0.3s;
+                        border: 2px solid var(--purple);
+
+                        &:hover {
+                            background-color: var(--purple);
+                        }
+                    }
+
+                    i.ph-x {
+                        background-color: rgba($color: #FFFFFF, $alpha: 0.2);
+                    }
+
+                    &:hover {
+                        background-color: var(--on-surface);
+                        border: 2px solid var(--purple);
+                    }
+                }
+            }
+        }
+
+        .list-more-feature {
+            .row {
+                margin-left: 0;
+                margin-right: 0;
+
+                >div {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+
+        @media (max-width: 1199.98px) {
+            >.row {
+                >div:first-child {
+                    .choose-type {
+                        display: inline-block;
+                    }
+                }
+
+                >div:last-child {
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes showItem {
+    from {
+        // transform: scale(0.2);
+        opacity: 0;
+    }
+
+    to {
+        // transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.list-pricing.hide {
+    display: none;
+}
+
+.list-pricing.show {
+    display: block;
+    animation: showItem ease-in-out 0.5s;
+}
+/*
+List pricing: End
+*/

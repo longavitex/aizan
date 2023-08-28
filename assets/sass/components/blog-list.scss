@@ -1,0 +1,168 @@
+/*
+***Blog List: Start
+*/
+.blog-list {
+    .container {
+        >.row {
+            >div {
+                .blog-item {
+                    transition: all ease 0.5s;
+                    cursor: pointer;
+
+                    .bg-img {
+                        img {
+                            transition: all ease 0.5s;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .heading5 {
+                        transition: all ease 0.3s;
+                    }
+
+                    &:hover {
+                        .bg-img {
+                            img {
+                                transform: scale(1.08);
+                            }
+                        }
+
+                        .heading5 {
+                            color: var(--purple);
+                        }
+                    }
+
+                    @media (max-width: 449.98px) {
+                        .cmt {
+                            width: 50%;
+
+                            i.ph-fill {
+                                display: none !important;
+                            }
+
+                            .pl-8 {
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+
+                >.list-nav {
+                    .nav-item {
+                        cursor: pointer;
+                        width: 44px;
+                        height: 44px;
+                        border: 1px solid var(--line-dark);
+                        transition: all ease 0.3s;
+
+                        &.active,
+                        &:hover {
+                            background-color: var(--line-dark);
+                        }
+                    }
+                }
+            }
+
+            .search-block {
+                position: relative;
+                height: 50px;
+
+                input {
+                    height: 100%;
+                    padding-left: 16px;
+                    padding-right: 52px;
+                    color: var(--white);
+                    border: 1px solid transparent;
+                    outline: none;
+                    border-radius: 44px;
+                }
+
+                i {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    border-radius: 0 8px 8px 0;
+                    font-size: 20px;
+                    color: var(--secondary);
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: all ease 0.3s;
+
+                    &:hover {
+                        background-color: var(--purple);
+                        color: var(--white);
+                    }
+                }
+            }
+
+            .cate-block {
+                .pb-12 {
+                    border-bottom: 1px solid var(--line-dark);
+                }
+
+                .list-nav {
+                    .nav-item {
+                        .right {
+                            div {
+                                width: 32px;
+                                height: 32px;
+                            }
+                        }
+
+                        &.active,
+                        &:hover {
+                            .left {
+                                .text-button {
+                                    color: var(--purple);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .tags-popular-block {
+                .list-tag {
+                    a {
+                        &:hover {
+                            background-color: var(--purple);
+                        }
+                    }
+                }
+            }
+
+            .recent-post-block {
+                .recent-post-item {
+                    .item-img {
+                        img {
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 8px;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &:hover {
+                        .text-button {
+                            color: var(--purple);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        .container {
+            >.row {
+                .pl-65 {
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+}

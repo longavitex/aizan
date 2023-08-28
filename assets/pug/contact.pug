@@ -1,0 +1,48 @@
+extends base/layout.pug
+block title
+    title Contact Us
+block header 
+    div(class="style-purple")
+        include components/header/menu/menu-one.pug
+block content
+    include mixins/breadcrum.pug
+    +breadcrum({classname: 'pt-80 pb-80', nav:'Home', nav1:'Page', nav2:'Contact Us', heading:'Contact Us', subHeading:"Get in touch with our dedicated team of experts. Whether you have a question, need assistance, or want to discuss your project, we are here to help."})
+    .form-contact.bg-on-surface.pt-100.pb-100
+        .container 
+            .row.flex-between.row-gap-32
+                .col-12.col-lg-5
+                    .infor
+                        .heading.d-flex.flex-column.row-gap-16
+                            .heading4.text-white We’d love to help
+                            .body3.text-placehover Say goodbye to the hassle of managing multiple accounts across different financial institutions.
+                            include components/list-social.pug
+                        .list-more-infor.mt-40
+                            .item.flex-item-center.gap-12
+                                i.ph.ph-phone.text-white.bg-purple.p-8.bora-50
+                                .line-y 
+                                .body2.text-white 123 456 7890
+                            .item.flex-item-center.gap-12.mt-20
+                                i.ph-bold.ph-envelope-simple-open.text-white.bg-purple.p-8.bora-50
+                                .line-y 
+                                .body2.text-white hi.avitex@gmail.com
+                            .item.flex-item-center.gap-12.mt-20
+                                i.ph-bold.ph-map-pin-line.text-white.bg-purple.p-8.bora-50
+                                .line-y 
+                                .body2.text-white 4140 Rd. Allentown, New Mexico 31134
+                .col-12.col-lg-5
+                    .form-block.flex-columns-between.gap-20.p-28
+                        .row.row-gap-20
+                            .col-12.col-sm-6
+                                input(type="text" placeholder="Name").w-100.bg-surface.text-secondary.caption1.pl-16.pr-16.pt-12.pb-12.bora-8
+                            .col-12.col-sm-6      
+                                input(type="text" placeholder="Subject").w-100.bg-surface.text-secondary.caption1.pl-16.pr-16.pt-12.pb-12.bora-8
+                            .col-12
+                                input(type="text" placeholder="Email").w-100.bg-surface.text-secondary.caption1.pl-16.pr-16.pt-12.pb-12.bora-8
+                            .col-12 
+                                textarea(name="messsage", cols="10", rows="4" placeholder="Your Questions...").w-100.bg-surface.text-secondary.caption1.pl-16.pr-16.pt-12.pb-12.bora-8.display-block
+                        .button-block.mt-40
+                            button.button.bg-purple.button-purple-hover.text-white Send message
+    .map-block
+        iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16894.73660956101!2d-99.18411676499272!3d19.41781376470434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201b420c8c849%3A0x84231ae36f6ec524!2sMuseo%20Nacional%20de%20Antropolog%C3%ADa!5e0!3m2!1svi!2s!4v1689137436245!5m2!1svi!2s" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")
+block footer 
+    include components/footer.pug

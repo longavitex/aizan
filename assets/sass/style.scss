@@ -1,0 +1,29 @@
+/*  Main color */
+:root {
+    --blue: #3D89FB;
+    --yellow: #F3D465;
+    --green: #1FBE72;
+    --purple: #7D3CF3;
+    --white: #FFFFFF;
+    --on-surface: #121215;
+    --surface: #F8F8F8;
+    --line: #E5E5E5;
+    --secondary: #615F6F;
+    --placehover: #C1C1C1;
+    --line-dark: rgba(255, 255, 255, 0.1);
+}
+
+@import './base/reset.scss';
+@import './base/custom-bootstrap.scss';
+@import './base/global.scss';
+
+@import './components/popup-newsletter.scss';
+@import './components/page-not-found.scss';
+@import './components/blog-list.scss';
+@import './components/blog-detail.scss';
+@import './components/contact.scss';
+@import './components/list-pricing.scss';
+@import './components/list-faqs.scss';
+
+@import './layout/menu.scss';
+@import './layout/footer.scss';

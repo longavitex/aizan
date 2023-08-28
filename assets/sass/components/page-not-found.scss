@@ -1,0 +1,45 @@
+.page-not-found-block {
+    background-color: var(--on-surface);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+
+    .row {
+        >div:last-child {
+            padding-left: 90px;
+
+            .content {
+                .text {
+                    font-size: 68px;
+                    font-weight: 700;
+                    line-height: normal;
+                    text-transform: capitalize;
+                }
+
+                .text-placehover {
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 36px;
+                    text-transform: capitalize;
+                }
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            padding: 32px 0;
+            >div:last-child {
+                padding-left: 15px;
+
+                .content {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+/*
+Page not found: End
+*/

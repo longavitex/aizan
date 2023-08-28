@@ -1,0 +1,17 @@
+#popup-newsletter-block
+    .popup-newsletter-main
+        .bg-img 
+            img(src="assets/images/components/bg-popup-newsletter.png", alt="").w-100.h-100
+        .content.p-40.bg-on-surface 
+            .close-block.text-end
+                i.ph-bold.ph-x.d-block.fs-18.text-white.pointer
+            .heading6.text-white News letter
+            .text-placehover.mt-8 Sign up to get all the latest AIZAN news, website updates, offers and promos.
+            form(action="").mt-32
+                .form-input
+                    input(type="text" placeholder="Email").bg-line-dark.text-white
+                    button
+                        i.ph.ph-paper-plane-tilt.text-placehover
+                .flex-item-center.gap-8.mt-12
+                    input(type="checkbox", name="prevent")
+                    .caption1.text-placehover Prevent this Pop-up

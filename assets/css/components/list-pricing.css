@@ -1,0 +1,65 @@
+/*
+List pricing: Start
+*/
+.section-pricing .container > .row > div:first-child button.active {
+  background-color: var(--purple);
+}
+.section-pricing .container > .row .list-pricing .price {
+  align-items: flex-end;
+}
+.section-pricing .container > .row .list-pricing .pricing-item {
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.section-pricing .container > .row .list-pricing .pricing-item a {
+  transition: all ease 0.3s;
+  border: 2px solid var(--purple);
+}
+.section-pricing .container > .row .list-pricing .pricing-item a:hover {
+  background-color: var(--purple);
+}
+.section-pricing .container > .row .list-pricing .pricing-item i.ph-x {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.section-pricing .container > .row .list-pricing .pricing-item:hover {
+  background-color: var(--on-surface);
+  border: 2px solid var(--purple);
+}
+.section-pricing .container .list-more-feature .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.section-pricing .container .list-more-feature .row > div {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (max-width: 1199.98px) {
+  .section-pricing .container > .row > div:first-child .choose-type {
+    display: inline-block;
+  }
+  .section-pricing .container > .row > div:last-child {
+    padding-left: 15px;
+  }
+}
+
+@keyframes showItem {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.list-pricing.hide {
+  display: none;
+}
+
+.list-pricing.show {
+  display: block;
+  animation: showItem ease-in-out 0.5s;
+}
+
+/*
+List pricing: End
+*/

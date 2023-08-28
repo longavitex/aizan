@@ -1,0 +1,16 @@
+extends base/layout.pug
+block title
+    title Page not found
+block content
+    .page-not-found-block.flex-center
+        .container
+            .row.flex-center.row-gap-40
+                .col-lg-6.col-md-10
+                    img(src="assets/images/components/bg-404.png", alt="").w-100
+                .col-lg-6
+                    .content 
+                        .text.text-white Oh no! error 404
+                        .text-placehover.mt-24 The page you are looking for cannot be found. take a break before trying again 
+                        a(href="index.html").button.bg-purple.button-purple-hover.text-white.mt-24 Back to hompage
+
+

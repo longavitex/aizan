@@ -1,0 +1,13 @@
+extends base/layout.pug
+block title
+    title Pricing
+block header 
+    div(class="style-purple")
+        include components/header/menu/menu-one.pug
+block content
+    include mixins/breadcrum.pug
+    +breadcrum({classname: 'pt-80 pb-80', nav:'Home', nav1:'Page', nav2:'Pricing', heading:'Pricing', subHeading:"Discover our flexible and transparent pricing options. We offer tailored packages to suit your specific needs and budget."})
+    div(class="style-pricing")
+        include components/list-pricing.pug
+block footer 
+    include components/footer.pug

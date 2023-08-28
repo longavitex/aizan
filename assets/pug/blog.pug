@@ -1,0 +1,140 @@
+extends base/layout.pug
+block title
+    title FAQs
+block header 
+    div(class="style-purple")
+        include components/header/menu/menu-one.pug
+block content
+    include mixins/breadcrum.pug
+    +breadcrum({classname: 'pt-80 pb-80', nav:'Home', nav1:'Page', nav2:'Blog', heading:'Blog', subHeading:"We offer a variety of pricing packages to meet the unique needs of our freelancers. Contact us today to discuss which package is right for you."})
+    .blog-list.pt-100.pb-100
+        .container 
+            .row.row-gap-40
+                .col-12.col-lg-8.d-flex.flex-column.row-gap-40
+                    a(href="blog-detail.html" class="blog-item item-filter d-block" data-name="tab-one")
+                        .bg-img.w-100.overflow-hidden.bora-16
+                            img(src="assets/images/blog/item1.png", alt="").w-100.h-100.d-block
+                        .blog-infor.mt-24
+                            .text-button-uppercase.pt-6.pb-6.pl-16.pr-16.bg-line-dark.bora-16.d-inline-block.transition-0-3s Creative
+                            .heading5.mt-16 Exploring AI Generation Create Image
+                            .flex-item-center.gap-8.mt-8.flex-wrap
+                                .author.text-placehover by 
+                                    span.text-white Peter Parker 
+                                i.ph-fill.ph-dot-outline.text-placehover.d-block
+                                .caption1.text-placehover Oct 12, 2023
+                                .cmt.flex-item-center
+                                    i.ph-fill.ph-dot-outline.text-placehover.d-block
+                                    i.ph.ph-chats.text-placehover.fs-24.pl-8
+                                    .caption2.text-placehover.pl-4 02 comments
+                            .body2.text-placehover.mt-8.pb-16 The jobs report soundly beat expectations, with job gains broadly spread across the economy and about 60% higher…
+                            .read.fw-700.text-underline Read More
+                    a(href="blog-detail.html" class="blog-item item-filter d-block" data-name="tab-one")
+                        .bg-img.w-100.overflow-hidden.bora-16
+                            img(src="assets/images/blog/item2.png", alt="").w-100.h-100.d-block
+                        .blog-infor.mt-24
+                            .text-button-uppercase.pt-6.pb-6.pl-16.pr-16.bg-line-dark.bora-16.d-inline-block.transition-0-3s Creative
+                            .heading5.mt-16 Exploring AI Generation Create Image
+                            .flex-item-center.gap-8.mt-8.flex-wrap
+                                .author.text-placehover by 
+                                    span.text-white Peter Parker 
+                                i.ph-fill.ph-dot-outline.text-placehover.d-block
+                                .caption1.text-placehover Oct 12, 2023
+                                .cmt.flex-item-center
+                                    i.ph-fill.ph-dot-outline.text-placehover.d-block
+                                    i.ph.ph-chats.text-placehover.fs-24.pl-8
+                                    .pl-4.caption2.text-placehover 02 comments
+                            .body2.text-placehover.mt-8.pb-16 The jobs report soundly beat expectations, with job gains broadly spread across the economy and about 60% higher…
+                            .read.fw-700.text-underline Read More
+                    a(href="blog-detail.html" class="blog-item item-filter d-block" data-name="tab-one")
+                        .bg-img.w-100.overflow-hidden.bora-16
+                            img(src="assets/images/blog/item3.png", alt="").w-100.h-100.d-block
+                        .blog-infor.mt-24
+                            .text-button-uppercase.pt-6.pb-6.pl-16.pr-16.bg-line-dark.bora-16.d-inline-block.transition-0-3s Creative
+                            .heading5.mt-16 Exploring AI Generation Create Image
+                            .flex-item-center.gap-8.mt-8.flex-wrap
+                                .author.text-placehover by 
+                                    span.text-white Peter Parker 
+                                i.ph-fill.ph-dot-outline.text-placehover.d-block
+                                .caption1.text-placehover Oct 12, 2023
+                                .cmt.flex-item-center
+                                    i.ph-fill.ph-dot-outline.text-placehover.d-block
+                                    i.ph.ph-chats.text-placehover.fs-24.pl-8
+                                    .pl-4.caption2.text-placehover 02 comments
+                            .body2.text-placehover.mt-8.pb-16 The jobs report soundly beat expectations, with job gains broadly spread across the economy and about 60% higher…
+                            .read.fw-700.text-underline Read More
+                    
+                    .list-nav.flex-item-center.gap-8
+                        .nav-item.bora-50.flex-center&attributes({"data-name":"tab-one"}).active 1
+                        .nav-item.bora-50.flex-center&attributes({"data-name":"tab-two"}) 2
+                        .nav-item.bora-50.flex-center&attributes({"data-name":"tab-three"}) 3
+                .col-12.col-lg-4.pl-65
+                    .search-block.bora-44.overflow-hidden
+                        input(type="text" placeholder="Search").bg-line-dark.w-100
+                        i.ph.ph-magnifying-glass
+                    .cate-block.mt-40
+                        .heading7.text-white.pb-12 Categories
+                        .list-nav.mt-24
+                            .nav-item.flex-between.pb-12.text-white.pointer&attributes({"data-name":"tab-one"})
+                                .left.flex-item-center
+                                    i.ph-bold.ph-caret-right.text-purple
+                                    .text-button.transition-0-3s.pl-8 action
+                                .right 
+                                    .text-button.flex-center.bora-50.bg-line-dark 1
+                            .nav-item.flex-between.pt-12.pb-12.text-white.pointer&attributes({"data-name":"tab-two"})
+                                .left.flex-item-center
+                                    i.ph-bold.ph-caret-right.text-purple
+                                    .text-button.transition-0-3s.pl-8 adventure
+                                .right 
+                                    .text-button.flex-center.bora-50.bg-line-dark 3
+                            .nav-item.flex-between.pt-12.pb-12.text-white.pointer&attributes({"data-name":"tab-three"})
+                                .left.flex-item-center
+                                    i.ph-bold.ph-caret-right.text-purple
+                                    .text-button.transition-0-3s.pl-8 console
+                                .right 
+                                    .text-button.flex-center.bora-50.bg-line-dark 5
+                            .nav-item.flex-between.pt-12.pb-12.text-white.pointer&attributes({"data-name":"tab-one"})
+                                .left.flex-item-center
+                                    i.ph-bold.ph-caret-right.text-purple
+                                    .text-button.transition-0-3s.pl-8 esport
+                                .right 
+                                    .text-button.flex-center.bora-50.bg-line-dark 2
+                            .nav-item.flex-between.pt-12.pb-12.text-white.pointer.active&attributes({"data-name":"tab-three"})
+                                .left.flex-item-center
+                                    i.ph-bold.ph-caret-right.text-purple
+                                    .text-button.transition-0-3s.pl-8 racing
+                                .right 
+                                    .text-button.flex-center.bora-50.bg-line-dark 4
+                    .tags-popular-block.mt-40
+                        .heading7.pb-12.border-underline Popular Tags
+                        .list-tag.mt-24.d-flex.flex-wrap.gap-12
+                            a(href="#!").text-button-uppercase.pt-6.pb-6.pl-16.pr-16.bg-line-dark.bora-16.transition-0-3s Creative
+                            a(href="#!").text-button-uppercase.pt-6.pb-6.pl-16.pr-16.bg-line-dark.bora-16.transition-0-3s 3d Art
+                            a(href="#!").text-button-uppercase.pt-6.pb-6.pl-16.pr-16.bg-line-dark.bora-16.transition-0-3s Binance
+                            a(href="#!").text-button-uppercase.pt-6.pb-6.pl-16.pr-16.bg-line-dark.bora-16.transition-0-3s Business
+                            a(href="#!").text-button-uppercase.pt-6.pb-6.pl-16.pr-16.bg-line-dark.bora-16.transition-0-3s Marketing
+                    .recent-post-block.mt-40
+                        .heading7.pb-12.border-underline Recent Posts
+                        .list-recent-post.mt-24
+                            .recent-post-item.d-flex.item-start.gap-16
+                                a(href="blog-detail-one.html").item-img.bora-8.d-block
+                                    img(src="assets/images/blog/recent1.png", alt="").d-block
+                                .item-infor
+                                    a(href="blog-detail-one.html")
+                                        .text-button.transition-0-3s 10 Effective Tips to Improve Your Running Form
+                                        .caption1.text-placehover Oct 12, 2023
+                            .recent-post-item.d-flex.item-start.gap-16.mt-24
+                                a(href="blog-detail-one.html").item-img.bora-8.d-block
+                                    img(src="assets/images/blog/recent2.png", alt="").d-block
+                                .item-infor
+                                    a(href="blog-detail-one.html")
+                                        .text-button.transition-0-3s 5 Rules to keep in mind when negotiating a job
+                                        .caption1.text-placehover Oct 12, 2023
+                            .recent-post-item.d-flex.item-start.gap-16.mt-24
+                                a(href="blog-detail-one.html").item-img.bora-8.d-block
+                                    img(src="assets/images/blog/recent3.png", alt="").d-block
+                                .item-infor
+                                    a(href="blog-detail-one.html")
+                                        .text-button.transition-0-3s Strategies to increase salary with job offers
+                                        .caption1.text-placehover Oct 12, 2023
+block footer 
+    include components/footer.pug

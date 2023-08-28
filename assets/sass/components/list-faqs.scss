@@ -1,0 +1,46 @@
+/*
+Shared List Questions: Start
+*/
+.question-item {
+    border-bottom: 1px solid rgba($color: #FFFFFF, $alpha: 0.1);
+
+    .question-item-main {
+        i {
+            transform: rotate(0);
+            transition: all ease 0.5s;
+        }
+
+        @media (max-width: 575.99px) {
+            i {
+                font-size: 16px;
+            }
+        }
+    }
+
+
+    .content-question {
+        transition: all ease-in-out 0.5s;
+        max-height: 0;
+        overflow: hidden;
+
+        .border-line {
+            background-color: rgba(231, 231, 231, 0.8);
+        }
+    }
+
+    &:hover {
+        .question-item-main { 
+            color: var(--white);
+        }
+    }
+}
+
+.question-item.open {
+    .content-question {
+        max-height: 150px;
+    }
+}
+
+/*
+Shared List Questions: End
+*/
