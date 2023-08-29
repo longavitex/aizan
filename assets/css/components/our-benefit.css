@@ -1,0 +1,26 @@
+.our-benefit .list-benefit .row > a .heading6 {
+  transition: all ease 0.3s;
+}
+.our-benefit .list-benefit .row > a .line-dark {
+  transition: all ease 0.3s;
+  position: relative;
+}
+.our-benefit .list-benefit .row > a .line-dark::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--purple);
+  transition: all ease 0.3s;
+}
+.our-benefit .list-benefit .row > a:hover {
+  cursor: pointer;
+}
+.our-benefit .list-benefit .row > a:hover .heading6 {
+  color: var(--purple);
+}
+.our-benefit .list-benefit .row > a:hover .line-dark::before {
+  width: 100%;
+}

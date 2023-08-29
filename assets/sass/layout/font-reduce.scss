@@ -1,0 +1,473 @@
+/*
+*** Font reduce: Start
+*/
+@media (max-width: 575.98px) {
+
+    html,
+    body {
+        font-size: 0.875em;
+        line-height: 1.5;
+    }
+
+    .heading1 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .heading2 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .heading3 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .heading4 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .heading5 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .heading6 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .heading7 {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .sub-heading1 {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+    }
+
+    .sub-heading2 {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+    }
+
+    .body1 {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .body2 {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .text-title {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .text-subtitle {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .caption1 {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .caption2 {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .button {
+        display: inline-flex;
+        padding: 12px 28px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 68px;
+        // text
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 26px;
+        text-transform: capitalize;
+        transition: all ease 0.4s;
+    }
+
+    .text-button {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .text-button-small {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 20px;
+    }
+
+    .text-button-uppercase {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 20px;
+        text-transform: uppercase;
+    }
+
+    .gap-60 {
+        gap: 28px;
+    }
+
+    .gap-40 {
+        gap: 24px;
+    }
+
+    .gap-32 {
+        gap: 22px;
+    }
+
+    .gap-30 {
+        gap: 20px;
+    }
+
+    .gap-28 {
+        gap: 18px;
+    }
+
+    .gap-24 {
+        gap: 16px;
+    }
+
+    .gap-20 {
+        gap: 14px;
+    }
+
+    .gap-16 {
+        gap: 12px;
+    }
+
+    .gap-12 {
+        gap: 10px;
+    }
+
+    .gap-8 {
+        gap: 6px;
+    }
+
+    .row-gap-60 {
+        row-gap: 28px;
+    }
+
+    .row-gap-40 {
+        row-gap: 24px;
+    }
+
+    .row-gap-32 {
+        row-gap: 22px;
+    }
+
+    .row-gap-24 {
+        row-gap: 16px;
+    }
+
+    .row-gap-20 {
+        row-gap: 14px;
+    }
+
+    .row-gap-16 {
+        row-gap: 12px;
+    }
+
+    .row-gap-12 {
+        row-gap: 10px;
+    }
+
+    .row-gap-8 {
+        row-gap: 6px;
+    }
+
+    .p-40 {
+        padding: 28px;
+    }
+
+    .p-32 {
+        padding: 24px;
+    }
+
+    .p-28 {
+        padding: 22px;
+    }
+
+    .p-24 {
+        padding: 16px;
+    }
+
+    .p-20 {
+        padding: 14px;
+    }
+
+    .p-16 {
+        padding: 12px;
+    }
+
+    .p-12 {
+        padding: 10px;
+    }
+
+    .p-8 {
+        padding: 6px;
+    }
+
+    .pb-100 {
+        padding-bottom: 50px;
+    }
+
+    .pb-80 {
+        padding-bottom: 40px;
+    }
+
+    .pb-60 {
+        padding-bottom: 32px;
+    }
+
+    .pb-40 {
+        padding-bottom: 28px;
+    }
+
+    .pb-32 {
+        padding-bottom: 24px;
+    }
+
+    .pb-28 {
+        padding-bottom: 20px;
+    }
+
+    .pb-24 {
+        padding-bottom: 16px;
+    }
+
+    .pb-20 {
+        padding-bottom: 14px;
+    }
+
+    .pb-16 {
+        padding-bottom: 12px;
+    }
+
+    .pb-12 {
+        padding-bottom: 10px;
+    }
+
+    .pb-8 {
+        padding-bottom: 6px;
+    }
+
+    .pt-100 {
+        padding-top: 50px;
+    }
+
+    .pt-80 {
+        padding-top: 40px;
+    }
+
+    .pt-60 {
+        padding-top: 32px;
+    }
+
+    .pt-40 {
+        padding-top: 28px;
+    }
+
+    .pt-32 {
+        padding-top: 24px;
+    }
+
+    .pt-28 {
+        padding-top: 20px;
+    }
+
+    .pt-24 {
+        padding-top: 16px;
+    }
+
+    .pt-20 {
+        padding-top: 14px;
+    }
+
+    .pt-16 {
+        padding-top: 12px;
+    }
+
+    .pt-12 {
+        padding-top: 10px;
+    }
+
+    .pt-8 {
+        padding-top: 6px;
+    }
+    
+    .pr-40 {
+        padding-right: 28px;
+    }
+    
+    .pr-32 {
+        padding-right: 24px;
+    }
+    
+    .pr-28 {
+        padding-right: 20px;
+    }
+    
+    .pr-24 {
+        padding-right: 16px;
+    }
+    
+    .pr-20 {
+        padding-right: 14px;
+    }
+    
+    .pr-16 {
+        padding-right: 12px;
+    }
+    
+    .pr-12 {
+        padding-right: 10px;
+    }
+    
+    .pr-8 {
+        padding-right: 6px;
+    }
+    
+    .pl-40 {
+        padding-left: 28px;
+    }
+    
+    .pl-32 {
+        padding-left: 24px;
+    }
+    
+    .pl-28 {
+        padding-left: 20px;
+    }
+    
+    .pl-24 {
+        padding-left: 16px;
+    }
+    
+    .pl-20 {
+        padding-left: 14px;
+    }
+    
+    .pl-16 {
+        padding-left: 12px;
+    }
+    
+    .pl-12 {
+        padding-left: 10px;
+    }
+    
+    .pl-8 {
+        padding-left: 6px;
+    }
+
+    .mt-100 {
+        margin-top: 50px;
+    }
+
+    .mt-80 {
+        margin-top: 40px;
+    }
+
+    .mt-60 {
+        margin-top: 32px;
+    }
+
+    .mt-40 {
+        margin-top: 30px;
+    }
+
+    .mt-32 {
+        margin-top: 24px;
+    }
+
+    .mt-28 {
+        margin-top: 20px;
+    }
+
+    .mt-24 {
+        margin-top: 16px;
+    }
+
+    .mt-20 {
+        margin-top: 14px;
+    }
+
+    .mt-16 {
+        margin-top: 12px;
+    }
+
+    .mt-12 {
+        margin-top: 10px;
+    }
+
+    .mt-8 {
+        margin-top: 6px;
+    }
+
+    .w-60 {
+        width: 40px;
+    }
+    
+    .h-60 {
+        height: 40px;
+    }
+    
+    .w-40 {
+        width: 30px;
+    }
+    
+    .h-40 {
+        height: 30px;
+    }
+
+    .bora-44 {
+        border-radius: 24px;
+    }
+
+    .bora-32 {
+        border-radius: 20px;
+    }
+
+    .bora-24 {
+        border-radius: 16px;
+    }
+
+    .bora-20 {
+        border-radius: 14px;
+    }
+
+    .bora-16 {
+        border-radius: 12px;
+    }
+
+    .bora-12 {
+        border-radius: 8px;
+    }
+
+    .bora-8 {
+        border-radius: 6px;
+    }
+}
+
+/*
+*** Font reduce: End
+*/

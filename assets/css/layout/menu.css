@@ -146,7 +146,7 @@ Menu header: Start
   right: -75%;
   width: 75%;
   height: 100%;
-  background-color: var(--on-surface);
+  background-color: var(--black-surface);
   transition: all ease 0.5s;
   z-index: 1;
   overflow-x: hidden;
@@ -185,7 +185,7 @@ Menu header: Start
 .header-menu > .container #menu-mobile-block .menu-mobile-main ul li .sub-nav-mobile .explore-block,
 .header-menu > .container #menu-mobile-block .menu-mobile-main ul li .sub-nav-mobile .list-pages,
 .header-menu > .container #menu-mobile-block .menu-mobile-main ul li .sub-nav-mobile .list-partners {
-  padding: 16px;
+  padding: 16px 24px;
 }
 .header-menu > .container #menu-mobile-block .menu-mobile-main ul li .sub-nav-mobile .list-social {
   flex-wrap: wrap;

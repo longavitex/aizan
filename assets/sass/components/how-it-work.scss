@@ -1,0 +1,37 @@
+.how-it-work {
+    .row.mt-40 {
+        >div:last-child {
+            .bg-img {
+                position: relative;
+
+                .count {
+                    position: absolute;
+                    left: 32px;
+                    bottom: 32px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .row.mt-40 {
+            >div:last-child {
+                .bg-img {
+                    height: 240px;
+
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                    .count {
+                        left: 16px;
+                        bottom: 16px;
+                        padding-left: 16px;
+                        padding-right: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

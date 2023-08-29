@@ -5,11 +5,16 @@ mixin breadcrum(props = {})
             .row.flex-center
                 .col-lg-7.col-md-8.col-sm-10
                     .heading-nav.flex-center.gap-8
-                        a(href="index.html").hover-underline.caption1.text-placehover Home 
-                        i.ph-fill.ph-dot-outline.text-purple
-                        a(href=`${href2}`).caption1.text-placehover!= nav1 
-                        i.ph-fill.ph-dot-outline.text-purple
-                        .caption1.text-white!= nav2
+                        if(!nav2)
+                            a(href="index.html").hover-underline.caption1.text-placehover Home 
+                            i.ph-fill.ph-dot-outline.text-purple
+                            a(href=`${href2}`).caption1.text-white!= nav1 
+                        if(nav2)
+                            a(href="index.html").hover-underline.caption1.text-placehover Home 
+                            i.ph-fill.ph-dot-outline.text-purple
+                            a(href=`${href2}`).caption1.text-placehover!= nav1 
+                            i.ph-fill.ph-dot-outline.text-purple
+                            .caption1.text-white!= nav2
                     .text-nav.mt-12
                         .heading3.text-white.text-center!= heading
                         .sub-heading.mt-8.text-white.text-center.fw-400!= subHeading

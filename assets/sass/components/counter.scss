@@ -1,0 +1,21 @@
+.counter-block.style-three {
+    .bg-img {
+        background-image: url(/assets/images/components/bg-grid.png);
+        background-position: center;
+        background-size: cover;
+    }
+
+    @media (max-width: 1199.98px) {
+        .row {
+            flex-direction: column-reverse;
+
+            .bg-img {
+                text-align: center !important;
+
+                img {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}

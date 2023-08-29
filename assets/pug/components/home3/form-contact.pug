@@ -1,0 +1,26 @@
+.form-contact.bg-line-dark 
+    .bg-img 
+        img(src="assets/images/components/bg-contact3.png", alt="").w-100.h-100.object-fit-cover
+    .container
+        .form-block.pt-60.pb-60
+            form(action="")
+                .heading3 We’d love to help
+                .body2.text-placehover Say goodbye to the hassle of managing multiple accounts across different financial institutions.
+                .row.row-gap-20.mt-40
+                    .col-12.col-sm-6 
+                        input(type="text" placeholder="Your name").w-100.bg-line-dark.p-16.bora-12.text-white
+                    .col-12.col-sm-6 
+                        input(type="text" placeholder="Your email").w-100.bg-line-dark.p-16.bora-12.text-white
+                    .col-12.col-sm-6 
+                        input(type="text" placeholder="Telephone").w-100.bg-line-dark.p-16.bora-12.text-white
+                    .col-12.col-sm-6 
+                        select(name="categories").w-100.bg-line-dark.p-16.bora-12.text-white
+                            option(value="Personal").text-on-surface Personal
+                            option(value="Business").text-on-surface Business
+                            option(value="Development").text-on-surface Development
+                        i.ph-duotone.ph-caret-down
+                    .col-12 
+                        textarea(name="messsage", cols="10", rows="4" placeholder="Message").text-white.w-100.bg-line-dark.p-16.bora-12
+                button.button.bg-purple.button-purple-hover.text-white.mt-32 Message
+                    i.ph.ph-arrow-up-right.text-white
+

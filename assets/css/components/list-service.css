@@ -1,0 +1,18 @@
+.list-service.style-four .list .service-item {
+  transition: all ease 0.3s;
+}
+.list-service.style-four .list .service-item i::before {
+  transition: all ease 0.3s;
+}
+.list-service.style-four .list .service-item .text-placehover {
+  transition: all ease 0.3s;
+}
+.list-service.style-four .list .service-item:hover {
+  background-color: var(--purple);
+}
+.list-service.style-four .list .service-item:hover i::before {
+  color: var(--white);
+}
+.list-service.style-four .list .service-item:hover .text-placehover {
+  color: var(--white);
+}

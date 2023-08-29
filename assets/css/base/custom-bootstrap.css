@@ -29,6 +29,18 @@
   padding-right: 15px;
 }
 
+.col-2-4 {
+  flex: 0 0 auto;
+  width: 20%;
+}
+
+@media (min-width: 1200px) {
+  .col-xl-2-4 {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+}
+
 /*
 *** Custom Boostrap(container, row): End
 */

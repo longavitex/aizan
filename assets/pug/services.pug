@@ -1,0 +1,34 @@
+extends base/layout.pug
+block title
+    title Services
+block header
+    div(class="style-purple")
+        include components/header/menu/menu-one.pug
+block content
+    include mixins/breadcrum.pug
+    +breadcrum({classname: 'pt-80 pb-80', nav:'Home', nav1:'Services', heading:'Our Services', subHeading:"Explore our range of cutting-edge services designed to elevate your business. From digital marketing and branding to AI-driven solutions."})
+    include components/home4/list-service.pug
+    include components/partners.pug
+    .counter-block.style-three.pt-100.pb-100
+        .container 
+            .row.row-gap-32.flex-between
+                .col-xl-6 
+                    .heading3 Create your own AI business with us
+                    .count.mt-40
+                        .item.flex-item-center.gap-24.pb-20
+                            .heading3.text-purple 35
+                                span k 
+                            .body2.text-placehover Client satisfaction is at the heart of what we do. We take pride in achieving a 95% client satisfaction rate
+                        .line-dark
+                        .item.flex-item-center.gap-24.pt-20
+                            .heading3.text-purple 15
+                                span k 
+                            .body2.text-placehover Our team of storytellers has crafted over 500 compelling narratives that resonate with audiences
+                    a(href="#!").button.bg-purple.button-purple-hover.text-on-surface.mt-40 Explore more
+                .bg-img.col-xl-5.text-end
+                    img(src="assets/images/components/bg-service-group.png", alt="")
+    include components/home4/testimonial.pug
+    div(class="style-service")
+        include components/home3/form-contact.pug
+block footer 
+    include components/footer.pug

@@ -1,0 +1,20 @@
+.list-partner {
+    @media (max-width: 1199.98px) {
+        .container {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .partner-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.form-contact {
+  position: relative;
+}
+.form-contact .bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  bottom: 0;
+}
+.form-contact .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.form-contact .container .form-block {
+  width: 50%;
+  height: 100%;
+  padding-left: 80px;
+}
+.form-contact .container .form-block .row {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.form-contact .container .form-block .row > div {
+  padding-left: 12px;
+  padding-right: 12px;
+  position: relative;
+}
+.form-contact .container .form-block .row > div i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  right: 24px;
+}

@@ -1,0 +1,19 @@
+extends base/layout.pug
+block title
+    title About Us
+block header
+    div(class="style-purple")
+        include components/header/menu/menu-one.pug
+block content
+    include mixins/breadcrum.pug
+    +breadcrum({classname: 'pt-80 pb-80', nav:'Home', nav1:'Page', nav2:'About Us', heading:'About Us', subHeading:"Learn more about our digital agency and what sets us apart. Discover our story, our mission, and our passion for creativity and innovation."})
+    include components/about-us-page/about-us.pug
+    include components/partners.pug
+    div(class="style-purple")
+        include components/home1/how-it-work.pug
+    div(class="style-purple")
+        include components/home2/counter.pug
+    include components/about-us-page/our-benefit.pug
+    include components/about-us-page/our-leader.pug
+block footer 
+    include components/footer.pug

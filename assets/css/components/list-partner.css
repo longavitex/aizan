@@ -1,0 +1,16 @@
+@media (max-width: 1199.98px) {
+  .list-partner .container {
+    justify-content: center;
+  }
+}
+@media (max-width: 575.98px) {
+  .list-partner .partner-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+  }
+  .list-partner .partner-item img {
+    width: 100%;
+  }
+}

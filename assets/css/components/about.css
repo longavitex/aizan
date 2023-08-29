@@ -1,0 +1,44 @@
+.about-us .container .row > div:first-child .heading3 {
+  z-index: 2;
+}
+.about-us .container .row > div:first-child .heading3 span {
+  position: relative;
+}
+.about-us .container .row > div:first-child .heading3 span::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  right: 0;
+  bottom: -22px;
+  height: 30px;
+  background-color: transparent;
+  border: 3px solid var(--purple);
+  border-radius: 30%;
+}
+.about-us .container .row > div:first-child .heading3 span::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  right: 0;
+  bottom: -24px;
+  height: 24px;
+  background-color: var(--black-surface);
+  z-index: 1;
+}
+.about-us .container .row > div:first-child .heading3 p {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 991.98px) {
+  .about-us .container .row > div:last-child .count {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 575.98px) {
+  .about-us .container .row > div:first-child .heading3 span::before, .about-us .container .row > div:first-child .heading3 span::after {
+    display: none;
+  }
+  .about-us .container .row > div:last-child .count {
+    justify-content: space-between;
+  }
+}

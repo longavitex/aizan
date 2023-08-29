@@ -1,3 +1,6 @@
+/*
+*** Blog detail: Start
+*/
 .blog-detail .container > .row > div:first-child .blog-title .list-social a {
   border-radius: 8px;
   border: 1px solid var(--on-surface);
@@ -50,3 +53,7 @@
   line-height: 26px;
   text-transform: unset;
 }
+
+/*
+*** Blog detail: End
+*/

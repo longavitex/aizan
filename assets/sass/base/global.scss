@@ -229,7 +229,7 @@
 }
 
 .bg-black-surface {
-    background-color: #000;
+    background-color: var(--black-surface);
 }
 
 .bg-line-dark {
@@ -274,11 +274,6 @@
     background-color: rgba($color: #FFFFFF, $alpha: 0.1);
 }
 
-.col-2-4 {
-    flex: 0 0 auto;
-    width: 20%;
-}
-
 .flex-wrap {
     flex-wrap: wrap;
 }
@@ -317,6 +312,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.gap-60 {
+    gap: 60px;
 }
 
 .gap-40 {
@@ -399,8 +398,8 @@
     font-size: 48px;
 }
 
-.fs-42 {
-    font-size: 42px;
+.fs-40 {
+    font-size: 40px;
 }
 
 .fs-36 {
@@ -737,6 +736,14 @@
 
 .mt-4 {
     margin-top: 4px !important;
+}
+
+.w-60 {
+    width: 60px;
+}
+
+.h-60 {
+    height: 60px;
 }
 
 .w-40 {
