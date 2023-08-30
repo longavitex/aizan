@@ -11,9 +11,16 @@
   padding-left: 8px;
   border-left: 1px solid var(--line-dark);
 }
+.blog-detail .container > .row > div:first-child .blog-comment select {
+  -webkit-appearance: auto;
+  padding-right: 2px;
+}
 .blog-detail .container > .row > div:first-child .blog-comment .list-comment .comment-item .heading img {
   width: 52px;
   height: 52px;
+}
+.blog-detail .container > .row > div:first-child .blog-comment .list-comment .comment-item .comment-infor .like i {
+  transition: all ease 0.3s;
 }
 .blog-detail .container > .row > div:first-child .blog-form-contact .row {
   margin-left: -10px;

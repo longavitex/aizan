@@ -34,3 +34,18 @@
   display: block;
   right: 24px;
 }
+@media (max-width: 1320px) {
+  .form-contact .container .form-block {
+    padding-left: 15px;
+  }
+}
+@media (max-width: 991.98px) {
+  .form-contact .bg-img {
+    position: relative;
+    width: 100%;
+  }
+  .form-contact .container .form-block {
+    width: 100%;
+    padding-left: 0;
+  }
+}

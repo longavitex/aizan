@@ -22,12 +22,25 @@
                 }
 
                 .blog-comment {
+                    select {
+                        -webkit-appearance: auto;
+                        padding-right: 2px;
+                    }
+
                     .list-comment {
                         .comment-item {
                             .heading {
                                 img {
                                     width: 52px;
                                     height: 52px;
+                                }
+                            }
+
+                            .comment-infor {
+                                .like {
+                                    i {
+                                        transition: all ease 0.3s;
+                                    }
                                 }
                             }
                         }
@@ -93,6 +106,7 @@
         }
     }
 }
+
 /*
 *** Blog detail: End
 */

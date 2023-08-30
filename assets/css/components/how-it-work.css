@@ -21,3 +21,7 @@
     padding-right: 16px;
   }
 }
+
+.style-purple .col-lg-7 .bg-blue {
+  background-color: var(--purple);
+}

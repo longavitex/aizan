@@ -1,0 +1,59 @@
+extends base/layout.pug
+block title
+    title Services Detail
+block header
+    div(class="style-purple")
+        include components/header/menu/menu-one.pug
+block content
+    include mixins/breadcrum.pug
+    +breadcrum({classname: 'pt-80 pb-80', nav:'Home', nav1:'Services', nav2:'Services Detail', heading:'Services Detail', subHeading:"Explore our range of cutting-edge services designed to elevate your business. From digital marketing and branding to AI-driven solutions."})
+    .embracing-multilingual-support.pt-100.pb-100 
+        .container 
+            .row.row-gap-40
+                .col-lg-6 
+                    .heading3 Embracing Multilingual Support
+                    .body2.text-placehover.mt-24 Welcome to AI Digital Agency, where we believe in reaching diverse audiences and global markets as the key to success in the digital age. Our "Embracing Multilingual Support" service is specially designed to help your business overcome language barriers, connect with new customer segments, and expand your international reach.
+                    .list-feature.mt-32
+                        .row.row-gap-12
+                            .col-sm-6
+                                .item.flex-item-center.gap-12
+                                    .icon
+                                        i.ph-bold.ph-check.p-4.fs-12.text-white.bg-purple.bora-50
+                                    .text-button Website Localization
+                            .col-sm-6
+                                .item.flex-item-center.gap-12
+                                    .icon
+                                        i.ph-bold.ph-check.p-4.fs-12.text-white.bg-purple.bora-50
+                                    .text-button Multilingual Content Creation
+                            .col-sm-6
+                                .item.flex-item-center.gap-12
+                                    .icon
+                                        i.ph-bold.ph-check.p-4.fs-12.text-white.bg-purple.bora-50
+                                    .text-button Multilingual Chatbots
+                            .col-sm-6
+                                .item.flex-item-center.gap-12
+                                    .icon
+                                        i.ph-bold.ph-check.p-4.fs-12.text-white.bg-purple.bora-50
+                                    .text-button Global Marketing Campaigns
+                .col-lg-6.pl-65.pl-col-lg-0
+                    .bg-img.bora-24.overflow-hidden
+                        img(src="assets/images/components/bg-services-detail.png", alt="").d-block.w-100
+    include mixins/serviceItem.pug
+    .list-service.our-capabilities.bg-line-dark.pt-100.pb-100
+        .container
+            .heading3.text-center Our Capabilities
+            .row.list.mt-40.row-gap-32
+                .col-lg-4 
+                    +serviceItem({classname:'pl-32 pr-32 pt-40 pb-40 h-100 bg-line-dark', style:'style-four', icon:'icon-hand-scale fs-60', title:'Enhanced Decision-Making', desc:"Leverage AI's data analysis capabilities to make informed and strategic decisions that drive growth."})
+                .col-lg-4 
+                    +serviceItem({classname:'pl-32 pr-32 pt-40 pb-40 h-100 bg-line-dark', style:'style-four', icon:'icon-chart-gear fs-60', title:'Efficient Operations', desc:'Automate repetitive tasks, streamline processes, and optimize resource allocation, leading to increased efficiency.'})
+                .col-lg-4 
+                    +serviceItem({classname:'pl-32 pr-32 pt-40 pb-40 h-100 bg-line-dark', style:'style-four', icon:'icon-coin fs-60', title:'Data-driven Insights', desc:'Extract valuable insights from large datasets, enabling you to uncover hidden opportunities and address challenges.'})
+                
+    div(class="style-services-detail mt-100")
+        include components/partners.pug
+    include components/home1/how-it-work.pug    
+    div(class="style-service")
+        include components/home3/form-contact.pug
+block footer 
+    include components/footer.pug

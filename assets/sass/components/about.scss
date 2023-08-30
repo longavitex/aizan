@@ -15,7 +15,7 @@
                         bottom: -22px;
                         height: 30px;
                         background-color: transparent;
-                        border: 3px solid var(--purple);
+                        border: 3px solid var(--blue);
                         border-radius: 30%;
                     }
 
@@ -67,6 +67,35 @@
             >div:last-child {
                 .count {
                     justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+
+.about-us.style-one {
+    .container .row {
+        >div:last-child {
+            border-radius: 534.758px;
+            opacity: 0.32;
+            background: #5596F8;
+            filter: blur(132px);
+
+            .bg-img:nth-child(2) {
+                
+            }
+        }
+    }
+}
+
+.about-us.style-about {
+    .container .row {
+        >div:first-child {
+            .heading3 {
+                span {
+                    &::before {
+                        background-color: var(--purple);
+                    }
                 }
             }
         }

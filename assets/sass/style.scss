@@ -18,12 +18,18 @@
 @import './base/custom-bootstrap.scss';
 @import './base/global.scss';
 
+@import './layout/menu.scss';
+@import './layout/slider.scss';
+@import './layout/footer.scss';
+
 @import './components/popup-newsletter.scss';
+@import './components/breadcrum.scss';
 @import './components/about.scss';
 @import './components/counter.scss';
 @import './components/page-not-found.scss';
 @import './components/blog-list.scss';
 @import './components/blog-detail.scss';
+@import './components/blog-section.scss';
 @import './components/contact.scss';
 @import './components/list-pricing.scss';
 @import './components/list-faqs.scss';
@@ -33,7 +39,6 @@
 @import './components/our-benefit.scss';
 @import './components/our-leader.scss';
 @import './components/form-contact.scss';
+@import './components/testimonial.scss';
 
-@import './layout/menu.scss';
-@import './layout/footer.scss';
 @import './layout/font-reduce.scss';

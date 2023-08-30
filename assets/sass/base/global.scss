@@ -168,6 +168,14 @@
     color: var(--blue);
 }
 
+.text-blue-hover {
+    transition: all ease 0.3s;
+
+    &:hover {
+        color: var(--blue);
+    }
+}
+
 .icon-blue {
     &::before {
         color: var(--blue);
@@ -176,6 +184,14 @@
 
 .text-yellow {
     color: var(--yellow);
+}
+
+.text-yellow-hover {
+    transition: all ease 0.3s;
+
+    &:hover {
+        color: var(--yellow);
+    }
 }
 
 .icon-yellow {
@@ -188,6 +204,14 @@
     color: var(--green);
 }
 
+.text-green-hover {
+    transition: all ease 0.3s;
+
+    &:hover {
+        color: var(--green);
+    }
+}
+
 .icon-green {
     &::before {
         color: var(--green);
@@ -196,6 +220,14 @@
 
 .text-purple {
     color: var(--purple);
+}
+
+.text-purple-hover {
+    transition: all ease 0.3s;
+
+    &:hover {
+        color: var(--purple);
+    }
 }
 
 .icon-purple {
@@ -752,6 +784,14 @@
 
 .h-40 {
     height: 40px;
+}
+
+.w-20 {
+    width: 20px;
+}
+
+.h-20 {
+    height: 20px;
 }
 
 .display-none {

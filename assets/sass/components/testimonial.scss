@@ -1,0 +1,56 @@
+/*
+Testimonial Home4: Start
+*/
+.testimonial-block.style-four {
+    .container {
+        >.row {
+            flex-wrap: nowrap;
+    
+            >div:first-child {
+                .block-button {
+    
+                    .prev-btn,
+                    .next-btn {
+                        border: 1px solid var(--white);
+                    }
+    
+                    .disabled {
+                        border: 1px solid var(--secondary);
+    
+                        i {
+                            color: var(--secondary);
+                        }
+                    }
+                }
+            }
+    
+            >div:last-child {
+                overflow: hidden;
+    
+                .slick-initialized {
+                    .slick-list {
+                        overflow: unset;
+                        margin-left: -15px;
+                        margin-right: -15px;
+
+                        .slick-slide {
+                            padding-right: 15px;
+                            padding-left: 15px;
+
+                            .main-content {
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: 991.98px) {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+/*
+Testimonial Home4: End
+*/

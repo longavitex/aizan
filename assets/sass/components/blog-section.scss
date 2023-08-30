@@ -1,0 +1,118 @@
+/*
+Our Blog Home1: Start
+*/
+.list-blog {
+    .cursor {
+        background-color: #111;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        transition: all linear 0.2s;
+        width: 70px;
+        height: 70px;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .list {
+        .slick-list {
+            padding-left: 0;
+            padding-right: 0;
+
+            .item {
+                padding-right: 15px;
+                padding-left: 15px;
+                cursor: none;
+
+                .main-item {
+                    cursor: none;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1023.99px) {
+        .cursor {
+            display: none;
+        }
+
+        .list {
+            .slick-list {
+                .item {
+                    cursor: pointer;
+
+                    .main-item {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        gap: 16px;
+
+        @media (max-width:767.99px) {
+            margin-top: 30px;
+        }
+
+        li {
+            position: relative;
+            border: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            button {
+                display: none;
+            }
+
+            &::after {
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: transparent;
+                border: 1px solid var(--line);
+                transition: 0.5s;
+            }
+
+            &.slick-active {
+                border: 1px solid var(--white);
+                background-color: var(--on-surface);
+
+                &::after {
+                    background-color: var(--white);
+                    border: 1px solid var(--on-surface);
+                }
+            }
+        }
+    }
+}
+
+.style-blog-detail {
+    .list-blog {
+        .heading {
+            a {
+                u {
+                    &:hover {
+                        color: var(--purple);
+                    }
+                }
+            }
+        }
+    }
+}
+/*
+Our Blog Home1: End
+*/

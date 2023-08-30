@@ -7,7 +7,7 @@ block header
 block content
     include mixins/breadcrum.pug
     +breadcrum({classname: 'pt-80 pb-80', nav:'Home', nav1:'Page', nav2:'Blog Detail', heading:'Blog Detail', subHeading:"We offer a variety of pricing packages to meet the unique needs of our freelancers. Contact us today to discuss which package is right for you."})
-    .blog-detail.blog-list.pt-100.pb-100
+    .blog-detail.blog-list.pt-100
         .container 
             .row.row-gap-60
                 .col-12.col-lg-8
@@ -96,8 +96,8 @@ block content
                                 .text-button-small Sort By:
                                 select(name="sort").bg-on-surface.text-white
                                     option(value="Newest") Newest
-                                    option(value="Lastest") Lastest
-                                    option(value="Like") Like
+                                    option(value="Oldest") Oldest
+                                    option(value="Best Fit") Best Fit
                         .list-comment.mt-24
                             .comment-item.pb-24
                                 .heading.flex-between
@@ -116,9 +116,9 @@ block content
                                             .text-button-small.text-placehover.pl-4 20
                                         .cmt.flex-item-center.pointer
                                             i.ph.ph-chat.text-white 
-                                            .text-button-small.text-placehover.pl-4 Hide Replies
+                                            .text-button-small.text-placehover.pl-4 Show Replies
                                     .text-button-small.text-placehover.pointer Reply
-                            .comment-item.pb-24.pl-40
+                            .comment-item.reply.hide.pb-24.pl-40
                                 .heading.flex-between
                                     .left.flex-item-center.gap-16
                                         img.avatar(src="assets/images/avatar/avatar2.png", alt="")
@@ -133,9 +133,6 @@ block content
                                         .like.flex-item-center.pointer
                                             i.ph.ph-heart.text-white 
                                             .text-button-small.text-placehover.pl-4 20
-                                        .cmt.flex-item-center.pointer
-                                            i.ph.ph-chat.text-white 
-                                            .text-button-small.text-placehover.pl-4 Hide Replies
                                     .text-button-small.text-placehover.pointer Reply
                             .comment-item.pt-24.pb-24
                                 .heading.flex-between
@@ -214,5 +211,7 @@ block content
                         .caption1.text-placehover.text-center.mt-12 Lorem ipsum dolor sit amet, consectetur.
                         input(type="text" placeholder="Your email address").button.bg-line-dark.text-white.text-center.w-100.mt-20
                         a(href="#!").button.bg-purple.button-purple-hover.text-white.mt-16.w-100 Sign up
+    div(class="style-blog-detail")
+        include components/home1/our-blogs.pug
 block footer 
     include components/footer.pug

@@ -39,4 +39,26 @@
             }
         }
     }
+
+    @media (max-width: 1320px) {
+        .container {
+            .form-block {
+                padding-left: 15px;
+            }
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        .bg-img {
+            position: relative;
+            width: 100%;
+        }
+
+        .container {
+            .form-block {
+                width: 100%;
+                padding-left: 0;
+            }
+        }
+    }
 }

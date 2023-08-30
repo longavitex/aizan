@@ -1,5 +1,5 @@
 mixin serviceItem(props = {})
-    -var {classname = '', href="service-detail.html", style='', icon, title, desc} = props
+    -var {classname = '', href="services-detail.html", style='', icon, title, desc} = props
     div(class=`service-item hover-box-shadow ${classname}`)
         if(style=='style-four')
             a(href=`${href}`).service-item-main
@@ -7,5 +7,6 @@ mixin serviceItem(props = {})
                     i(class=`${icon}`)
                 .desc.mt-32
                     .heading6!= title 
-                    .text-placehover.mt-8!= desc
+                    .text-placehover.mt-8!= desc 
+        
         

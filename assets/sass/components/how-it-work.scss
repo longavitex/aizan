@@ -35,3 +35,11 @@
         }
     }
 }
+
+.style-purple {
+    .col-lg-7 {
+        .bg-blue {
+            background-color: var(--purple);
+        }
+    }
+}

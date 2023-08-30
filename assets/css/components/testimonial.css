@@ -1,0 +1,40 @@
+/*
+Testimonial Home4: Start
+*/
+.testimonial-block.style-four .container > .row {
+  flex-wrap: nowrap;
+}
+.testimonial-block.style-four .container > .row > div:first-child .block-button .prev-btn,
+.testimonial-block.style-four .container > .row > div:first-child .block-button .next-btn {
+  border: 1px solid var(--white);
+}
+.testimonial-block.style-four .container > .row > div:first-child .block-button .disabled {
+  border: 1px solid var(--secondary);
+}
+.testimonial-block.style-four .container > .row > div:first-child .block-button .disabled i {
+  color: var(--secondary);
+}
+.testimonial-block.style-four .container > .row > div:last-child {
+  overflow: hidden;
+}
+.testimonial-block.style-four .container > .row > div:last-child .slick-initialized .slick-list {
+  overflow: unset;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.testimonial-block.style-four .container > .row > div:last-child .slick-initialized .slick-list .slick-slide {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.testimonial-block.style-four .container > .row > div:last-child .slick-initialized .slick-list .slick-slide .main-content {
+  height: 100%;
+}
+@media (max-width: 991.98px) {
+  .testimonial-block.style-four .container > .row {
+    flex-wrap: wrap;
+  }
+}
+
+/*
+Testimonial Home4: End
+*/

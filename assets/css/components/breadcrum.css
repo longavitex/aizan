@@ -1,0 +1,18 @@
+/*
+Bread crum: Start
+*/
+.breadcrum {
+  background-color: #29292C;
+}
+.breadcrum .text-nav .heading3 {
+  position: relative;
+}
+.breadcrum .text-nav .heading3 svg {
+  position: absolute;
+  top: -12px;
+  right: -40px;
+}
+
+/*
+Bread crum: End
+*/

@@ -89,6 +89,22 @@ Footer: Start
                 }
             }
         }
+
+        @media (max-width: 575.98px) {
+            .heading {
+                .list-social {
+                    a {
+                        .fs-14 {
+                            font-size: 12px;
+                        }
+
+                        .fs-12 {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 /*

@@ -1,0 +1,15 @@
+mixin blogItem(props = {})
+    -var {classname = '', style, href='blog-detail.html', img, category, date, title, desc} = props
+    div(class=`blog-item ${classname}`)
+        if(style=='style-one')
+            a(href=`${href}`).main-item
+                .bg-img.w-100.overflow-hidden
+                    img(src=`${img}`).w-100.h-100.display-block
+                .infor.p-24
+                    .heading.flex-item-center.gap-8 
+                        .text-button-uppercase!= category
+                        i.ph-fill.ph-dot-outline.text-placehover 
+                        .caption1.text-placehover!= date
+                    .heading5.mt-8!= title
+                    .text-placehover.mt-8!= desc
+    

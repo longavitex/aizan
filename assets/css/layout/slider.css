@@ -1,0 +1,101 @@
+.slider-block .slider-main {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-image: url(../../assets/images/slider/bg-slider1.png);
+  background-position: center;
+  background-size: cover;
+}
+.slider-block .slider-main .container {
+  width: 100%;
+  height: 100%;
+}
+.slider-block .slider-main .row {
+  position: relative;
+  height: 100%;
+}
+.slider-block .slider-main .row > div:first-child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+}
+.slider-block .slider-main .row > div:last-child {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  right: 15px;
+}
+.slider-block .slider-main .row > div:last-child .bg-img img:nth-child(1) {
+  position: absolute;
+  right: 245px;
+  transform: translateY(-60%);
+  z-index: 1;
+}
+.slider-block .slider-main .row > div:last-child .bg-img img:nth-child(2) {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: moveYY 15s ease infinite;
+}
+.slider-block .slider-main .row > div:last-child .bg-img img:nth-child(3) {
+  position: absolute;
+  right: 0;
+  top: calc(50% + 216px);
+  transform: translateY(-50%);
+  animation: moveY 15s ease infinite;
+}
+.slider-block .slider-main .row > div:last-child .icon svg:first-child {
+  position: absolute;
+  right: 190px;
+  transform: translateY(-200px);
+}
+.slider-block .slider-main .row > div:last-child .icon svg:last-child {
+  position: absolute;
+  left: 50px;
+  transform: translateY(100px);
+  z-index: 0;
+}
+.slider-block .slider-main .row > div:last-child .user-infor {
+  background: rgba(255, 255, 255, 0.4);
+  display: inline-flex;
+  position: absolute;
+  right: 260px;
+  top: calc(50% + 230px);
+  transform: translateY(-50%);
+  animation: moveX 15s ease infinite;
+}
+
+@keyframes moveY {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(calc(-50% + 15px));
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+@keyframes moveYY {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(calc(-50% - 15px));
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+@keyframes moveX {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

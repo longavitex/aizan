@@ -1,4 +1,4 @@
-.list-service.style-four {
+.list-service {
     .list {
         .service-item {
             transition: all ease 0.3s;
@@ -15,6 +15,7 @@
 
             &:hover {
                 background-color: var(--purple);
+                margin-top: -8px;
 
                 i {
                     &::before {
@@ -24,6 +25,14 @@
 
                 .text-placehover {
                     color: var(--white);
+                }
+            }
+        }
+
+        @media (max-width: 1023.98px) {
+            .service-item {
+                &:hover {
+                    margin-top: 0;
                 }
             }
         }
