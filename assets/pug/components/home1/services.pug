@@ -1,0 +1,17 @@
+include ../../mixins/serviceItem.pug
+
+.service-block.list-service.style-one.pt-100 
+    .container 
+        .heading.text-center 
+            .heading3.text-center Find an AI solution for your business
+            .body2.text-placehover.mt-12.text-center Experience the future of communication with our AI-powered chat solution.
+        .list.row.row-gap-32.mt-40
+            .col-lg-3.col-sm-6
+                +serviceItem({classname:'pl-32 pr-32 pt-24 pb-24 bora-24 h-100', style:'style-one', icon:'icon-chart fs-60', title:'Analytics and Insights', desc:"Gain valuable insights into customer behavior, preferences"})
+            .col-lg-3.col-sm-6
+                +serviceItem({classname:'pl-32 pr-32 pt-24 pb-24 bora-24 h-100', style:'style-one', icon:'icon-message fs-60', title:'Chat Bot AI', desc:"Engage and assist your website visitors with our intelligent "})
+            .col-lg-3.col-sm-6
+                +serviceItem({classname:'pl-32 pr-32 pt-24 pb-24 bora-24 h-100', style:'style-one', icon:'icon-hand-circle fs-60', title:'Multilingual Support', desc:"Expand your reach and cater to a global audience ..."})
+            .col-lg-3.col-sm-6
+                +serviceItem({classname:'pl-32 pr-32 pt-24 pb-24 bora-24 h-100', style:'style-one', icon:'icon-chart-box fs-60', title:'AI-Powered Chatbots', desc:"Engage and assist your website visitors with our intelligent"})
+                

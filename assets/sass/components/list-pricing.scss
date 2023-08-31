@@ -83,7 +83,46 @@ List pricing: Start
     }
 }
 
-@keyframes showItem {
+.section-pricing.style-one {
+    position: relative;
+
+    >.bg-blur {
+        position: absolute;
+        right: -50px;
+        top: 100px;
+        width: 534px;
+        height: 534px;
+        border-radius: 534px;
+        opacity: 0.14;
+        background: #5596F8;
+        filter: blur(132px);
+        z-index: 0;
+    }
+
+    .container {
+        position: relative;
+
+        .bg-blur {
+            position: absolute;
+            left: -50px;
+            top: 0;
+            width: 534px;
+            height: 534px;
+            border-radius: 534px;
+            opacity: 0.14;
+            background: #5596F8;
+            filter: blur(132px);
+            z-index: 0;
+        }
+
+        .row, .list-pricing {
+            position: relative;
+            z-index: 2;
+        }
+    }
+}
+
+@keyframes showListPrice {
     from {
         // transform: scale(0.2);
         opacity: 0;
@@ -101,7 +140,7 @@ List pricing: Start
 
 .list-pricing.show {
     display: block;
-    animation: showItem ease-in-out 0.5s;
+    animation: showListPrice ease-in-out 0.5s;
 }
 
 .style-pricing {

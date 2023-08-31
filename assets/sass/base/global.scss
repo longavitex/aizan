@@ -240,6 +240,12 @@
     color: var(--white);
 }
 
+.icon-white {
+    &::before {
+        color: var(--white);
+    }
+}
+
 .text-on-surface {
     color: var(--on-surface);
 }
@@ -852,6 +858,10 @@
 
 .border-line-top {
     border-top: 1px solid var(--line-dark);
+}
+
+.border-white {
+    border: 1px solid var(--white);
 }
 
 .hover-bg-purple {

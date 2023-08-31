@@ -1,0 +1,92 @@
+include ../../mixins/projectItem.pug
+
+.projects-block.pt-100 
+    .container 
+        .bg-blur
+        .heading.text-center
+            .heading3.text-center Our Gallery of Innovative Artworks
+            .list-nav.flex-center.mt-24
+                .nav-item.text-button.pt-8.pb-8.pl-16.pr-16.bora-44.pointer&attributes({"data-name":"all"}) All
+                .nav-item.text-button.pt-8.pb-8.pl-16.pr-16.bora-44.pointer&attributes({"data-name":"anime"}) Anime
+                .nav-item.text-button.pt-8.pb-8.pl-16.pr-16.bora-44.pointer.active&attributes({"data-name":"creative"}) Creative
+                .nav-item.text-button.pt-8.pb-8.pl-16.pr-16.bora-44.pointer&attributes({"data-name":"pixel"}) Pixel
+                .nav-item.text-button.pt-8.pb-8.pl-16.pr-16.bora-44.pointer&attributes({"data-name":"illustration"}) Illustration
+        .list.row.row-gap-32.mt-40
+            //- Creative
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"creative"})
+                +projectItem({classname:'', img:'assets/images/projects/1.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"creative"})
+                +projectItem({classname:'', img:'assets/images/projects/2.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"creative"})
+                +projectItem({classname:'', img:'assets/images/projects/3.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"creative"})
+                +projectItem({classname:'', img:'assets/images/projects/4.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"creative"})
+                +projectItem({classname:'', img:'assets/images/projects/5.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"creative"})
+                +projectItem({classname:'', img:'assets/images/projects/6.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"creative"})
+                +projectItem({classname:'', img:'assets/images/projects/7.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"creative"})
+                +projectItem({classname:'', img:'assets/images/projects/8.png', category:'Marketting', title:'AI financial management'})
+            //- Anime
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"anime"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/9.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"anime"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/10.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"anime"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/11.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"anime"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/12.png', category:'Marketting', title:'AI financial management'})
+            //- Pixel
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"pixel"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/3.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"pixel"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/5.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"pixel"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/7.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"pixel"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/9.png', category:'Marketting', title:'AI financial management'})
+            //- illustration
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"illustration"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/2.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"illustration"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/4.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"illustration"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/6.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"illustration"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/8.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"illustration"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/10.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"illustration"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/12.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"illustration"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/7.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"illustration"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/9.png', category:'Marketting', title:'AI financial management'})
+            //- All
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"all"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/3.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"all"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/5.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"all"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/7.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"all"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/9.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"all"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/2.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"all"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/4.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"all"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/6.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"all"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/8.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"all"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/10.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"all"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/12.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"all"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/1.png', category:'Marketting', title:'AI financial management'})
+            .col-lg-3.col-sm-6.item-filter&attributes({"data-name":"all"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/11.png', category:'Marketting', title:'AI financial management'})
+            

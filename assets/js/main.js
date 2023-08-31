@@ -191,6 +191,129 @@ if (comments) {
 // }
 
 
+// Testimonial Home1
+$(".testimonial-block.style-one .container .row .list-avatar .avatar").slick({
+  dots: false,
+  arrows: true,
+  prevArrow: '.prev-btn',
+  nextArrow: '.next-btn',
+  slidesToShow: 5,
+  slidesToScroll: 5,
+  touchThreshold: 100,
+  swipe: true,
+  swipeToSlide: true,
+  autoplay: false,
+  centerMode: true,
+  pauseOnFocus: false,
+  pauseOnHover: false,
+  pauseOnDotsHover: false,
+  infinite: true,
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      }
+    },
+  ]
+});
+
+
+// Change avatar testimonial home1
+const prevBtn = document.querySelector('.testimonial-block.style-one .list-avatar .prev-btn')
+const nextBtn = document.querySelector('.testimonial-block.style-one .list-avatar .next-btn')
+const listCmt = document.querySelector('.testimonial-block.style-one .list-comment')
+const commentItems = document.querySelectorAll('.testimonial-block.style-one .list-comment .cmt-item')
+
+// Listen event click prev btn 
+if (prevBtn) {
+  prevBtn.addEventListener('click', () => {
+    commentItems.forEach(item => {
+      let indexCmt = item.getAttribute('data-name')
+      let avatarCurrent = document.querySelector('.testimonial-block.style-one .list-avatar .slick-current')
+      let indexAvatar = avatarCurrent.getAttribute('data-name')
+
+      if (indexCmt === indexAvatar) {
+        listCmt.querySelector('.active').classList.remove('active')
+        item.classList.add('active')
+      }
+    })
+  })
+}
+
+// Listen event click next btn 
+if (nextBtn) {
+  nextBtn.addEventListener('click', () => {
+    commentItems.forEach(item => {
+      let indexCmt = item.getAttribute('data-name')
+      let avatarCurrent = document.querySelector('.testimonial-block.style-one .list-avatar .slick-current')
+      let indexAvatar = avatarCurrent.getAttribute('data-name')
+
+      if (indexCmt === indexAvatar) {
+        listCmt.querySelector('.active').classList.remove('active')
+        item.classList.add('active')
+      }
+    })
+  })
+}
+
+// Listen event slide list avatar 
+const slickList = document.querySelector('.testimonial-block.style-one .list-avatar .slick-list')
+
+if (slickList) {
+  slickList.addEventListener('mousemove', (e) => {
+    commentItems.forEach(item => {
+      let indexCmt = item.getAttribute('data-name')
+      let avatarCurrent = document.querySelector('.testimonial-block.style-one .list-avatar .slick-current')
+      let indexAvatar = avatarCurrent.getAttribute('data-name')
+
+      if (indexCmt === indexAvatar) {
+        listCmt.querySelector('.active').classList.remove('active')
+        item.classList.add('active')
+      }
+    })
+  })
+}
+
+
+// change active nav - Projects Home1
+const listNav = document.querySelectorAll('.list-nav')
+const filterItem = document.querySelectorAll('.item-filter')
+
+if (listNav) {
+  listNav.forEach(listNavItem => {
+    listNavItem.onclick = function (selectedItem) {
+      if (selectedItem.target.classList.contains("nav-item")) {
+        // add active class
+        listNavItem.querySelector('.active').classList.remove('active')
+        selectedItem.target.classList.add('active')
+
+        //get data-name value
+        let filterName = selectedItem.target.getAttribute('data-name')
+
+        filterItem.forEach((item) => {
+          if (filterName === item.getAttribute('data-name')) {
+            item.classList.add('show')
+            item.classList.remove('hide')
+          } else {
+            item.classList.remove('show')
+            item.classList.add('hide')
+          }
+        })
+      }
+    }
+  })
+}
+
+
 // Blogs home1
 $(".list-blog .container .list").slick({
   dots: true,
@@ -232,6 +355,7 @@ $(".list-blog .container .list").slick({
   ]
 });
 
+
 // Change cursor
 const listBlog = document.querySelectorAll('.list-blog .slick-list')
 const mouseCursor = document.querySelector('.cursor')
@@ -261,6 +385,7 @@ if (listBlog) {
     })
   })
 }
+
 
 // Testimonial Home4
 $(".testimonial-block.style-four .container .row .list-testimonial").slick({

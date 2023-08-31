@@ -1,0 +1,25 @@
+/*
+Shared Animation Filter Item: Start
+*/
+@keyframes showItem {
+  from {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.item-filter.hide {
+  display: none;
+}
+
+.item-filter.show {
+  display: block;
+  animation: showItem ease-in-out 0.5s;
+}
+
+/*
+Shared Animation Filter Item: End
+*/

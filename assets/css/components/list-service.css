@@ -22,3 +22,24 @@
     margin-top: 0;
   }
 }
+
+.list-service.style-one .list .service-item .heading7 {
+  position: relative;
+  display: inline-block;
+}
+.list-service.style-one .list .service-item .heading7::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--white);
+  transition: all ease 0.3s;
+}
+.list-service.style-one .list .service-item .heading7:hover::before {
+  width: 100%;
+}
+.list-service.style-one .list .service-item:hover {
+  background-color: var(--line-dark);
+}

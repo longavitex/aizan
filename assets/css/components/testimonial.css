@@ -1,4 +1,129 @@
 /*
+Testimonial Home1: Start
+*/
+.testimonial-block.style-one .container .row > div .list-avatar {
+  padding-left: 54px;
+  padding-right: 54px;
+  position: relative;
+}
+.testimonial-block.style-one .container .row > div .list-avatar .avatar.slick-slider {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+.testimonial-block.style-one .container .row > div .list-avatar .avatar.slick-slider .slick-list {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 0 !important;
+}
+.testimonial-block.style-one .container .row > div .list-avatar .avatar.slick-slider .slick-list .slick-track {
+  overflow: auto;
+  padding-top: 70px;
+  padding-bottom: 50px;
+  display: flex !important;
+}
+.testimonial-block.style-one .container .row > div .list-avatar .avatar.slick-slider .slick-list .slick-track .item {
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: all ease 0.4s;
+  transform: scale(0.9);
+  border-radius: 50%;
+}
+.testimonial-block.style-one .container .row > div .list-avatar .avatar.slick-slider .slick-list .slick-track .item .bg-img {
+  border-radius: 50%;
+  transition: all ease 0.4s;
+  padding: 10px;
+}
+.testimonial-block.style-one .container .row > div .list-avatar .avatar.slick-slider .slick-list .slick-track .item .bg-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.testimonial-block.style-one .container .row > div .list-avatar .avatar.slick-slider .slick-list .slick-track .item.slick-center {
+  transform: scale(1.2) translateZ(0);
+}
+.testimonial-block.style-one .container .row > div .list-avatar .avatar.slick-slider .slick-list .slick-track .item.slick-center .bg-img {
+  background-color: var(--line-dark);
+}
+.testimonial-block.style-one .container .row > div .list-avatar .prev-btn,
+.testimonial-block.style-one .container .row > div .list-avatar .next-btn {
+  position: absolute;
+  top: calc(50% + 10px);
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+.testimonial-block.style-one .container .row > div .list-avatar .prev-btn:hover,
+.testimonial-block.style-one .container .row > div .list-avatar .next-btn:hover {
+  border: 1px solid var(--blue) !important;
+}
+.testimonial-block.style-one .container .row > div .list-avatar .prev-btn {
+  left: 54px;
+}
+.testimonial-block.style-one .container .row > div .list-avatar .next-btn {
+  right: 54px;
+}
+.testimonial-block.style-one .container .row > div .list-comment {
+  overflow: hidden;
+}
+.testimonial-block.style-one .container .row > div .list-comment .cmt-item {
+  display: none;
+}
+.testimonial-block.style-one .container .row > div .list-comment .cmt-item.active {
+  display: block;
+  animation: opacityAnimate ease 0.7s;
+}
+@keyframes opacityAnimate {
+  from {
+    opacity: 0;
+    transform: translate(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@media (max-width: 575.98px) {
+  .testimonial-block.style-one .container .row > div .list-avatar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .testimonial-block.style-one .container .row > div .list-avatar .avatar.slick-slider {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .testimonial-block.style-one .container .row > div .list-avatar .avatar.slick-slider .slick-list .slick-track {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  .testimonial-block.style-one .container .row > div .list-avatar .avatar.slick-slider .slick-list .slick-track .item {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .testimonial-block.style-one .container .row > div .list-avatar .avatar.slick-slider .slick-list .slick-track .item .bg-img {
+    padding: 8px;
+  }
+  .testimonial-block.style-one .container .row > div .list-avatar .prev-btn {
+    left: 0;
+    width: 24px;
+    height: 24px;
+  }
+  .testimonial-block.style-one .container .row > div .list-avatar .prev-btn i {
+    font-size: 14px;
+  }
+  .testimonial-block.style-one .container .row > div .list-avatar .next-btn {
+    right: 0;
+    width: 24px;
+    height: 24px;
+  }
+  .testimonial-block.style-one .container .row > div .list-avatar .next-btn i {
+    font-size: 14px;
+  }
+}
+
+/*
+Testimonial Home1: End
+*/
+/*
 Testimonial Home4: Start
 */
 .testimonial-block.style-four .container > .row {
