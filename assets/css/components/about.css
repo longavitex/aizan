@@ -1,3 +1,6 @@
+/*
+*** About us Home1: Start
+*/
 .about-us.style-one .container .row > div:last-child {
   position: relative;
   display: flex;
@@ -106,6 +109,9 @@
   }
 }
 
+/*
+*** About us Home1: End
+*/
 @keyframes moveYUp {
   0% {
     transform: translateY(0);
@@ -150,6 +156,31 @@
     transform: translateY(0);
   }
 }
+/*
+*** About us Home2: Start
+*/
+.about-block.style-two .row > div:first-child {
+  position: relative;
+}
+.about-block.style-two .row > div:first-child .infor {
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.1);
+}
+@media (max-width: 991.98px) {
+  .about-block.style-two .row > div:first-child .infor {
+    right: 25px;
+    bottom: -40px;
+  }
+}
+
+/*
+*** About us Home2: End
+*/
+/*
+*** About us About Page: Start
+*/
 .about-us.style-about .container .row > div:first-child .heading3 {
   z-index: 2;
 }
@@ -194,3 +225,7 @@
     justify-content: space-between;
   }
 }
+
+/*
+*** About us About Page: End
+*/

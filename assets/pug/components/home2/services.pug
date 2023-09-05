@@ -1,0 +1,20 @@
+include ../../mixins/serviceItem.pug
+
+.services-block.style-two.bg-white.pt-100.pb-100 
+    .container 
+        .heading.row.flex-between.row-gap-16
+            .col-lg-8 
+                .text-subtitle.pt-8.pb-8.pl-20.pr-20.bg-green.display-inline-block.bora-99 Project process
+                .heading3.text-on-surface.mt-24 Unleash Your Creative Potential
+            .col-lg-4.pr-40.pr-col-lg-0
+                .body1.text-secondary Join our community of creative enthusiasts and witness the power of AI in revolutionizing the way we create visuals.
+        .list.row.row-gap-32.mt-40
+            .col-xl-3.col-sm-6
+                +serviceItem({classname:'pl-24 pr-24 pt-40 pb-32 bora-32 border-line h-100', style:'style-two', icon:'icon-light fs-60', title:'Instant Creativity', desc:"Engage and assist your website visitors with our intelligent chat bot, available 24/7."})
+            .col-xl-3.col-sm-6
+                +serviceItem({classname:'pl-24 pr-24 pt-40 pb-32 bora-32 border-line h-100', style:'style-two', icon:'icon-classify fs-60', title:'Customizable Options', desc:"Get instant and accurate answers to your queries with our powerful question-answering AI."})
+            .col-xl-3.col-sm-6
+                +serviceItem({classname:'pl-24 pr-24 pt-40 pb-32 bora-32 border-line h-100', style:'style-two', icon:'icon-infinite fs-60', title:'Endless Possibilities', desc:"Transform text into stunning visual content effortlessly."})
+            .col-xl-3.col-sm-6
+                +serviceItem({classname:'pl-24 pr-24 pt-40 pb-32 bora-32 border-line h-100', style:'style-two', icon:'icon-share fs-60', title:'High-Quality Output', desc:"Convert images (videos) into other formats seamlessly with our versatile conversion feature."})
+        

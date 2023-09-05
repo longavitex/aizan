@@ -1,3 +1,163 @@
+/*
+*** List service Home1: Start
+*/
+.list-service.style-one {
+    .list {
+        .service-item {
+            .heading7 {
+                position: relative;
+                display: inline-block;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 1px;
+                    background-color: var(--white);
+                    transition: all ease 0.3s;
+                }
+
+                &:hover {
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &:hover {
+                background-color: var(--line-dark);
+            }
+        }
+    }
+}
+
+/*
+*** List service Home1: End
+*/
+
+/*
+*** List service Home2: Start
+*/
+.services-block.style-two {
+    .list {
+        .service-item {
+            transition: all ease 0.4s;
+            position: relative;
+
+            .heading {
+                i {
+                    &::before {
+                        transition: all ease 0.4s;
+                        color: var(--secondary);
+                    }
+                }
+            }
+
+            .desc {
+                padding-bottom: 56px;
+            }
+
+            .read {
+                position: absolute;
+                left: 24px;
+                bottom: 32px;
+                overflow: hidden;
+
+                .text-button {
+                    position: absolute;
+                    transition: all ease 0.4s;
+                    left: -90px;
+                }
+
+                i {
+                    transition: all ease 0.4s;
+                }
+
+                &:hover {
+                    i {
+                        margin-left: 96px !important;
+                    }
+                }
+            }
+
+            &:hover {
+                box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.10);
+
+                .heading {
+                    i {
+                        &::before {
+                            color: var(--on-surface);
+                        }
+                    }
+                }
+
+                .read {
+                    .text-button {
+                        left: 0;
+                    }
+
+                    i {
+                        margin-left: 90px;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 1023.98px) {
+            .service-item {
+                .read {
+                    .text-button {
+                        position: relative;
+                        left: 0;
+                    }
+
+                    &:hover {
+                        i {
+                            margin-left: 0 !important;
+                        }
+                    }
+                }
+
+                &:hover {
+                    .read {
+                        i {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .service-item {
+                padding-bottom: 16px;
+
+                .desc {
+                    padding-bottom: 44px;
+                }
+
+                .read {
+                    left: 16px;
+                    bottom: 20px;
+
+                    i {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+*** List service Home2: End
+*/
+
+/*
+*** List service Home4: Start
+*/
 .list-service {
     .list {
         .service-item {
@@ -39,34 +199,6 @@
     }
 }
 
-.list-service.style-one {
-    .list {
-        .service-item {
-            .heading7 {
-                position: relative;
-                display: inline-block;
-
-                &::before {
-                    position: absolute;
-                    content: "";
-                    left: 0;
-                    bottom: 0;
-                    width: 0;
-                    height: 1px;
-                    background-color: var(--white);
-                    transition: all ease 0.3s;
-                }
-
-                &:hover {
-                    &::before {
-                        width: 100%;
-                    }
-                }
-            }
-
-            &:hover {
-                background-color: var(--line-dark);
-            }
-        }
-    }
-}
+/*
+*** List service Home4: End
+*/

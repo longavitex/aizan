@@ -3,7 +3,12 @@ Menu header: Start
 */
 .header-menu {
     height: 80px;
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    transition: all linear 0.5s;
 
     >.container {
         height: 100%;
@@ -285,6 +290,13 @@ Menu header: Start
         }
     }
 
+    &.sticky {
+        top: 0;
+        position: fixed;
+        background-color: var(--black-surface);
+        box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
+    }
+
     @media (max-width: 1199.98px) {
         >.container {
             .header-main {
@@ -331,6 +343,97 @@ Menu header: Start
             a {
                 display: none;
             }
+        }
+    }
+}
+
+.style-two {
+    .header-menu {
+        background-color: transparent;
+        border-bottom: 1px solid var(--line-dark);
+
+        >.container {
+            .header-main {
+                .menu-main {
+                    >ul {
+                        li {
+                            >a {
+                                &::before {
+                                    background-color: var(--green);
+                                }
+                            }
+
+                            .sub-nav {
+                                .sub-nav-main {
+                                    .row {
+                                        .list-home {
+                                            .item {
+                                                &:hover {
+                                                    .text-button {
+                                                        color: var(--green);
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .list-pages {
+                                            a {
+                                                i {
+                                                    &::before {
+                                                        color: var(--green);
+                                                    }
+                                                }
+
+                                                &:hover {
+                                                    .text-button {
+                                                        color: var(--green);
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .explore-block {
+                                            a {
+                                                background-color: var(--green);
+
+                                                &:hover {
+                                                    background-color: #00ff40;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .logo {
+                    svg {
+                        g {
+                            path:first-child {
+                                fill: var(--green);
+                            }
+                        }
+                    }
+                }
+
+                .right-block {
+                    a {
+                        background-color: var(--green);
+
+                        &:hover {
+                            background-color: #00ff40;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.sticky {
+            background-color: var(--black-surface);
+            box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
+            border-bottom: none;
         }
     }
 }
@@ -416,6 +519,7 @@ Menu header: Start
         }
     }
 }
+
 /*
 Menu header: End
 */

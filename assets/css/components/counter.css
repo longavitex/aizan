@@ -1,16 +1,90 @@
-.counter-block.style-three .bg-img {
+/*
+*** Counter Home3: Start
+*/
+.counter-block.style-three .list-img {
   background-image: url(/assets/images/components/bg-grid.png);
   background-position: center;
   background-size: cover;
+}
+.counter-block.style-three .list-img .bg-img {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  padding: 72px;
+  border: 1px dashed var(--line);
+  position: relative;
+}
+.counter-block.style-three .list-img .bg-img .logo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(243, 212, 101, 0.1);
+}
+.counter-block.style-three .list-img .bg-img .list-avatar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: circleScroll 30s linear infinite;
+}
+.counter-block.style-three .list-img .bg-img .list-avatar .avatar {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  transform: rotate(calc(60deg * var(--i)));
+  transform-origin: 230px;
+}
+.counter-block.style-three .list-img .bg-img .list-avatar .avatar img {
+  width: 100%;
+  height: 100%;
+}
+@keyframes circleScroll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 @media (max-width: 1199.98px) {
   .counter-block.style-three .row {
     flex-direction: column-reverse;
   }
-  .counter-block.style-three .row .bg-img {
+  .counter-block.style-three .row .list-img {
     text-align: center !important;
   }
-  .counter-block.style-three .row .bg-img img {
+  .counter-block.style-three .row .list-img img {
     width: 70%;
   }
 }
+
+/*
+*** Counter Home3: End
+*/
+/*
+*** Counter About Us: Start
+*/
+.style-purple .counter {
+  background-color: var(--line-dark);
+}
+.style-purple .counter .text-on-surface {
+  color: var(--white);
+}
+.style-purple .counter .text-secondary {
+  color: var(--placehover);
+}
+.style-purple .counter .heading2 {
+  font-size: 44px;
+  line-height: 54px;
+}
+
+/*
+*** Counter About Us: End   
+*/

@@ -1,0 +1,68 @@
+include ../../mixins/projectItem.pug
+
+.projects-block.style-two.pb-100.bg-white
+    .container 
+        .heading.text-center
+            .text-subtitle.pt-8.pb-8.pl-20.pr-20.bg-green.display-inline-block.bora-99 Projects
+            .heading3.text-on-surface.mt-24.text-center Our Gallery of Innovative Artworks
+            .list-nav.flex-center.mt-24
+                .nav-item.text-button.text-on-surface.pt-8.pb-8.pl-16.pr-16.bora-44.pointer.active&attributes({"data-name":"all"}) All
+                .nav-item.text-button.text-on-surface.pt-8.pb-8.pl-16.pr-16.bora-44.pointer&attributes({"data-name":"anime"}) Anime
+                .nav-item.text-button.text-on-surface.pt-8.pb-8.pl-16.pr-16.bora-44.pointer&attributes({"data-name":"creative"}) Creative
+                .nav-item.text-button.text-on-surface.pt-8.pb-8.pl-16.pr-16.bora-44.pointer&attributes({"data-name":"pixel"}) Pixel
+                .nav-item.text-button.text-on-surface.pt-8.pb-8.pl-16.pr-16.bora-44.pointer&attributes({"data-name":"illustration"}) Illustration
+        .list.mt-40
+            //- All
+            .item-filter&attributes({"data-name":"all"})
+                +projectItem({classname:'', img:'assets/images/projects/2-1.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"all"})
+                +projectItem({classname:'', img:'assets/images/projects/2-2.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"all"})
+                +projectItem({classname:'', img:'assets/images/projects/2-3.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"all"})
+                +projectItem({classname:'', img:'assets/images/projects/2-4.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"all"})
+                +projectItem({classname:'', img:'assets/images/projects/2-5.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"all"})
+                +projectItem({classname:'', img:'assets/images/projects/2-6.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"all"})
+                +projectItem({classname:'', img:'assets/images/projects/2-7.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"all"})
+                +projectItem({classname:'', img:'assets/images/projects/2-8.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            //- Anime
+            .item-filter&attributes({"data-name":"anime"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/2-7.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"anime"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/2-8.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"anime"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/2-5.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"anime"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/2-2.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            //- Creative
+            .item-filter&attributes({"data-name":"creative"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/2-3.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"creative"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/2-1.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"creative"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/2-2.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"creative"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/2-7.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            //- Pixel
+            .item-filter&attributes({"data-name":"pixel"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/2-4.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"pixel"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/2-6.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"pixel"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/2-1.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"pixel"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/2-7.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            //- illustration
+            .item-filter&attributes({"data-name":"illustration"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/2-2.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"illustration"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/2-4.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"illustration"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/2-6.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            .item-filter&attributes({"data-name":"illustration"}).hide
+                +projectItem({classname:'', img:'assets/images/projects/2-8.png', category:'3d realistic', title:'Cake Garden beatifull'})
+            

@@ -8,6 +8,16 @@ mixin serviceItem(props = {})
                 .desc.mt-24
                     .heading7!= title 
                     .text-placehover.mt-4!= desc 
+        if(style=='style-two')
+            a(href=`${href}`).service-item-main
+                .heading
+                    i(class=`${icon}`)
+                .desc.mt-24
+                    .heading6.text-on-surface!= title 
+                    .text-secondary.mt-12!= desc 
+                .read.flex-item-center.gap-8.mt-32
+                    .text-button.text-on-surface Read more
+                    i.ph-light.ph-arrow-right.fs-32.text-on-surface
         if(style=='style-four')
             a(href=`${href}`).service-item-main
                 .heading

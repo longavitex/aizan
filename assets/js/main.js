@@ -32,6 +32,15 @@ if (popupNewsletterMain) {
 }
 
 
+// header menu sticky when scroll
+window.addEventListener('scroll', () => {
+  let headerMenu = document.querySelector('.header-menu')
+  if (headerMenu) {
+    headerMenu.classList.toggle('sticky', window.scrollY > 700);
+  }
+})
+
+
 // mobile menu
 const mobileMenuBtn = document.querySelector('.menu-humburger i')
 const menuMobile = document.querySelector('#menu-mobile-block')

@@ -3,7 +3,12 @@ Menu header: Start
 */
 .header-menu {
   height: 80px;
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+  transition: all linear 0.5s;
 }
 .header-menu > .container {
   height: 100%;
@@ -213,6 +218,12 @@ Menu header: Start
 .header-menu > .container #menu-mobile-block.open .menu-mobile-main {
   right: 0;
 }
+.header-menu.sticky {
+  top: 0;
+  position: fixed;
+  background-color: var(--black-surface);
+  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
+}
 @media (max-width: 1199.98px) {
   .header-menu > .container .header-main .menu-main ul {
     gap: 20px;
@@ -242,6 +253,43 @@ Menu header: Start
   .header-menu .right-block a {
     display: none;
   }
+}
+
+.style-two .header-menu {
+  background-color: transparent;
+  border-bottom: 1px solid var(--line-dark);
+}
+.style-two .header-menu > .container .header-main .menu-main > ul li > a::before {
+  background-color: var(--green);
+}
+.style-two .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .list-home .item:hover .text-button {
+  color: var(--green);
+}
+.style-two .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .list-pages a i::before {
+  color: var(--green);
+}
+.style-two .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .list-pages a:hover .text-button {
+  color: var(--green);
+}
+.style-two .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a {
+  background-color: var(--green);
+}
+.style-two .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a:hover {
+  background-color: #00ff40;
+}
+.style-two .header-menu > .container .header-main .logo svg g path:first-child {
+  fill: var(--green);
+}
+.style-two .header-menu > .container .header-main .right-block a {
+  background-color: var(--green);
+}
+.style-two .header-menu > .container .header-main .right-block a:hover {
+  background-color: #00ff40;
+}
+.style-two .header-menu.sticky {
+  background-color: var(--black-surface);
+  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
+  border-bottom: none;
 }
 
 .style-purple .header-menu > .container .header-main .menu-main > ul li > a::before {

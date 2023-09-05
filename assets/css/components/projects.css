@@ -1,3 +1,6 @@
+/*
+*** List Projects Home1: Start
+*/
 .projects-block .container {
   position: relative;
 }
@@ -16,9 +19,18 @@
 .projects-block .container .heading .list-nav {
   position: relative;
   z-index: 1;
+  gap: 8px;
 }
-.projects-block .container .heading .list-nav .active {
+.projects-block .container .heading .list-nav .nav-item {
+  transition: all ease 0.3s;
+}
+.projects-block .container .heading .list-nav .nav-item:hover, .projects-block .container .heading .list-nav .nav-item.active {
   background-color: var(--blue);
+}
+@media (max-width: 575.98px) {
+  .projects-block .container .heading .list-nav {
+    flex-wrap: wrap;
+  }
 }
 .projects-block .container .list {
   position: relative;
@@ -76,7 +88,7 @@
   visibility: visible;
 }
 .projects-block .container .list > div a:hover .bg-img img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 .projects-block .container .list > div a:hover .infor {
   bottom: 16px;
@@ -86,3 +98,85 @@
     bottom: 16px;
   }
 }
+
+/*
+*** List Projects Home1: End
+*/
+/*
+*** List Projects Home2: Start
+*/
+.projects-block.style-two .heading .list-nav {
+  gap: 32px;
+  display: inline-flex;
+  padding: 6px 12px;
+  border-radius: 68px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.projects-block.style-two .heading .list-nav .nav-item {
+  transition: all ease 0.3s;
+}
+.projects-block.style-two .heading .list-nav .nav-item:hover, .projects-block.style-two .heading .list-nav .nav-item.active {
+  background-color: var(--on-surface);
+  color: var(--white);
+}
+@media (max-width: 575.98px) {
+  .projects-block.style-two .heading .list-nav {
+    flex-wrap: wrap;
+    gap: 12px;
+    border-radius: 12px;
+  }
+}
+.projects-block.style-two .list {
+  display: grid;
+  grid-template-areas: "h1 h2 h3 h4" "h5 h2 h7 h4" "h5 h6 h7 h8";
+  grid-gap: 30px;
+}
+.projects-block.style-two .list > div .item::before {
+  display: none;
+}
+.projects-block.style-two .list > div .item .bg-img img {
+  filter: grayscale(0.1);
+}
+.projects-block.style-two .list > div .item:hover .bg-img img {
+  filter: saturate(1.5) contrast(1);
+  transform: scale(1);
+}
+.projects-block.style-two .list > div:nth-child(1) {
+  grid-area: h1;
+}
+.projects-block.style-two .list > div:nth-child(2) {
+  grid-area: h2;
+}
+.projects-block.style-two .list > div:nth-child(3) {
+  grid-area: h3;
+}
+.projects-block.style-two .list > div:nth-child(4) {
+  grid-area: h4;
+}
+.projects-block.style-two .list > div:nth-child(5) {
+  grid-area: h5;
+}
+.projects-block.style-two .list > div:nth-child(6) {
+  grid-area: h6;
+}
+.projects-block.style-two .list > div:nth-child(7) {
+  grid-area: h7;
+}
+.projects-block.style-two .list > div:nth-child(8) {
+  grid-area: h8;
+}
+@media (max-width: 1023.98px) {
+  .projects-block.style-two .list {
+    grid-template-areas: "h1 h2" "h4 h2" "h4 h3" "h5 h6" "h5 h7" "h8 h7";
+  }
+}
+@media (max-width: 575.98px) {
+  .projects-block.style-two .list {
+    grid-template-areas: "h1" "h2" "h3" "h4" "h5" "h6" "h7" "h8";
+  }
+}
+
+/*
+*** List Projects Home2: End
+*/

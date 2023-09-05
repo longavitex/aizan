@@ -19,6 +19,16 @@
     }
 }
 
+.style-two {
+    .list-partner {
+        background: var(--surface);
+
+        .heading7 {
+            color: var(--on-surface);
+        }
+    }
+}
+
 .style-services-detail {
     .list-partner {
         background: transparent;

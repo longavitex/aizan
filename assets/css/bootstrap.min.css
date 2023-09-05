@@ -9452,11 +9452,6 @@ fieldset:disabled .btn {
     color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important
 }
 
-.text-secondary {
-    --bs-text-opacity: 1;
-    color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important
-}
-
 .text-success {
     --bs-text-opacity: 1;
     color: rgba(var(--bs-success-rgb), var(--bs-text-opacity)) !important
@@ -9555,10 +9550,6 @@ fieldset:disabled .btn {
 
 .text-primary-emphasis {
     color: var(--bs-primary-text-emphasis) !important
-}
-
-.text-secondary-emphasis {
-    color: var(--bs-secondary-text-emphasis) !important
 }
 
 .text-success-emphasis {

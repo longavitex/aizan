@@ -1,0 +1,20 @@
+extends base/layout.pug
+block title
+    title Home 2 - AI Image Generator
+block header
+    div(class="style-two")
+        include components/header/menu/menu-one.pug
+block content
+    include components/slider/slider-two.pug
+    div(class="style-two")
+        include components/home1/partners.pug
+    include components/home2/services.pug
+    include components/home2/counter.pug
+    include components/home2/about.pug
+    include components/home2/projects.pug
+    include components/home1/testimonial.pug
+    include components/home1/pricing.pug
+    include components/home1/our-blogs.pug
+    //- include components/popup-newsletter.pug
+block footer 
+    include components/footer.pug

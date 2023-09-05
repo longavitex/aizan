@@ -3,6 +3,7 @@ Bread crum: Start
 */
 .breadcrum {
     background-color: #29292C;
+    margin-top: 80px;
 
     .text-nav {
         .heading3 {
@@ -15,7 +16,12 @@ Bread crum: Start
             }
         }
     }
+
+    @media (max-width: 575.98px) {
+        margin-top: 60px;
+    }
 }
+
 /*
 Bread crum: End
 */

@@ -15,6 +15,13 @@
   }
 }
 
+.style-two .list-partner {
+  background: var(--surface);
+}
+.style-two .list-partner .heading7 {
+  color: var(--on-surface);
+}
+
 .style-services-detail .list-partner {
   background: transparent;
 }
