@@ -250,11 +250,15 @@ Menu header: Start
   .header-menu .right-block .menu-humburger {
     padding-right: 0;
   }
+  .header-menu .right-block .follow-block,
   .header-menu .right-block a {
     display: none;
   }
 }
 
+/*
+*** Menu Home2: Start
+*/
 .style-two .header-menu {
   background-color: transparent;
   border-bottom: 1px solid var(--line-dark);
@@ -286,10 +290,91 @@ Menu header: Start
 .style-two .header-menu > .container .header-main .right-block a:hover {
   background-color: #00ff40;
 }
+.style-two .header-menu > .container #menu-mobile-block .logo svg g path:first-child {
+  fill: var(--green);
+}
+.style-two .header-menu > .container #menu-mobile-block .bg-blue {
+  background-color: var(--green);
+}
+.style-two .header-menu > .container #menu-mobile-block .icon-blue::before {
+  color: var(--green);
+}
 .style-two .header-menu.sticky {
   background-color: var(--black-surface);
   box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
   border-bottom: none;
+}
+
+/*
+*** Menu Home2: End
+*/
+/*
+*** Menu Home3: Start
+*/
+.header-menu.style-three > .container .header-main .logo {
+  left: 0;
+  transform: translateY(-50%);
+}
+.header-menu.style-three > .container .header-main .logo svg g path:first-child {
+  fill: var(--yellow);
+}
+.header-menu.style-three > .container .header-main .menu-main {
+  padding-left: 104px;
+}
+.header-menu.style-three > .container .header-main .menu-main > ul li > a::before {
+  background-color: var(--yellow);
+}
+.header-menu.style-three > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .list-home .item:hover .text-button {
+  color: var(--yellow);
+}
+.header-menu.style-three > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .list-pages a i::before {
+  color: var(--yellow);
+}
+.header-menu.style-three > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .list-pages a:hover .text-button {
+  color: var(--yellow);
+}
+.header-menu.style-three > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a {
+  background-color: var(--yellow);
+  color: var(--on-surface);
+}
+.header-menu.style-three > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a i::before {
+  color: var(--on-surface);
+}
+.header-menu.style-three > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a:hover {
+  background-color: #ebb41d;
+}
+.header-menu.style-three > .container .header-main .right-block .list-social a {
+  width: 28px;
+  height: 28px;
+  background-color: var(--line-dark);
+  border: 1px solid #3f3f3f;
+  transition: all ease 0.3s;
+}
+.header-menu.style-three > .container .header-main .right-block .list-social a i {
+  transition: all ease 0.3s;
+  font-size: 12px;
+}
+.header-menu.style-three > .container .header-main .right-block .list-social a:hover {
+  background-color: var(--yellow);
+}
+.header-menu.style-three > .container .header-main .right-block .list-social a:hover i::before {
+  color: var(--on-surface);
+}
+.header-menu.style-three > .container .header-main .right-block .list-social a:nth-child(3) i,
+.header-menu.style-three > .container .header-main .right-block .list-social a:nth-child(4) i,
+.header-menu.style-three > .container .header-main .right-block .list-social a:nth-child(5) i {
+  font-size: 10px;
+  margin-left: 1px;
+  margin-top: 1px;
+}
+.header-menu.style-three > .container #menu-mobile-block .logo svg g path:first-child {
+  fill: var(--yellow);
+}
+.header-menu.style-three > .container #menu-mobile-block .bg-blue {
+  background-color: var(--yellow);
+}
+.header-menu.style-three > .container #menu-mobile-block .icon-blue::before {
+  color: var(--yellow);
 }
 
 .style-purple .header-menu > .container .header-main .menu-main > ul li > a::before {
@@ -318,6 +403,15 @@ Menu header: Start
 }
 .style-purple .header-menu > .container .header-main .right-block a:hover {
   background-color: #5700c9;
+}
+.style-purple .header-menu > .container #menu-mobile-block .logo svg g path:first-child {
+  fill: var(--purple);
+}
+.style-purple .header-menu > .container #menu-mobile-block .bg-blue {
+  background-color: var(--purple);
+}
+.style-purple .header-menu > .container #menu-mobile-block .icon-blue::before {
+  color: var(--purple);
 }
 
 /*

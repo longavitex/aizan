@@ -340,6 +340,7 @@ Menu header: Start
                 padding-right: 0;
             }
 
+            .follow-block,
             a {
                 display: none;
             }
@@ -347,6 +348,9 @@ Menu header: Start
     }
 }
 
+/*
+*** Menu Home2: Start
+*/
 .style-two {
     .header-menu {
         background-color: transparent;
@@ -428,6 +432,28 @@ Menu header: Start
                     }
                 }
             }
+
+            #menu-mobile-block {
+                .logo {
+                    svg {
+                        g {
+                            path:first-child {
+                                fill: var(--green);
+                            }
+                        }
+                    }
+                }
+
+                .bg-blue {
+                    background-color: var(--green);
+                }
+
+                .icon-blue {
+                    &::before {
+                        color: var(--green);
+                    }
+                }
+            }
         }
 
         &.sticky {
@@ -437,6 +463,156 @@ Menu header: Start
         }
     }
 }
+
+/*
+*** Menu Home2: End
+*/
+
+
+/*
+*** Menu Home3: Start
+*/
+.header-menu.style-three {
+    >.container {
+        .header-main {
+            .logo {
+                left: 0;
+                transform: translateY(-50%);
+
+                svg {
+                    g {
+                        path:first-child {
+                            fill: var(--yellow);
+                        }
+                    }
+                }
+            }
+
+            .menu-main {
+                padding-left: 104px;
+
+                >ul {
+                    li {
+                        >a {
+                            &::before {
+                                background-color: var(--yellow);
+                            }
+                        }
+
+                        .sub-nav {
+                            .sub-nav-main {
+                                .row {
+                                    .list-home {
+                                        .item {
+                                            &:hover {
+                                                .text-button {
+                                                    color: var(--yellow);
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .list-pages {
+                                        a {
+                                            i {
+                                                &::before {
+                                                    color: var(--yellow);
+                                                }
+                                            }
+
+                                            &:hover {
+                                                .text-button {
+                                                    color: var(--yellow);
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .explore-block {
+                                        a {
+                                            background-color: var(--yellow);
+                                            color: var(--on-surface);
+
+                                            i {
+                                                &::before {
+                                                    color: var(--on-surface);
+                                                }
+                                            }
+
+                                            &:hover {
+                                                background-color: #ebb41d;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .right-block {
+                .list-social {
+                    a {
+                        width: 28px;
+                        height: 28px;
+                        background-color: var(--line-dark);
+                        border: 1px solid #3f3f3f;
+                        transition: all ease 0.3s;
+
+                        i {
+                            transition: all ease 0.3s;
+                            font-size: 12px;
+                        }
+
+                        &:hover {
+                            background-color: var(--yellow);
+
+                            i {
+                                &::before {
+                                    color: var(--on-surface);
+                                }
+                            }
+                        }
+                    }
+
+                    a:nth-child(3),
+                    a:nth-child(4),
+                    a:nth-child(5) {
+                        i {
+                            font-size: 10px;
+                            margin-left: 1px;
+                            margin-top: 1px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #menu-mobile-block {
+            .logo {
+                svg {
+                    g {
+                        path:first-child {
+                            fill: var(--yellow);
+                        }
+                    }
+                }
+            }
+
+            .bg-blue {
+                background-color: var(--yellow);
+            }
+
+            .icon-blue {
+                &::before {
+                    color: var(--yellow);
+                }
+            }
+        }
+    }
+}
+
 
 .style-purple {
     .header-menu {
@@ -513,6 +689,28 @@ Menu header: Start
                         &:hover {
                             background-color: #5700c9;
                         }
+                    }
+                }
+            }
+
+            #menu-mobile-block {
+                .logo {
+                    svg {
+                        g {
+                            path:first-child {
+                                fill: var(--purple);
+                            }
+                        }
+                    }
+                }
+
+                .bg-blue {
+                    background-color: var(--purple);
+                }
+
+                .icon-blue {
+                    &::before {
+                        color: var(--purple);
                     }
                 }
             }

@@ -1,0 +1,37 @@
+/*
+*** Top Nav: Start
+*/
+.top-nav.style-three .right-block .line {
+  height: 100%;
+  width: 1px;
+  padding: 12px 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 992px) {
+  .top-nav .location {
+    display: none;
+  }
+  .top-nav .mail {
+    padding-left: 0;
+  }
+}
+@media (max-width: 576px) {
+  .top-nav .h-44 {
+    height: 36px;
+  }
+  .top-nav .h-60 {
+    height: 40px;
+  }
+  .top-nav .right-block {
+    gap: 0;
+  }
+  .top-nav .right-block .call-block,
+  .top-nav .right-block .line,
+  .top-nav .right-block .list-social {
+    display: none;
+  }
+}
+/*
+*** Top Nav: End
+*/

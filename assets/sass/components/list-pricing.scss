@@ -10,7 +10,8 @@ List pricing: Start
                 }
             }
 
-            .list-pricing {
+            .list-pricing,
+            .list-pricing-year {
                 .price {
                     align-items: flex-end;
                 }
@@ -115,7 +116,8 @@ List pricing: Start
             z-index: 0;
         }
 
-        .row, .list-pricing {
+        .row,
+        .list-pricing {
             position: relative;
             z-index: 2;
         }
@@ -179,4 +181,112 @@ List pricing: Start
 
 /*
 List pricing: End
+*/
+
+
+/*
+Section Pricing Home2: Start
+*/
+.section-pricing.style-two {
+    .container {
+        .heading {
+            .switch {
+                .bg-surface {
+                    display: block;
+                    width: 80px;
+                    height: 40px;
+                    border-radius: 99px;
+                    border: none;
+                    outline: none;
+                    position: relative;
+                    transition: all ease 0.6s;
+                    overflow: hidden;
+                    cursor: pointer;
+                    border: 1px solid var(--line);
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 32px;
+                        height: 32px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 4px;
+                        background-color: var(--green);
+                        border-radius: 50%;
+                        transition: all ease 0.3s;
+                    }
+                }
+
+                &.enable {
+                    .bg-surface {
+                        background-color: var(--green);
+
+                        &::before {
+                            left: 44px;
+                            background-color: var(--white);
+                        }
+                    }
+                }
+            }
+        }
+
+        .list-pricing,
+        .list-pricing-year {
+            .pricing-item {
+                border: 2px solid var(--line);
+
+                a {
+                    border: 2px solid var(--green);
+
+                    &:hover {
+                        background-color: var(--green);
+                        color: var(--white);
+                    }
+                }
+
+                i.ph-x {
+                    background-color: var(--line);
+                }
+
+                &:hover {
+                    box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
+                    background-color: var(--white);
+                    border: 2px solid var(--green);
+                }
+            }
+        }
+    }
+
+    @keyframes showList {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .list-pricing.hide {
+        display: none;
+    }
+
+    .list-pricing.show {
+        display: block;
+        animation: showList ease-in-out 0.7s;
+    }
+
+    .list-pricing-year.hide {
+        display: none;
+    }
+
+    .list-pricing-year.show {
+        display: block;
+        animation: showList ease-in-out 0.7s;
+    }
+}
+
+/*
+Section Pricing Home2: End
 */

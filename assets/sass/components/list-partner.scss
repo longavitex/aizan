@@ -1,3 +1,6 @@
+/*
+*** List partner: Start
+*/
 .list-partner {
     @media (max-width: 1199.98px) {
         .container {
@@ -19,6 +22,12 @@
     }
 }
 
+/*
+*** List partner: End
+*/
+/*
+*** List partner Home2: Start
+*/
 .style-two {
     .list-partner {
         background: var(--surface);
@@ -29,8 +38,49 @@
     }
 }
 
+/*
+*** List partner Home2: End
+*/
+
+/*
+*** List partner autoplay Home2: Start
+*/
+.list-partner-slide {
+    .list {
+        display: flex;
+        width: calc((152px + 230px + 258px + 202px + 263px) * 2 + 120px * 10);
+        overflow: hidden;
+        animation: scroll 30s linear infinite;
+
+        .item {
+            margin: 0 60px;
+        }
+    }
+
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(calc((152px + 230px + 258px + 202px + 263px) * 2 + 120px * 10) * -0.4);
+        }
+    }
+}
+
+/*
+*** List partner autoplay Home2: End
+*/
+
+/*
+*** List partner services detail: Start
+*/
 .style-services-detail {
     .list-partner {
         background: transparent;
     }
 }
+
+/*
+*** List partner services detail: End
+*/

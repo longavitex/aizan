@@ -18,6 +18,7 @@
 @import './base/custom-bootstrap.scss';
 @import './base/global.scss';
 
+@import './layout/top-nav.scss';
 @import './layout/menu.scss';
 @import './layout/slider.scss';
 @import './layout/footer.scss';
@@ -42,5 +43,7 @@
 @import './components/form-contact.scss';
 @import './components/projects.scss';
 @import './components/testimonial.scss';
+@import './components/modal-video.scss';
+@import './components/list-instagram.scss';
 
 @import './layout/font-reduce.scss';

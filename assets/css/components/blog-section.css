@@ -81,6 +81,29 @@ Our Blog Home1: Start
   border: 1px solid var(--on-surface);
 }
 
+.list-blog.style-two .item .blog-item {
+  background-color: var(--surface);
+}
+.list-blog.style-two .item .blog-item .text-button-uppercase,
+.list-blog.style-two .item .blog-item .heading6 {
+  color: var(--on-surface);
+}
+.list-blog.style-two .item .blog-item .text-placehover {
+  color: var(--secondary);
+}
+.list-blog.style-two .slick-dots li::after {
+  background-color: transparent;
+  border: 1px solid var(--on-surface);
+}
+.list-blog.style-two .slick-dots li.slick-active {
+  border: 1px solid var(--on-surface);
+  background-color: var(--white);
+}
+.list-blog.style-two .slick-dots li.slick-active::after {
+  background-color: var(--on-surface);
+  border: 1px solid var(--white);
+}
+
 .style-blog-detail .list-blog .heading a u:hover {
   color: var(--purple);
 }

@@ -315,11 +315,11 @@
     }
 
     50% {
-        transform: translate(-10px, 10px) rotate(10deg);
+        transform: translate(-10px, 10px) rotate(0deg);
     }
 
     75% {
-        transform: translate(5px, -5px) rotate(25deg);
+        transform: translate(5px, -5px) rotate(-20deg);
     }
 
     100% {
@@ -368,3 +368,100 @@
         transform: translateX(0);
     }
 }
+
+
+/*
+*** Slider Home3: Start
+*/
+.slider-block.style-two.style-three {
+    .slider-main {
+        background-image: url(../../assets/images/slider/bg-slider3.png);
+
+        .container {
+            .heading2 {
+                background: linear-gradient(90deg, #F3D465 4.16%, #71E07E 95.24%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .list-avatar {
+                img:nth-child(1) {
+                    width: 52px;
+                    height: 52px;
+                    left: 300px;
+                    top: 200px;
+                }
+
+                img:nth-child(2) {
+                    width: 96px;
+                    height: 96px;
+                    left: -40px;
+                    bottom: 450px;
+                }
+
+                img:nth-child(3) {
+                    width: 96px;
+                    height: 96px;
+                    left: unset;
+                    right: -20px;
+                    bottom: 340px;
+                }
+            }
+
+            .list-cate {
+                .item {
+                    position: absolute;
+                    border-radius: 50%;
+                    background: linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 100%);
+
+                    &:nth-child(1) {
+                        width: 124px;
+                        height: 124px;
+                        left: 50px;
+                        bottom: 200px;
+                        animation: moveX 20s ease-in-out alternate infinite;
+
+                        svg {
+                            position: absolute;
+                            left: -8px;
+                            bottom: -8px;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        width: 104px;
+                        height: 104px;
+                        right: 80px;
+                        bottom: 150px;
+                        animation: slide_2 25s ease-in-out alternate infinite;
+
+                        svg {
+                            position: absolute;
+                            right: -7px;
+                            bottom: -10px;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        width: 88px;
+                        height: 88px;
+                        right: 60px;
+                        top: 200px;
+                        animation: moveY 15s ease-in-out alternate infinite;
+
+                        svg {
+                            position: absolute;
+                            right: -8px;
+                            bottom: -8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+*** Slider Home3: End
+*/

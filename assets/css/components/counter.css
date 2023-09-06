@@ -3,8 +3,10 @@
 */
 .counter-block.style-three .list-img {
   background-image: url(/assets/images/components/bg-grid.png);
-  background-position: center;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 .counter-block.style-three .list-img .bg-img {
   width: 360px;
@@ -28,22 +30,45 @@
   width: 100%;
   height: 100%;
   top: 0;
-  left: -50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  left: 0;
+  border-radius: 50%;
   animation: circleScroll 30s linear infinite;
 }
 .counter-block.style-three .list-img .bg-img .list-avatar .avatar {
   position: absolute;
   width: 96px;
   height: 96px;
-  transform: rotate(calc(60deg * var(--i)));
-  transform-origin: 230px;
 }
 .counter-block.style-three .list-img .bg-img .list-avatar .avatar img {
   width: 100%;
   height: 100%;
+  animation: circleScrollMinus 30s linear infinite;
+}
+.counter-block.style-three .list-img .bg-img .list-avatar .avatar:nth-child(1) {
+  top: -48px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.counter-block.style-three .list-img .bg-img .list-avatar .avatar:nth-child(2) {
+  top: 36px;
+  right: -30px;
+}
+.counter-block.style-three .list-img .bg-img .list-avatar .avatar:nth-child(3) {
+  bottom: 36px;
+  right: -30px;
+}
+.counter-block.style-three .list-img .bg-img .list-avatar .avatar:nth-child(4) {
+  bottom: -48px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.counter-block.style-three .list-img .bg-img .list-avatar .avatar:nth-child(5) {
+  bottom: 36px;
+  left: -30px;
+}
+.counter-block.style-three .list-img .bg-img .list-avatar .avatar:nth-child(6) {
+  top: 36px;
+  left: -30px;
 }
 @keyframes circleScroll {
   0% {
@@ -51,6 +76,14 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes circleScrollMinus {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
   }
 }
 @media (max-width: 1199.98px) {

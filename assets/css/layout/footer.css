@@ -71,6 +71,16 @@ Footer: Start
   }
 }
 
+.style-two .logo svg path:nth-child(1) {
+  fill: var(--green);
+}
+.style-two .list-social .item {
+  background-color: var(--green);
+}
+.style-two .list-social .item:hover {
+  background-color: #00ff40;
+}
+
 /*
 Footer: End
 */

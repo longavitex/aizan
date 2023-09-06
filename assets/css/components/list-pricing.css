@@ -4,25 +4,31 @@ List pricing: Start
 .section-pricing .container > .row > div:first-child button.active {
   background-color: var(--blue);
 }
-.section-pricing .container > .row .list-pricing .price {
+.section-pricing .container > .row .list-pricing .price,
+.section-pricing .container > .row .list-pricing-year .price {
   align-items: flex-end;
 }
-.section-pricing .container > .row .list-pricing .pricing-item {
+.section-pricing .container > .row .list-pricing .pricing-item,
+.section-pricing .container > .row .list-pricing-year .pricing-item {
   border: 2px solid transparent;
   cursor: pointer;
   transition: all ease 0.3s;
 }
-.section-pricing .container > .row .list-pricing .pricing-item a {
+.section-pricing .container > .row .list-pricing .pricing-item a,
+.section-pricing .container > .row .list-pricing-year .pricing-item a {
   transition: all ease 0.3s;
   border: 2px solid var(--blue);
 }
-.section-pricing .container > .row .list-pricing .pricing-item a:hover {
+.section-pricing .container > .row .list-pricing .pricing-item a:hover,
+.section-pricing .container > .row .list-pricing-year .pricing-item a:hover {
   background-color: var(--blue);
 }
-.section-pricing .container > .row .list-pricing .pricing-item i.ph-x {
+.section-pricing .container > .row .list-pricing .pricing-item i.ph-x,
+.section-pricing .container > .row .list-pricing-year .pricing-item i.ph-x {
   background-color: rgba(255, 255, 255, 0.2);
 }
-.section-pricing .container > .row .list-pricing .pricing-item:hover {
+.section-pricing .container > .row .list-pricing .pricing-item:hover,
+.section-pricing .container > .row .list-pricing-year .pricing-item:hover {
   background-color: var(--on-surface);
   border: 2px solid var(--blue);
 }
@@ -81,7 +87,8 @@ List pricing: Start
   filter: blur(132px);
   z-index: 0;
 }
-.section-pricing.style-one .container .row, .section-pricing.style-one .container .list-pricing {
+.section-pricing.style-one .container .row,
+.section-pricing.style-one .container .list-pricing {
   position: relative;
   z-index: 2;
 }
@@ -121,4 +128,88 @@ List pricing: Start
 
 /*
 List pricing: End
+*/
+/*
+Section Pricing Home2: Start
+*/
+.section-pricing.style-two .container .heading .switch .bg-surface {
+  display: block;
+  width: 80px;
+  height: 40px;
+  border-radius: 99px;
+  border: none;
+  outline: none;
+  position: relative;
+  transition: all ease 0.6s;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid var(--line);
+}
+.section-pricing.style-two .container .heading .switch .bg-surface::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 4px;
+  background-color: var(--green);
+  border-radius: 50%;
+  transition: all ease 0.3s;
+}
+.section-pricing.style-two .container .heading .switch.enable .bg-surface {
+  background-color: var(--green);
+}
+.section-pricing.style-two .container .heading .switch.enable .bg-surface::before {
+  left: 44px;
+  background-color: var(--white);
+}
+.section-pricing.style-two .container .list-pricing .pricing-item,
+.section-pricing.style-two .container .list-pricing-year .pricing-item {
+  border: 2px solid var(--line);
+}
+.section-pricing.style-two .container .list-pricing .pricing-item a,
+.section-pricing.style-two .container .list-pricing-year .pricing-item a {
+  border: 2px solid var(--green);
+}
+.section-pricing.style-two .container .list-pricing .pricing-item a:hover,
+.section-pricing.style-two .container .list-pricing-year .pricing-item a:hover {
+  background-color: var(--green);
+  color: var(--white);
+}
+.section-pricing.style-two .container .list-pricing .pricing-item i.ph-x,
+.section-pricing.style-two .container .list-pricing-year .pricing-item i.ph-x {
+  background-color: var(--line);
+}
+.section-pricing.style-two .container .list-pricing .pricing-item:hover,
+.section-pricing.style-two .container .list-pricing-year .pricing-item:hover {
+  box-shadow: 0px 10px 25px 0px rgba(54, 95, 104, 0.15);
+  background-color: var(--white);
+  border: 2px solid var(--green);
+}
+@keyframes showList {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.section-pricing.style-two .list-pricing.hide {
+  display: none;
+}
+.section-pricing.style-two .list-pricing.show {
+  display: block;
+  animation: showList ease-in-out 0.7s;
+}
+.section-pricing.style-two .list-pricing-year.hide {
+  display: none;
+}
+.section-pricing.style-two .list-pricing-year.show {
+  display: block;
+  animation: showList ease-in-out 0.7s;
+}
+
+/*
+Section Pricing Home2: End
 */

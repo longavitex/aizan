@@ -1,0 +1,72 @@
+.instagram-block .list-image .item {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+}
+.instagram-block .list-image .item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease 0.3s;
+  z-index: 2;
+}
+.instagram-block .list-image .item img {
+  transition: all ease 0.3s;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.01) translateZ(0);
+}
+.instagram-block .list-image .item a {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease 0.4s;
+}
+.instagram-block .list-image .item a i {
+  color: var(--on-surface);
+  transition: all ease 0.3s;
+  display: block;
+}
+.instagram-block .list-image .item a:hover {
+  background-color: var(--green);
+}
+.instagram-block .list-image .item a:hover i {
+  color: var(--white);
+}
+.instagram-block .list-image .item:hover::before,
+.instagram-block .list-image .item:hover a {
+  opacity: 1;
+  visibility: visible;
+}
+.instagram-block .list-image .item:hover img {
+  transform: scale(1.03) translateZ(0);
+}
+@media (max-width: 575.98px) {
+  .instagram-block .list-image .item a {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+  .instagram-block .list-image .item a i {
+    font-size: 20px;
+  }
+}

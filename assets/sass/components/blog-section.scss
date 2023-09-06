@@ -100,6 +100,42 @@ Our Blog Home1: Start
     }
 }
 
+.list-blog.style-two {
+    .item {
+        .blog-item {
+            background-color: var(--surface);
+
+            .text-button-uppercase,
+            .heading6 {
+                color: var(--on-surface);
+            }
+
+            .text-placehover {
+                color: var(--secondary);
+            }
+        }
+    }
+
+    .slick-dots {
+        li {
+            &::after {
+                background-color: transparent;
+                border: 1px solid var(--on-surface);
+            }
+
+            &.slick-active {
+                border: 1px solid var(--on-surface);
+                background-color: var(--white);
+
+                &::after {
+                    background-color: var(--on-surface);
+                    border: 1px solid var(--white);
+                }
+            }
+        }
+    }
+}
+
 .style-blog-detail {
     .list-blog {
         .heading {
@@ -113,6 +149,7 @@ Our Blog Home1: Start
         }
     }
 }
+
 /*
 Our Blog Home1: End
 */

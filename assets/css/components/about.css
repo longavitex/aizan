@@ -179,6 +179,16 @@
 *** About us Home2: End
 */
 /*
+*** About us Home3: Start
+*/
+.about-us.style-about.style-three .container .row > div:first-child .heading3 span::before {
+  border: 3px solid var(--yellow);
+}
+
+/*
+*** About us Home3: End
+*/
+/*
 *** About us About Page: Start
 */
 .about-us.style-about .container .row > div:first-child .heading3 {

@@ -1,0 +1,115 @@
+/*
+*** Video Block: Start
+*/
+.video-block {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+.video-block .bg-img img {
+  width: calc(100% + 2px);
+  height: 100%;
+  object-fit: cover;
+  margin-left: -1px;
+}
+.video-block .play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  border: 1px solid var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.video-block .play-btn i {
+  transition: all ease 0.3s;
+}
+.video-block .play-btn:hover {
+  background-color: rgb(243, 60, 27);
+  border-color: rgb(243, 60, 27);
+}
+@media (max-width: 575.98px) {
+  .video-block {
+    height: 400px;
+  }
+}
+
+/*
+*** Video Block: End
+*/
+/*
+Modal Video: Start
+*/
+.js-video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all ease 0.5s;
+  z-index: -1;
+}
+.js-video-modal .js-video-modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  padding-left: 32px;
+  padding-right: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.js-video-modal .js-video-modal-container .video-block {
+  width: 100%;
+  height: 100%;
+}
+.js-video-modal .js-video-modal-container .video-block iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+@media (max-width: 767.99px) {
+  .js-video-modal .js-video-modal-container {
+    height: 400px;
+  }
+}
+@media (max-width: 576.99px) {
+  .js-video-modal .js-video-modal-container {
+    height: 320px;
+  }
+}
+@media (max-width: 479.99px) {
+  .js-video-modal .js-video-modal-container {
+    height: 250px;
+  }
+}
+@media (max-width: 400.99px) {
+  .js-video-modal .js-video-modal-container {
+    height: 200px;
+  }
+}
+
+.js-video-modal.open {
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+}
+
+/*
+Modal Video: End
+*/

@@ -1,0 +1,22 @@
+include ../../mixins/blogItem.pug
+
+.list-blog.style-two.pt-100.pb-100.bg-white
+    .container 
+        .cursor.flex-center.gap-12
+            i.ph.ph-caret-left.text-white
+            i.ph.ph-caret-right.text-white
+        .heading.flex-between 
+            .heading3.text-on-surface Our Blogs
+            a(href="blog.html") 
+                u.fw-700.text-blue-hover.text-on-surface View All
+        .row.list.mt-40 
+            .item
+                +blogItem({classname: 'bg-line-dark overflow-hidden bora-24', style:'style-one', img:'assets/images/blog/2-1.png', category:'Creative', date:'Oct 12, 2023', title:'Exploring AI Generation Create Image', desc:'Cryptocurrencies operate on decentralized networks...'})
+            .item
+                +blogItem({classname: 'bg-line-dark overflow-hidden bora-24', style:'style-one', img:'assets/images/blog/2-2.png', category:'3d cartoon', date:'Oct 11, 2023', title:'Breaking the Barriers of Creativity', desc:'Cryptocurrencies operate on decentralized networks...'})
+            .item
+                +blogItem({classname: 'bg-line-dark overflow-hidden bora-24', style:'style-one', img:'assets/images/blog/2-3.png', category:'realistic', date:'Oct 10, 2023', title:'A Game-Changer for E-Commerce', desc:'Cryptocurrencies operate on decentralized networks...'})
+            .item
+                +blogItem({classname: 'bg-line-dark overflow-hidden bora-24', style:'style-one', img:'assets/images/blog/2-4.png', category:'Creative', date:'Oct 10, 2023', title:'Breaking the Barriers of Creativity', desc:'Cryptocurrencies operate on decentralized networks...'})
+            
+            

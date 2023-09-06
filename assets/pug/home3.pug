@@ -1,0 +1,22 @@
+extends base/layout.pug
+block title
+    title Home 3 - AI Digital Agency
+block header
+    include components/header/top-nav/top-nav-three.pug
+    include components/header/menu/menu-three.pug
+block content
+    include components/slider/slider-three.pug
+    include components/home3/about.pug
+    include components/home2/projects.pug
+    include components/home2/testimonial.pug
+    include components/home2/banner.pug
+    include components/home2/pricing.pug
+    include components/home2/video.pug
+    include components/home2/list-partner.pug
+    include components/home2/our-blogs.pug
+    include components/home2/instagram.pug
+    include components/modal-video.pug
+    //- include components/popup-newsletter.pug
+block footer 
+    div(class="style-two")
+        include components/footer.pug

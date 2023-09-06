@@ -1,0 +1,89 @@
+.instagram-block {
+    .list-image {
+        .item {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba($color: #000000, $alpha: 0.5);
+                opacity: 0;
+                visibility: hidden;
+                transition: all ease 0.3s;
+                z-index: 2;
+            }
+
+            img {
+                transition: all ease 0.3s;
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transform: scale(1.01) translateZ(0);
+            }
+
+            a {
+                position: absolute;
+                z-index: 3;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 48px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                visibility: hidden;
+                transition: all ease 0.4s;
+
+                i {
+                    color: var(--on-surface);
+                    transition: all ease 0.3s;
+                    display: block;
+                }
+
+                &:hover {
+                    background-color: var(--green);
+
+                    i {
+                        color: var(--white);
+                    }
+                }
+            }
+
+            &:hover {
+
+                &::before,
+                a {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                img {
+                    transform: scale(1.03) translateZ(0);
+                }
+            }
+
+            @media (max-width: 575.98px) {
+                a {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 8px;
+
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
