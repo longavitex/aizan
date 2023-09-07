@@ -2,6 +2,8 @@
 Footer: Start
 */
 #footer {
+    position: relative;
+
     .footer-block {
         .heading {
             position: relative;
@@ -127,6 +129,35 @@ Footer: Start
         }
     }
 }
+
+.style-three {
+    .footer-block {
+        .logo {
+            svg {
+                path:nth-child(1) {
+                    fill: var(--yellow);
+                }
+            }
+        }
+
+        .list-social {
+            .item {
+                background-color: var(--yellow);
+
+                i {
+                    &::before {
+                        color: var(--on-surface);
+                    }
+                }
+
+                &:hover {
+                    background-color: #ebb41d;
+                }
+            }
+        }
+    }
+}
+
 /*
 Footer: End
 */

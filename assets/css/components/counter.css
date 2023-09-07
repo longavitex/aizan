@@ -4,6 +4,7 @@
 .counter-block.style-three .list-img {
   background-image: url(/assets/images/components/bg-grid.png);
   background-size: cover;
+  background-position: center center;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -45,7 +46,7 @@
   animation: circleScrollMinus 30s linear infinite;
 }
 .counter-block.style-three .list-img .bg-img .list-avatar .avatar:nth-child(1) {
-  top: -48px;
+  top: 30;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -86,15 +87,58 @@
     transform: rotate(-360deg);
   }
 }
-@media (max-width: 1199.98px) {
+@media (max-width: 991.98px) {
   .counter-block.style-three .row {
     flex-direction: column-reverse;
   }
+  .counter-block.style-three .row > div:first-child {
+    margin-top: 40px;
+  }
   .counter-block.style-three .row .list-img {
-    text-align: center !important;
+    justify-content: center;
   }
   .counter-block.style-three .row .list-img img {
     width: 70%;
+  }
+}
+@media (max-width: 575.98px) {
+  .counter-block.style-three .row .list-img .bg-img {
+    width: 240px;
+    height: 240px;
+  }
+  .counter-block.style-three .row .list-img .bg-img .logo svg {
+    width: 60px;
+    height: 32px;
+  }
+  .counter-block.style-three .row .list-img .bg-img .list-avatar .avatar {
+    width: 60px;
+    height: 60px;
+  }
+  .counter-block.style-three .row .list-img .bg-img .list-avatar .avatar:nth-child(1) {
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .counter-block.style-three .row .list-img .bg-img .list-avatar .avatar:nth-child(2) {
+    top: 35px;
+    right: -18px;
+  }
+  .counter-block.style-three .row .list-img .bg-img .list-avatar .avatar:nth-child(3) {
+    bottom: 27px;
+    right: -14px;
+  }
+  .counter-block.style-three .row .list-img .bg-img .list-avatar .avatar:nth-child(4) {
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .counter-block.style-three .row .list-img .bg-img .list-avatar .avatar:nth-child(5) {
+    bottom: 27px;
+    left: -14px;
+  }
+  .counter-block.style-three .row .list-img .bg-img .list-avatar .avatar:nth-child(6) {
+    top: 35px;
+    left: -18px;
   }
 }
 

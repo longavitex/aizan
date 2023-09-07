@@ -1,5 +1,5 @@
 /*
-Shared List Questions: Start
+*** Shared List Questions: Start
 */
 .question-item {
     border-bottom: 1px solid rgba($color: #FFFFFF, $alpha: 0.1);
@@ -29,7 +29,7 @@ Shared List Questions: Start
     }
 
     &:hover {
-        .question-item-main { 
+        .question-item-main {
             color: var(--white);
         }
     }
@@ -42,5 +42,34 @@ Shared List Questions: Start
 }
 
 /*
-Shared List Questions: End
+*** Shared List Questions: End
+*/
+
+/*
+*** FAQs Home3: Start
+*/
+.faqs-block {
+    position: relative;
+
+    .bg-blur {
+        position: absolute;
+        right: -100px;
+        bottom: -100px;
+        width: 500px;
+        height: 500px;
+        border-radius: 500px;
+        opacity: 0.15;
+        background: var(--yellow);
+        filter: blur(132px);
+        z-index: 0;
+    }
+
+    .question-item {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/*
+*** FAQs Home3: End
 */

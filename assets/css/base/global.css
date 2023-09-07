@@ -506,6 +506,10 @@
   padding: 4px !important;
 }
 
+.pr-80 {
+  padding-right: 80px;
+}
+
 .pr-65 {
   padding-right: 65px;
 }
@@ -548,6 +552,10 @@
 
 .pr-0 {
   padding-right: 0;
+}
+
+.pl-80 {
+  padding-left: 80px;
 }
 
 .pl-65 {

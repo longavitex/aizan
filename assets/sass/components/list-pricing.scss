@@ -290,3 +290,59 @@ Section Pricing Home2: Start
 /*
 Section Pricing Home2: End
 */
+
+/*
+Section Pricing Home3: Start
+*/
+.style-three {
+    .section-pricing {
+        padding-bottom: 100px;
+        background-color: var(--black-surface);
+
+        >.bg-blur {
+            background: none;
+        }
+
+        .container {
+            .bg-blur {
+                background: none;
+            }
+
+            >.row {
+                >div:first-child {
+                    button.active {
+                        background-color: var(--yellow);
+                        color: var(--on-surface);
+                    }
+                }
+
+                .list-pricing,
+                .list-pricing-year {
+                    .pricing-item {
+                        a {
+                            border: 2px solid var(--yellow);
+
+                            &:hover {
+                                color: var(--on-surface);
+                                background-color: var(--yellow);
+                            }
+                        }
+
+                        &:hover {
+                            background-color: var(--on-surface);
+                            border: 2px solid var(--yellow);
+                        }
+                    }
+                }
+            }
+        }
+
+        .bg-blue {
+            background-color: var(--yellow);
+        }
+    }
+}
+
+/*
+Section Pricing Home3: End
+*/

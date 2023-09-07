@@ -36,13 +36,13 @@
   position: relative;
   z-index: 1;
 }
-.projects-block .container .list > div a {
+.projects-block .container .list > div .item {
   cursor: pointer;
   position: relative;
   display: block;
   overflow: hidden;
 }
-.projects-block .container .list > div a::before {
+.projects-block .container .list > div .item::before {
   content: "";
   position: absolute;
   top: 0;
@@ -58,18 +58,18 @@
   z-index: 2;
 }
 @media (max-width: 575.98px) {
-  .projects-block .container .list > div a::before {
+  .projects-block .container .list > div .item::before {
     border-radius: 14px;
   }
 }
-.projects-block .container .list > div a .bg-img {
+.projects-block .container .list > div .item .bg-img {
   position: relative;
   z-index: 1;
 }
-.projects-block .container .list > div a .bg-img img {
+.projects-block .container .list > div .item .bg-img img {
   transition: all ease 0.5s;
 }
-.projects-block .container .list > div a .infor {
+.projects-block .container .list > div .item .infor {
   background-color: var(--white);
   border-radius: 10px;
   position: absolute;
@@ -80,21 +80,21 @@
   transition: all linear 0.3s;
   z-index: 3;
 }
-.projects-block .container .list > div a .infor .heading7 {
+.projects-block .container .list > div .item .infor .heading7 {
   text-transform: capitalize;
 }
-.projects-block .container .list > div a:hover::before {
+.projects-block .container .list > div .item:hover::before {
   opacity: 1;
   visibility: visible;
 }
-.projects-block .container .list > div a:hover .bg-img img {
+.projects-block .container .list > div .item:hover .bg-img img {
   transform: scale(1.04);
 }
-.projects-block .container .list > div a:hover .infor {
+.projects-block .container .list > div .item:hover .infor {
   bottom: 16px;
 }
 @media (max-width: 1023.98px) {
-  .projects-block .container .list > div a .infor {
+  .projects-block .container .list > div .item .infor {
     bottom: 16px;
   }
 }
@@ -179,4 +179,54 @@
 
 /*
 *** List Projects Home2: End
+*/
+/*
+*** List Projects Home3: Start
+*/
+.style-three .projects-block {
+  padding-bottom: 100px;
+}
+.style-three .projects-block .container > .bg-blur {
+  background: #F3D465;
+}
+.style-three .projects-block .container .heading .list-nav {
+  gap: 32px;
+  display: inline-flex;
+  padding: 6px 12px;
+  border-radius: 68px;
+  border: 1px solid var(--line-dark);
+  background: var(--line-dark);
+}
+.style-three .projects-block .container .heading .list-nav .nav-item:hover, .style-three .projects-block .container .heading .list-nav .nav-item.active {
+  background-color: var(--yellow);
+  color: var(--on-surface);
+}
+@media (max-width: 575.98px) {
+  .style-three .projects-block .container .heading .list-nav {
+    flex-wrap: wrap;
+    gap: 12px;
+    border-radius: 12px;
+  }
+}
+
+/*
+*** List Projects Home3: End
+*/
+/*
+*** List Projects Home4: Start
+*/
+.projects-block.style-four .container .list .slick-list .project-item .item {
+  cursor: pointer;
+}
+.projects-block.style-four .container .list .slick-list .project-item .item::before {
+  left: 15px;
+  right: 15px;
+}
+.projects-block.style-four .container .list .slick-list .project-item .item .infor {
+  left: 31px;
+  right: 31px;
+}
+
+/*
+*** List Projects Home4: End
 */

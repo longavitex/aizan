@@ -42,7 +42,7 @@
             z-index: 1;
 
             >div {
-                a {
+                .item {
                     cursor: pointer;
                     position: relative;
                     display: block;
@@ -245,4 +245,78 @@
 
 /*
 *** List Projects Home2: End
+*/
+
+/*
+*** List Projects Home3: Start
+*/
+.style-three {
+    .projects-block {
+        padding-bottom: 100px;
+
+        .container {
+            >.bg-blur {
+                background: #F3D465;
+            }
+
+            .heading .list-nav {
+                gap: 32px;
+                display: inline-flex;
+                padding: 6px 12px;
+                border-radius: 68px;
+                border: 1px solid var(--line-dark);
+                background: var(--line-dark);
+
+                .nav-item {
+
+                    &:hover,
+                    &.active {
+                        background-color: var(--yellow);
+                        color: var(--on-surface);
+                    }
+                }
+
+                @media (max-width: 575.98px) {
+                    flex-wrap: wrap;
+                    gap: 12px;
+                    border-radius: 12px;
+                }
+            }
+        }
+    }
+}
+
+/*
+*** List Projects Home3: End
+*/
+
+/*
+*** List Projects Home4: Start
+*/
+.projects-block.style-four {
+    .container {
+        .list {
+            .slick-list {
+                .project-item {
+                    .item {
+                        cursor: pointer;
+
+                        &::before {
+                            left: 15px;
+                            right: 15px;
+                        }
+
+                        .infor {
+                            left: 31px;
+                            right: 31px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+*** List Projects Home4: End
 */

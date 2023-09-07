@@ -18,6 +18,15 @@ mixin serviceItem(props = {})
                 .read.flex-item-center.gap-8.mt-32
                     .text-button.text-on-surface Read more
                     i.ph-light.ph-arrow-right.fs-32.text-on-surface
+        if(style=='style-three')
+            a(href=`${href}`).service-item-main.flex-column-center.text-center
+                .heading.pb-20
+                    i(class=`${icon}`)
+                .line
+                .desc.pt-20
+                    .heading5!= title 
+                    .body3.mt-8!= desc 
+                    u.display-inline-block.fw-700.mt-20 Learn more
         if(style=='style-four')
             a(href=`${href}`).service-item-main
                 .heading

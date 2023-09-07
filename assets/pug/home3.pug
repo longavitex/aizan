@@ -7,16 +7,21 @@ block header
 block content
     include components/slider/slider-three.pug
     include components/home3/about.pug
-    include components/home2/projects.pug
-    include components/home2/testimonial.pug
-    include components/home2/banner.pug
-    include components/home2/pricing.pug
-    include components/home2/video.pug
-    include components/home2/list-partner.pug
-    include components/home2/our-blogs.pug
-    include components/home2/instagram.pug
+    div(class="shared-bg-service")
+        include components/home3/services.pug
+        include components/home3/banner.pug
+    include components/home3/testimonial.pug
+    div(class="style-three")
+        include components/home1/projects.pug
+    include components/home3/counter.pug
+    include components/home3/video.pug
+    include components/home3/faqs.pug
+    div(class="style-three")
+        include components/home1/pricing.pug
+    include components/home3/form-contact.pug
+    include components/home3/partners.pug
     include components/modal-video.pug
-    //- include components/popup-newsletter.pug
+    include components/popup-newsletter.pug
 block footer 
-    div(class="style-two")
+    div(class="style-three")
         include components/footer.pug

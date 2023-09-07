@@ -1,0 +1,21 @@
+include ../../mixins/projectItem.pug
+
+.projects-block.list-blog.style-four.pt-100.pb-100
+    .container
+        .heading.flex-between 
+            .left
+                .heading3  AI solution for your business
+                .body2.text-placehover.mt-12 Implement intelligent chatbots that can handle customer inquiries
+            a(href="blog.html") 
+                u.fw-700.text-purple-hover View All
+        .row.list.mt-40 
+            .project-item
+                +projectItem({classname:'', img:'assets/images/projects/1.png', category:'Marketting', title:'AI maketing management'})
+            .project-item
+                +projectItem({classname:'', img:'assets/images/projects/2.png', category:'Business', title:'AI business management'})
+            .project-item
+                +projectItem({classname:'', img:'assets/images/projects/4.png', category:'Finance', title:'AI financial management'})
+            .project-item
+                +projectItem({classname:'', img:'assets/images/projects/6.png', category:'Marketting', title:'AI financial management'})
+            
+            

@@ -73,6 +73,66 @@
 */
 
 /*
+*** List partner autoplay Home3: Start
+*/
+.list-partner-slide.style-three {
+    .list {
+        display: flex;
+        width: calc(2080px * 2 + 120px * 2);
+        overflow: hidden;
+        animation: scroll3 30s linear infinite;
+
+        .item {
+            margin: 0 60px;
+
+            .text {
+                font-size: 96px;
+                font-weight: 700;
+                color: var(--on-surface);
+                white-space: nowrap;
+                -webkit-text-stroke: 2px yellow;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .item {
+                .text {
+                    font-size: 48px;
+                }
+            }
+        }
+    }
+
+    @keyframes scroll3 {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(calc(2080px * 2 + 120px * 2) * -0.4);
+        }
+    }
+}
+
+/*
+*** List partner autoplay Home3: End
+*/
+
+/*
+*** List partner autoplay Home4: Start
+*/
+.style-four {
+    .list-partner-slide {
+        background-color: var(--purple);
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+}
+/*
+*** List partner autoplay Home4: End
+*/
+
+/*
 *** List partner services detail: Start
 */
 .style-services-detail {

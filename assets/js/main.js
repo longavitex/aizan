@@ -453,7 +453,7 @@ if (switchBtn) {
 const videoModal = document.querySelector('.js-video-modal')
 const videoModalContainer = document.querySelector('.js-video-modal-container')
 const closeVideo = document.querySelector('.js-modal-close')
-const playBtn = document.querySelector('.video-block .ph-play')
+const playBtn = document.querySelectorAll('.play-btn')
 
 //Show modal video
 function showVideo() {
@@ -471,8 +471,10 @@ function removeVideoModal() {
 
 //Listen click
 if (playBtn) {
-  playBtn.addEventListener('click', () => {
-    videoModal.classList.add('open')
+  playBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+      videoModal.classList.add('open')
+    })
   })
 }
 

@@ -1,0 +1,23 @@
+extends base/layout.pug
+block title
+    title Home 4 - AI Business Agency
+block header
+    include components/header/top-nav/top-nav-four.pug
+    include components/header/menu/menu-four.pug
+block content
+    include components/slider/slider-four.pug
+    div(class="style-four")
+        include components/home2/list-partner.pug
+    include components/home4/about.pug
+    include components/home4/list-service.pug
+    include components/home4/projects.pug
+    include components/home3/video.pug
+    include components/home3/testimonial.pug
+    include components/home3/counter.pug
+    include components/home3/faqs.pug
+    include components/home3/form-contact.pug
+    include components/modal-video.pug
+    //- include components/popup-newsletter.pug
+block footer 
+    div(class="style-three")
+        include components/footer.pug

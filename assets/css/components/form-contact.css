@@ -1,5 +1,9 @@
+/*
+*** Form contact Home3: Start
+*/
 .form-contact.section-contact {
   position: relative;
+  overflow: hidden;
 }
 .form-contact.section-contact .bg-img {
   position: absolute;
@@ -12,6 +16,18 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+.form-contact.section-contact .container .bg-blur {
+  position: absolute;
+  right: -70px;
+  bottom: -70px;
+  width: 534px;
+  height: 534px;
+  border-radius: 534px;
+  opacity: 0.15;
+  background: var(--yellow);
+  filter: blur(132px);
+  z-index: 0;
 }
 .form-contact.section-contact .container .form-block {
   width: 50%;
@@ -49,3 +65,24 @@
     padding-left: 0;
   }
 }
+
+/*
+*** Form contact Home3: End
+*/
+/*
+*** Form contact Service Page: Start
+*/
+.style-service .form-contact .button.bg-yellow {
+  background-color: var(--purple);
+  color: var(--white);
+}
+.style-service .form-contact .button.bg-yellow i {
+  color: var(--white);
+}
+.style-service .form-contact .button.bg-yellow:hover {
+  background-color: #5700c9;
+}
+
+/*
+*** Form contact Service Page: End
+*/

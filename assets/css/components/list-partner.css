@@ -59,6 +59,54 @@
 *** List partner autoplay Home2: End
 */
 /*
+*** List partner autoplay Home3: Start
+*/
+.list-partner-slide.style-three .list {
+  display: flex;
+  width: 4400px;
+  overflow: hidden;
+  animation: scroll3 30s linear infinite;
+}
+.list-partner-slide.style-three .list .item {
+  margin: 0 60px;
+}
+.list-partner-slide.style-three .list .item .text {
+  font-size: 96px;
+  font-weight: 700;
+  color: var(--on-surface);
+  white-space: nowrap;
+  -webkit-text-stroke: 2px yellow;
+}
+@media (max-width: 575.98px) {
+  .list-partner-slide.style-three .list .item .text {
+    font-size: 48px;
+  }
+}
+@keyframes scroll3 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1760px);
+  }
+}
+
+/*
+*** List partner autoplay Home3: End
+*/
+/*
+*** List partner autoplay Home4: Start
+*/
+.style-four .list-partner-slide {
+  background-color: var(--purple);
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+/*
+*** List partner autoplay Home4: End
+*/
+/*
 *** List partner services detail: Start
 */
 .style-services-detail .list-partner {

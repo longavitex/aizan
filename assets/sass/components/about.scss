@@ -135,6 +135,7 @@
         }
     }
 }
+
 /*
 *** About us Home1: End
 */
@@ -194,6 +195,7 @@
         transform: translateY(0);
     }
 }
+
 /*
 *** About us Home2: Start
 */
@@ -218,6 +220,7 @@
         }
     }
 }
+
 /*
 *** About us Home2: End
 */
@@ -238,8 +241,108 @@
         }
     }
 }
+
 /*
 *** About us Home3: End
+*/
+
+/*
+*** About us Home4: Start
+*/
+.about-block.style-four {
+    .shared-bg-img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+
+    .container .row {
+        .bg-img {
+            position: relative;
+
+            .play-btn {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 65px;
+                height: 65px;
+                transition: all ease 0.5s;
+                cursor: pointer;
+
+                i {
+                    transition: all ease 0.5s;
+                }
+
+                &:hover {
+                    background-color: var(--white);
+
+                    i {
+                        color: var(--purple);
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            >div:last-child {
+                .list-counter {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .flex-between {
+                        width: 100%;
+                        justify-content: space-around;
+                    }
+
+                    .line-dark {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 449.98px) {
+            >div:first-child {
+                .bg-img {
+                    .play-btn {
+                        width: 50px;
+                        height: 50px;
+
+                        i {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+
+            >div:last-child {
+                .list-counter {
+                    .flex-between {
+                        justify-content: space-between;
+                    }
+
+                    .line-dark {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+*** About us Home4: End
 */
 
 /*
@@ -319,6 +422,7 @@
         }
     }
 }
+
 /*
 *** About us About Page: End
 */

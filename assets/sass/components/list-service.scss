@@ -156,9 +156,76 @@
 */
 
 /*
+*** List service Home3: Start
+*/
+.shared-bg-service {
+    background-attachment: fixed;
+    background-image: url(../images/components/bg-service3.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.services-block.style-three {
+    .list {
+        .service-item {
+            border-bottom: 4px solid var(--yellow);
+            transition: all ease 0.5s;
+
+            .line {
+                text-align: center;
+                border: 1px dashed var(--yellow);
+                width: 80%;
+                transition: all ease 0.3s;
+            }
+
+            .heading {
+                i {
+                    transition: all ease 0.3s;
+                }
+            }
+
+            .heading5,
+            .body3,
+            u {
+                transition: all ease 0.3s;
+            }
+
+            &:hover {
+                background-color: var(--yellow);
+
+                .heading {
+                    i {
+                        &::before {
+                            color: var(--on-surface);
+                        }
+                    }
+                }
+
+                .line {
+                    border-color: var(--on-surface);
+                }
+
+                .heading5,
+                .body3,
+                u {
+                    color: var(--on-surface);
+                }
+            }
+        }
+    }
+}
+
+/*
+*** List service Home3: End
+*/
+
+/*
 *** List service Home4: Start
 */
 .list-service {
+    position: relative;
+    
     .list {
         .service-item {
             transition: all ease 0.3s;

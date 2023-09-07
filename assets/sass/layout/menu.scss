@@ -613,7 +613,117 @@ Menu header: Start
     }
 }
 
+/*
+*** Menu Home3: End
+*/
 
+/*
+*** Menu Home4: Start
+*/
+.header-menu.style-four {
+    >.container {
+        .header-main {
+            .logo {
+                position: relative;
+                left: unset;
+                top: unset;
+                transform: unset;
+            }
+
+            .menu-main {
+                >ul {
+                    li {
+                        >a {
+                            &::before {
+                                background-color: var(--purple);
+                            }
+                        }
+
+                        .sub-nav {
+                            .sub-nav-main {
+                                .row {
+                                    .list-home {
+                                        .item {
+                                            &:hover {
+                                                .text-button {
+                                                    color: var(--purple);
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .list-pages {
+                                        a {
+                                            i {
+                                                &::before {
+                                                    color: var(--purple);
+                                                }
+                                            }
+
+                                            &:hover {
+                                                .text-button {
+                                                    color: var(--purple);
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .explore-block {
+                                        a {
+                                            background-color: var(--purple);
+
+                                            &:hover {
+                                                background-color: #5700c9;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: 575.98px) {
+                .right-block {
+                    .call-block {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        #menu-mobile-block {
+            .logo {
+                svg {
+                    g {
+                        path:first-child {
+                            fill: var(--purple);
+                        }
+                    }
+                }
+            }
+
+            .bg-blue {
+                background-color: var(--purple);
+            }
+
+            .icon-blue {
+                &::before {
+                    color: var(--purple);
+                }
+            }
+        }
+    }
+}
+
+/*
+*** Menu Home4: End
+*/
+
+/*
+*** Menu Style Subpage: Start
+*/
 .style-purple {
     .header-menu {
         >.container {
@@ -718,6 +828,9 @@ Menu header: Start
     }
 }
 
+/*
+*** Menu Style Subpage: End
+*/
 /*
 Menu header: End
 */

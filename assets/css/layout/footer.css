@@ -1,6 +1,9 @@
 /*
 Footer: Start
 */
+#footer {
+  position: relative;
+}
 #footer .footer-block .heading {
   position: relative;
 }
@@ -79,6 +82,19 @@ Footer: Start
 }
 .style-two .list-social .item:hover {
   background-color: #00ff40;
+}
+
+.style-three .footer-block .logo svg path:nth-child(1) {
+  fill: var(--yellow);
+}
+.style-three .footer-block .list-social .item {
+  background-color: var(--yellow);
+}
+.style-three .footer-block .list-social .item i::before {
+  color: var(--on-surface);
+}
+.style-three .footer-block .list-social .item:hover {
+  background-color: #ebb41d;
 }
 
 /*

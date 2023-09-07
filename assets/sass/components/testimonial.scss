@@ -153,58 +153,6 @@ Testimonial Home1: Start
             }
         }
     }
-
-    // .slick-dots {
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     gap: 16px;
-    //     position: absolute;
-    //     bottom: 0;
-    //     left: 50%;
-    //     transform: translateX(-50%);
-
-    //     @media (max-width:767.99px) {
-    //         margin-top: 30px;
-    //     }
-
-    //     li {
-    //         position: relative;
-    //         border: none;
-    //         width: 16px;
-    //         height: 16px;
-    //         border-radius: 50%;
-    //         background-color: transparent;
-    //         display: flex;
-    //         align-items: center;
-    //         justify-content: center;
-    //         cursor: pointer;
-
-    //         button {
-    //             display: none;
-    //         }
-
-    //         &::after {
-    //             content: "";
-    //             width: 10px;
-    //             height: 10px;
-    //             border-radius: 50%;
-    //             background-color: transparent;
-    //             border: 1px solid var(--line);
-    //             transition: 0.5s;
-    //         }
-
-    //         &.slick-active {
-    //             border: 1px solid var(--white);
-    //             background-color: var(--line-dark);
-
-    //             &::after {
-    //                 background-color: var(--white);
-    //                 border: 1px solid var(--line-dark);
-    //             }
-    //         }
-    //     }
-    // }
 }
 
 /*
@@ -289,9 +237,129 @@ Testimonial Home2: Start
             }
         }
     }
+
+    @media (max-width: 991.98px) {
+        .row {
+            >div:last-child {
+                margin-top: 40px;
+            }
+
+            .list-img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 70%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .row {
+            .list-img {
+                .bg-img {
+                    width: 240px;
+                    height: 240px;
+
+                    .logo {
+                        svg {
+                            width: 60px;
+                            height: 32px;
+                        }
+                    }
+
+                    .list-avatar {
+                        .avatar {
+                            width: 60px;
+                            height: 60px;
+
+                            &:nth-child(1) {
+                                top: -30px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+
+                            &:nth-child(2) {
+                                top: 35px;
+                                right: -18px;
+                            }
+
+                            &:nth-child(3) {
+                                bottom: 27px;
+                                right: -14px;
+                            }
+
+                            &:nth-child(4) {
+                                bottom: -30px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+
+                            &:nth-child(5) {
+                                bottom: 27px;
+                                left: -14px;
+                            }
+
+                            &:nth-child(6) {
+                                top: 35px;
+                                left: -18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
 /*
 Testimonial Home2: End
+*/
+
+/*
+Testimonial Home3: Start
+*/
+.testimonial-block.style-three {
+    background-attachment: fixed;
+    background-image: url(../images/components/bg-color-testimonial3.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .row {
+        >div:nth-child(1) {
+            .bg-img {
+                position: relative;
+                border-radius: 24px;
+                overflow: hidden;
+
+                >div {
+                    position: absolute;
+                    width: 280px;
+                    height: 280px;
+                    padding: 0 50px;
+                    left: -30px;
+                    bottom: -70px;
+                }
+
+                @media (max-width: 575.98px) {
+                    >div {
+                        width: 170px;
+                        height: 170px;
+                        padding: 0 15px;
+                        left: -10px;
+                        bottom: -34px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+Testimonial Home3: End
 */
 
 /*
