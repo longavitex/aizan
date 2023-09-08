@@ -1070,7 +1070,6 @@ select {
   color: var(--on-surface);
   white-space: nowrap;
   -webkit-text-stroke: 2px var(--blue);
-  visibility: visible;
   display: block;
 }
 #preload .main-content .heading3 span {
@@ -2550,6 +2549,7 @@ Popup Newsletter: Start
   transition: all ease 0.8s;
   display: flex;
   justify-content: end;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 #popup-newsletter-block .popup-newsletter-main .bg-img {
   position: absolute;
@@ -4637,6 +4637,7 @@ Testimonial Home1: Start
   transform: translateY(-50%);
   cursor: pointer;
   transition: all ease 0.5s;
+  z-index: 1;
 }
 .testimonial-block.style-one .container .row > div .list-avatar .prev-btn:hover,
 .testimonial-block.style-one .container .row > div .list-avatar .next-btn:hover {

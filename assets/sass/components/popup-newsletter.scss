@@ -29,6 +29,7 @@ Popup Newsletter: Start
         transition: all ease 0.8s;
         display: flex;
         justify-content: end;
+        border: 1px solid rgba($color: #FFFFFF, $alpha: 0.2);
 
         .bg-img {
             position: absolute;

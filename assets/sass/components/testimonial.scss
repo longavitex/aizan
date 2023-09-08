@@ -63,6 +63,7 @@ Testimonial Home1: Start
                         transform: translateY(-50%);
                         cursor: pointer;
                         transition: all ease 0.5s;
+                        z-index: 1;
 
                         &:hover {
                             border: 1px solid var(--blue) !important;

@@ -51,6 +51,7 @@ Testimonial Home1: Start
   transform: translateY(-50%);
   cursor: pointer;
   transition: all ease 0.5s;
+  z-index: 1;
 }
 .testimonial-block.style-one .container .row > div .list-avatar .prev-btn:hover,
 .testimonial-block.style-one .container .row > div .list-avatar .next-btn:hover {

@@ -25,7 +25,6 @@
   color: var(--on-surface);
   white-space: nowrap;
   -webkit-text-stroke: 2px var(--blue);
-  visibility: visible;
   display: block;
 }
 #preload .main-content .heading3 span {
