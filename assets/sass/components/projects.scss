@@ -295,6 +295,10 @@
 */
 .projects-block.style-four {
     .container {
+        .heading {
+            align-items: flex-end;
+        }
+
         .list {
             .slick-list {
                 .project-item {
@@ -312,6 +316,14 @@
                         }
                     }
                 }
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .heading {
+                flex-direction: column;
+                align-items: flex-start;
+                row-gap: 12px;
             }
         }
     }

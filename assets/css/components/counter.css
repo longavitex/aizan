@@ -46,7 +46,7 @@
   animation: circleScrollMinus 30s linear infinite;
 }
 .counter-block.style-three .list-img .bg-img .list-avatar .avatar:nth-child(1) {
-  top: 30;
+  top: -48px;
   left: 50%;
   transform: translateX(-50%);
 }

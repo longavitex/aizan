@@ -9,5 +9,7 @@ block content
     +breadcrum({classname: 'pt-80 pb-80', nav:'Home', nav1:'Page', nav2:'Pricing', heading:'Pricing', subHeading:"Discover our flexible and transparent pricing options. We offer tailored packages to suit your specific needs and budget."})
     div(class="style-pricing")
         include components/list-pricing.pug
+    include components/preload.pug
 block footer 
-    include components/footer.pug
+    div(class="style-four")
+        include components/footer.pug

@@ -11,6 +11,9 @@
 }
 
 .top-nav.style-four {
+    position: relative;
+    z-index: 1;
+
     .right-block {
         .list-social {
             a {

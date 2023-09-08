@@ -26,7 +26,7 @@
     font-size: 36px;
     font-weight: 600;
     line-height: 44px;
-
+    text-transform: capitalize;
 }
 
 .heading5 {
@@ -250,6 +250,12 @@
 .icon-white {
     &::before {
         color: var(--white);
+    }
+}
+
+.icon-line-dark {
+    &::before {
+        color: var(--line-dark);
     }
 }
 

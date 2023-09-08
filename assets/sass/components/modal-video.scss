@@ -49,6 +49,54 @@
 *** Video Block: End
 */
 
+/*
+*** Video Block Home4: Start
+*/
+.video-block.style-four {
+    height: 700px;
+
+    .play-btn {
+        border: none;
+        background-color: var(--purple);
+
+        &:hover {
+            background-color: var(--white);
+
+            i {
+                color: var(--purple);
+            }
+        }
+    }
+
+    .heading3 {
+        position: absolute;
+        top: calc(50% + 120px);
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: 767.98px) {
+        .heading3 {
+            width: 100%;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        height: 400px;
+
+        .heading3 {
+            top: calc(50% + 100px);
+        }
+    }
+}
+
+/*
+*** Video Block Home4: End
+*/
 
 /*
 Modal Video: Start
@@ -115,6 +163,7 @@ Modal Video: Start
     visibility: visible;
     z-index: 100;
 }
+
 /*
 Modal Video: End
 */

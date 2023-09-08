@@ -39,7 +39,7 @@ Testimonial Home1: Start
   object-fit: cover;
 }
 .testimonial-block.style-one .container .row > div .list-avatar .avatar.slick-slider .slick-list .slick-track .item.slick-center {
-  transform: scale(1.2) translateZ(0);
+  transform: scale(1.2);
 }
 .testimonial-block.style-one .container .row > div .list-avatar .avatar.slick-slider .slick-list .slick-track .item.slick-center .bg-img {
   background-color: var(--line-dark);
@@ -284,6 +284,9 @@ Testimonial Home3: End
 /*
 Testimonial Home4: Start
 */
+.testimonial-block.style-four {
+  position: relative;
+}
 .testimonial-block.style-four .container > .row {
   flex-wrap: nowrap;
 }

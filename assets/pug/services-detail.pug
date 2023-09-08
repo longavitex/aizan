@@ -44,7 +44,7 @@ block content
             .heading3.text-center Our Capabilities
             .row.list.mt-40.row-gap-32
                 .col-lg-4 
-                    +serviceItem({classname:'pl-32 pr-32 pt-40 pb-40 h-100 bg-line-dark', style:'style-four', icon:'icon-hand-scale fs-60', title:'Enhanced Decision-Making', desc:"Leverage AI's data analysis capabilities to make informed and strategic decisions that drive growth."})
+                    +serviceItem({classname:'pl-32 pr-32 pt-40 pb-40 h-100 bg-line-dark', style:'style-four', icon:'icon-flash fs-60', title:'Enhanced Decision-Making', desc:"Leverage AI's data analysis capabilities to make informed and strategic decisions that drive growth."})
                 .col-lg-4 
                     +serviceItem({classname:'pl-32 pr-32 pt-40 pb-40 h-100 bg-line-dark', style:'style-four', icon:'icon-chart-gear fs-60', title:'Efficient Operations', desc:'Automate repetitive tasks, streamline processes, and optimize resource allocation, leading to increased efficiency.'})
                 .col-lg-4 
@@ -52,8 +52,11 @@ block content
                 
     div(class="style-services-detail mt-100")
         include components/partners.pug
-    include components/home1/how-it-work.pug    
+    div(class="style-purple")
+        include components/home1/how-it-work.pug  
     div(class="style-service")
         include components/home3/form-contact.pug
+    include components/preload.pug
 block footer 
-    include components/footer.pug
+    div(class="style-four")
+        include components/footer.pug

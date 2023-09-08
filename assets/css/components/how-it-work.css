@@ -22,6 +22,21 @@
   }
 }
 
+.how-it-work.style-four {
+  background-attachment: fixed;
+  background-image: url(../images/components/bg-how-it-work4.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 991.98px) {
+  .how-it-work.style-four .heading .body2 {
+    text-align: left !important;
+  }
+}
+
 .style-purple .col-lg-7 .bg-blue {
   background-color: var(--purple);
 }

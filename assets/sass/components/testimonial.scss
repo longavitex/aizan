@@ -46,7 +46,7 @@ Testimonial Home1: Start
                                 }
 
                                 .item.slick-center {
-                                    transform: scale(1.2) translateZ(0);
+                                    transform: scale(1.2);
 
                                     .bg-img {
                                         background-color: var(--line-dark);
@@ -366,6 +366,8 @@ Testimonial Home3: End
 Testimonial Home4: Start
 */
 .testimonial-block.style-four {
+    position: relative;
+
     .container {
         >.row {
             flex-wrap: nowrap;

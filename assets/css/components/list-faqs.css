@@ -58,3 +58,20 @@
 /*
 *** FAQs Home3: End
 */
+/*
+*** FAQs Home4: Start
+*/
+.faqs-block.style-four {
+  position: relative;
+  z-index: 1;
+}
+.faqs-block.style-four .list-question > div .question-item-main i {
+  color: var(--purple);
+}
+.faqs-block.style-four .list-question > div:last-child {
+  border-bottom: none;
+}
+
+/*
+*** FAQs Home4: End
+*/

@@ -246,6 +246,7 @@ Section Pricing Home3: Start
 }
 .style-three .section-pricing .bg-blue {
   background-color: var(--yellow);
+  color: var(--on-surface);
 }
 
 /*

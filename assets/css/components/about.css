@@ -202,7 +202,6 @@
 .about-block.style-four .shared-bg-img img {
   width: 100%;
   height: 100%;
-  z-index: -1;
 }
 .about-block.style-four .container .row .bg-img {
   position: relative;

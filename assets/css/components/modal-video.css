@@ -44,6 +44,48 @@
 *** Video Block: End
 */
 /*
+*** Video Block Home4: Start
+*/
+.video-block.style-four {
+  height: 700px;
+}
+.video-block.style-four .play-btn {
+  border: none;
+  background-color: var(--purple);
+}
+.video-block.style-four .play-btn:hover {
+  background-color: var(--white);
+}
+.video-block.style-four .play-btn:hover i {
+  color: var(--purple);
+}
+.video-block.style-four .heading3 {
+  position: absolute;
+  top: calc(50% + 120px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 767.98px) {
+  .video-block.style-four .heading3 {
+    width: 100%;
+  }
+  .video-block.style-four .heading3 br {
+    display: none;
+  }
+}
+@media (max-width: 575.98px) {
+  .video-block.style-four {
+    height: 400px;
+  }
+  .video-block.style-four .heading3 {
+    top: calc(50% + 100px);
+  }
+}
+
+/*
+*** Video Block Home4: End
+*/
+/*
 Modal Video: Start
 */
 .js-video-modal {

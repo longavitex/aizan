@@ -75,7 +75,7 @@
   font-weight: 700;
   color: var(--on-surface);
   white-space: nowrap;
-  -webkit-text-stroke: 2px yellow;
+  -webkit-text-stroke: 2px var(--yellow);
 }
 @media (max-width: 575.98px) {
   .list-partner-slide.style-three .list .item .text {

@@ -8,6 +8,10 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.top-nav.style-four {
+  position: relative;
+  z-index: 1;
+}
 .top-nav.style-four .right-block .list-social a {
   width: 28px;
   height: 28px;

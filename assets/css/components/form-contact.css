@@ -43,6 +43,14 @@
   padding-right: 12px;
   position: relative;
 }
+.form-contact.section-contact .container .form-block .row > div input,
+.form-contact.section-contact .container .form-block .row > div textarea {
+  border: 1px solid transparent;
+}
+.form-contact.section-contact .container .form-block .row > div input:focus,
+.form-contact.section-contact .container .form-block .row > div textarea:focus {
+  border: 1px solid var(--line);
+}
 .form-contact.section-contact .container .form-block .row > div i {
   position: absolute;
   top: 50%;
@@ -68,6 +76,32 @@
 
 /*
 *** Form contact Home3: End
+*/
+/*
+*** Form contact Home4: Start
+*/
+.form-contact.style-four {
+  background: rgba(125, 60, 243, 0.1);
+}
+.form-contact.style-four .bg-img .heading3 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+@media (max-width: 1340.98px) {
+  .form-contact.style-four .bg-img .heading3 br {
+    display: none;
+  }
+}
+@media (max-width: 450.98px) {
+  .form-contact.style-four .bg-img .heading3 {
+    position: relative;
+  }
+}
+
+/*
+*** Form contact Home4: End
 */
 /*
 *** Form contact Service Page: Start

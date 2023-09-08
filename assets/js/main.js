@@ -1,3 +1,15 @@
+// Preload app
+const preload = document.querySelector('#preload')
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+      if(preload) {
+        preload.classList.add('disable')
+      }
+    }, 500)
+})
+
+
 // Pop up newsletter
 const popupNewsletter = document.querySelector('#popup-newsletter-block')
 const popupNewsletterMain = document.querySelector('#popup-newsletter-block .popup-newsletter-main')
@@ -7,7 +19,7 @@ window.onload = () => {
   if (popupNewsletter) {
     setTimeout(() => {
       popupNewsletter.classList.add('open')
-    }, 400)
+    }, 1000)
   }
 }
 
