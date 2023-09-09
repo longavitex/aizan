@@ -314,8 +314,10 @@ if (listNav) {
     listNavItem.onclick = function (selectedItem) {
       if (selectedItem.target.classList.contains("nav-item")) {
         // add active class
-        listNavItem.querySelector('.active').classList.remove('active')
-        selectedItem.target.classList.add('active')
+        if(listNavItem.querySelector('.active')) {
+          listNavItem.querySelector('.active').classList.remove('active')
+          selectedItem.target.classList.add('active')
+        }
 
         //get data-name value
         let filterName = selectedItem.target.getAttribute('data-name')
@@ -409,17 +411,23 @@ if (listBlog) {
 
 
 // Testimonial Home2
-// const swiper = new Swiper(".list-comment-two", {
-//   direction: "vertical",
-//   slidesPerView: 1,
-//   spaceBetween: 30,
-//   mousewheel: true,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
+var swiper = new Swiper(".list-comment-two", {
+  direction: "vertical",
+  slidesPerView: 1,
+  // spaceBetween: 30,
+  mousewheel: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 
+const slideItem = document.querySelectorAll('.list-comment-two .swiper-slide')
+if(slideItem){
+  slideItem.forEach(item => {
+    item.removeAttribute('style')
+  })
+}
 
 // change switch btn pricing Home2
 const switchBtn = document.querySelector('.switch')

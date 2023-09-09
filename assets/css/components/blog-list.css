@@ -29,14 +29,14 @@
     padding-left: 0;
   }
 }
-.blog-list .container > .row > div > .list-nav .nav-item {
+.blog-list .container > .row > div > .list-nav-number .nav-item {
   cursor: pointer;
   width: 44px;
   height: 44px;
   border: 1px solid var(--line-dark);
   transition: all ease 0.3s;
 }
-.blog-list .container > .row > div > .list-nav .nav-item.active, .blog-list .container > .row > div > .list-nav .nav-item:hover {
+.blog-list .container > .row > div > .list-nav-number .nav-item.active, .blog-list .container > .row > div > .list-nav-number .nav-item:hover {
   background-color: var(--line-dark);
 }
 .blog-list .container > .row .search-block {
@@ -74,11 +74,11 @@
 .blog-list .container > .row .cate-block .pb-12 {
   border-bottom: 1px solid var(--line-dark);
 }
-.blog-list .container > .row .cate-block .list-nav .nav-item .right div {
+.blog-list .container > .row .cate-block .list-cate .nav-item .right div {
   width: 32px;
   height: 32px;
 }
-.blog-list .container > .row .cate-block .list-nav .nav-item.active .left .text-button, .blog-list .container > .row .cate-block .list-nav .nav-item:hover .left .text-button {
+.blog-list .container > .row .cate-block .list-cate .nav-item.active .left .text-button, .blog-list .container > .row .cate-block .list-cate .nav-item:hover .left .text-button {
   color: var(--purple);
 }
 .blog-list .container > .row .tags-popular-block .list-tag a:hover {
