@@ -151,6 +151,9 @@
 .style-purple .counter {
   background-color: var(--line-dark);
 }
+.style-purple .counter .item .icon {
+  background-color: var(--purple);
+}
 .style-purple .counter .text-on-surface {
   color: var(--white);
 }

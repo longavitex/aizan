@@ -113,6 +113,21 @@ Popup Newsletter: Start
         top: 50%;
     }
 }
+
+/*
+*** prevent Popup Newsletter
+*/
+body.prevent-popupNewsletter {
+    #popup-newsletter-block {
+        opacity: 0;
+        visibility: hidden;
+
+        .popup-newsletter-main {
+            top: 0;
+        }
+    }
+}
+
 /*
 Popup Newsletter: End
 */

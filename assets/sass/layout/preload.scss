@@ -19,8 +19,7 @@
                 width: 200px;
                 height: 120px;
                 stroke: var(--white);
-                // fill-opacity: 0;
-                stroke-width: 3px;
+                stroke-width: 2px;
                 stroke-dasharray: 2000;
                 animation: drawLogo 3s ease-in-out 0.1s infinite;
             }

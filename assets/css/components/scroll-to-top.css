@@ -1,0 +1,51 @@
+/*
+Scroll To Top Button: Start
+*/
+.scroll-to-top-btn {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0px;
+  right: 30px;
+  transition: all ease 0.3s;
+  box-shadow: 0px 5px 25px rgba(58, 64, 67, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  z-index: 10;
+}
+.scroll-to-top-btn i {
+  color: var(--white);
+  transition: all ease 0.3s;
+}
+.scroll-to-top-btn:hover {
+  background-color: var(--surface);
+}
+.scroll-to-top-btn:hover i {
+  color: var(--on-surface);
+}
+
+.scroll-to-top-btn.active {
+  bottom: 30px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.style-two .scroll-to-top-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.style-two .scroll-to-top-btn:hover {
+  background-color: var(--on-surface);
+}
+.style-two .scroll-to-top-btn:hover i {
+  color: var(--white);
+}
+
+/*
+Scroll To Top Button: End
+*/

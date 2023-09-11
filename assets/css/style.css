@@ -1062,7 +1062,7 @@ select {
   width: 200px;
   height: 120px;
   stroke: var(--white);
-  stroke-width: 3px;
+  stroke-width: 2px;
   stroke-dasharray: 2000;
   animation: drawLogo 3s ease-in-out 0.1s infinite;
 }
@@ -2618,6 +2618,17 @@ Popup Newsletter: Start
 }
 
 /*
+*** prevent Popup Newsletter
+*/
+body.prevent-popupNewsletter #popup-newsletter-block {
+  opacity: 0;
+  visibility: hidden;
+}
+body.prevent-popupNewsletter #popup-newsletter-block .popup-newsletter-main {
+  top: 0;
+}
+
+/*
 Popup Newsletter: End
 */
 /*
@@ -3107,6 +3118,9 @@ Bread crum: End
 */
 .style-purple .counter {
   background-color: var(--line-dark);
+}
+.style-purple .counter .item .icon {
+  background-color: var(--purple);
 }
 .style-purple .counter .text-on-surface {
   color: var(--white);
@@ -4102,6 +4116,22 @@ Section Pricing Home3: End
 /*
 *** List service Home4: End
 */
+.how-it-work .row.mt-40 > div:first-child .feature-item .icon {
+  position: relative;
+}
+.how-it-work .row.mt-40 > div:first-child .feature-item .icon::before {
+  content: "";
+  position: absolute;
+  height: 36px;
+  width: 1px;
+  background-color: var(--white);
+  bottom: -62px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.how-it-work .row.mt-40 > div:first-child .feature-item:last-child .icon::before {
+  display: none;
+}
 .how-it-work .row.mt-40 > div:last-child .bg-img {
   position: relative;
 }
@@ -5259,6 +5289,57 @@ Modal Video: End
   }
 }
 
+/*
+Scroll To Top Button: Start
+*/
+.scroll-to-top-btn {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0px;
+  right: 30px;
+  transition: all ease 0.3s;
+  box-shadow: 0px 5px 25px rgba(58, 64, 67, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  z-index: 10;
+}
+.scroll-to-top-btn i {
+  color: var(--white);
+  transition: all ease 0.3s;
+}
+.scroll-to-top-btn:hover {
+  background-color: var(--surface);
+}
+.scroll-to-top-btn:hover i {
+  color: var(--on-surface);
+}
+
+.scroll-to-top-btn.active {
+  bottom: 30px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.style-two .scroll-to-top-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.style-two .scroll-to-top-btn:hover {
+  background-color: var(--on-surface);
+}
+.style-two .scroll-to-top-btn:hover i {
+  color: var(--white);
+}
+
+/*
+Scroll To Top Button: End
+*/
 /*
 *** Font reduce: Start
 */

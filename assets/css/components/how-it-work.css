@@ -1,3 +1,19 @@
+.how-it-work .row.mt-40 > div:first-child .feature-item .icon {
+  position: relative;
+}
+.how-it-work .row.mt-40 > div:first-child .feature-item .icon::before {
+  content: "";
+  position: absolute;
+  height: 36px;
+  width: 1px;
+  background-color: var(--white);
+  bottom: -62px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.how-it-work .row.mt-40 > div:first-child .feature-item:last-child .icon::before {
+  display: none;
+}
 .how-it-work .row.mt-40 > div:last-child .bg-img {
   position: relative;
 }

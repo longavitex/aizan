@@ -43,13 +43,13 @@ block content
         .container
             .heading3.text-center Our Capabilities
             .row.list.mt-40.row-gap-32
-                .col-lg-4 
-                    +serviceItem({classname:'pl-32 pr-32 pt-40 pb-40 h-100 bg-line-dark', style:'style-four', icon:'icon-flash fs-60', title:'Enhanced Decision-Making', desc:"Leverage AI's data analysis capabilities to make informed and strategic decisions that drive growth."})
-                .col-lg-4 
-                    +serviceItem({classname:'pl-32 pr-32 pt-40 pb-40 h-100 bg-line-dark', style:'style-four', icon:'icon-chart-gear fs-60', title:'Efficient Operations', desc:'Automate repetitive tasks, streamline processes, and optimize resource allocation, leading to increased efficiency.'})
-                .col-lg-4 
-                    +serviceItem({classname:'pl-32 pr-32 pt-40 pb-40 h-100 bg-line-dark', style:'style-four', icon:'icon-coin fs-60', title:'Data-driven Insights', desc:'Extract valuable insights from large datasets, enabling you to uncover hidden opportunities and address challenges.'})
-                
+                .col-lg-4.scroll-bottom-to-top1
+                    +serviceItem({classname:'pl-32 pr-32 pt-40 pb-40 h-100 bg-line-dark', style:'style-four', icon:'icon-flash icon-white fs-60', title:'Enhanced Decision-Making', desc:"Leverage AI's data analysis capabilities to make informed and strategic decisions that drive growth."})
+                .col-lg-4.scroll-bottom-to-top2
+                    +serviceItem({classname:'pl-32 pr-32 pt-40 pb-40 h-100 bg-line-dark', style:'style-four', icon:'icon-chart-gear icon-white fs-60', title:'Efficient Operations', desc:'Automate repetitive tasks, streamline processes, and optimize resource allocation, leading to increased efficiency.'})
+                .col-lg-4.scroll-bottom-to-top3
+                    +serviceItem({classname:'pl-32 pr-32 pt-40 pb-40 h-100 bg-line-dark', style:'style-four', icon:'icon-coin icon-white fs-60', title:'Data-driven Insights', desc:'Extract valuable insights from large datasets, enabling you to uncover hidden opportunities and address challenges.'})
+              
     div(class="style-services-detail mt-100")
         include components/partners.pug
     div(class="style-purple")
@@ -57,6 +57,8 @@ block content
     div(class="style-service")
         include components/home3/form-contact.pug
     include components/preload.pug
+    include components/popup-newsletter.pug
+    include components/scroll-to-top.pug
 block footer 
     div(class="style-four")
         include components/footer.pug

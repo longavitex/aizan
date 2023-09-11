@@ -191,6 +191,12 @@
     .counter {
         background-color: var(--line-dark);
 
+        .item {
+            .icon {
+                background-color: var(--purple);
+            }
+        }
+
         .text-on-surface {
             color: var(--white);
         }

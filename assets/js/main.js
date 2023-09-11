@@ -2,37 +2,75 @@
 const preload = document.querySelector('#preload')
 
 window.addEventListener('load', () => {
-    setTimeout(() => {
-      if(preload) {
-        preload.classList.add('disable')
-      }
-    }, 500)
+  setTimeout(() => {
+    if (preload) {
+      preload.classList.add('disable')
+    }
+  }, 300)
 })
 
 
+// Animation when scroll 
+ScrollReveal({
+  distance: '200px',
+  duration: 1000,
+  delay: 200,
+})
+
+// Scroll bottom to top 
+ScrollReveal().reveal('.scroll-bottom-to-top1', { delay: 200, origin: 'bottom' })
+ScrollReveal().reveal('.scroll-bottom-to-top2', { delay: 300, origin: 'bottom' })
+ScrollReveal().reveal('.scroll-bottom-to-top3', { delay: 400, origin: 'bottom' })
+ScrollReveal().reveal('.scroll-bottom-to-top4', { delay: 500, origin: 'bottom' })
+ScrollReveal().reveal('.scroll-bottom-to-top5', { delay: 600, origin: 'bottom' })
+ScrollReveal().reveal('.scroll-bottom-to-top6', { delay: 700, origin: 'bottom' })
+ScrollReveal().reveal('.scroll-bottom-to-top7', { delay: 800, origin: 'bottom' })
+ScrollReveal().reveal('.scroll-bottom-to-top8', { delay: 900, origin: 'bottom' })
+
+// Scroll left to right
+ScrollReveal().reveal('.scroll-left-to-right1', { delay: 200, origin: 'left' })
+ScrollReveal().reveal('.scroll-left-to-right2', { delay: 300, origin: 'left' })
+ScrollReveal().reveal('.scroll-left-to-right3', { delay: 400, origin: 'left' })
+ScrollReveal().reveal('.scroll-left-to-right4', { delay: 500, origin: 'left' })
+ScrollReveal().reveal('.scroll-left-to-right5', { delay: 600, origin: 'left' })
+ScrollReveal().reveal('.scroll-left-to-right6', { delay: 700, origin: 'left' })
+ScrollReveal().reveal('.scroll-left-to-right7', { delay: 800, origin: 'left' })
+ScrollReveal().reveal('.scroll-left-to-right8', { delay: 900, origin: 'left' })
+
+// Scroll right to left
+ScrollReveal().reveal('.scroll-right-to-left1', { delay: 200, origin: 'right' })
+ScrollReveal().reveal('.scroll-right-to-left2', { delay: 300, origin: 'right' })
+ScrollReveal().reveal('.scroll-right-to-left3', { delay: 400, origin: 'right' })
+ScrollReveal().reveal('.scroll-right-to-left4', { delay: 500, origin: 'right' })
+ScrollReveal().reveal('.scroll-right-to-left5', { delay: 600, origin: 'right' })
+ScrollReveal().reveal('.scroll-right-to-left6', { delay: 700, origin: 'right' })
+ScrollReveal().reveal('.scroll-right-to-left7', { delay: 800, origin: 'right' })
+ScrollReveal().reveal('.scroll-right-to-left8', { delay: 900, origin: 'right' })
+
+
 // Pop up newsletter
-const popupNewsletter = document.querySelector('#popup-newsletter-block')
+const popupNewsletterBlock = document.querySelector('#popup-newsletter-block')
 const popupNewsletterMain = document.querySelector('#popup-newsletter-block .popup-newsletter-main')
 const closePopupNewsletterBtn = document.querySelector('#popup-newsletter-block .close-block')
 
 window.onload = () => {
-  if (popupNewsletter) {
+  if (popupNewsletterBlock) {
     setTimeout(() => {
-      popupNewsletter.classList.add('open')
+      popupNewsletterBlock.classList.add('open')
     }, 1000)
   }
 }
 
 if (closePopupNewsletterBtn) {
   closePopupNewsletterBtn.addEventListener('click', () => {
-    popupNewsletter.classList.remove('open')
+    popupNewsletterBlock.classList.remove('open')
   })
 }
 
 // click outside mobile menu, close mobile menu
-if (popupNewsletter) {
-  popupNewsletter.addEventListener('click', () => {
-    popupNewsletter.classList.remove('open')
+if (popupNewsletterBlock) {
+  popupNewsletterBlock.addEventListener('click', () => {
+    popupNewsletterBlock.classList.remove('open')
   })
 }
 
@@ -43,12 +81,60 @@ if (popupNewsletterMain) {
   })
 }
 
+// Prevent Pop up
+// check for saved 'darkMode' in localStorage
+let popupNewsletter = localStorage.getItem('popupNewsletter');
+localStorage.setItem('popupNewsletter', '')
 
-// header menu sticky when scroll
+const disablePopupNewsletter = () => {
+  // 1. Add the class to the body
+  document.body.classList.add('prevent-popupNewsletter');
+  // 2. Update popupNewsletter in localStorage
+  localStorage.setItem('popupNewsletter', 'prevent');
+}
+
+const enablepopupNewsletter = () => {
+  // 1. Remove the class from the body
+  document.body.classList.remove('prevent-popupNewsletter');
+  // 2. Update popupNewsletter in localStorage 
+  localStorage.setItem('popupNewsletter', null);
+}
+
+// If the user already visited and prevent popupNewsletter
+// start things off with it on
+if (popupNewsletter === 'prevent') {
+  disablePopupNewsletter();
+}
+
+// When someone clicks the button
+const preventPopupInput = document.querySelector('.prevent-popup-input')
+if (preventPopupInput) {
+  preventPopupInput.addEventListener('change', () => {
+    // get their popupNewsletter setting
+    popupNewsletter = localStorage.getItem('popupNewsletter');
+
+    // if it not current prevent, enable it
+    if (preventPopupInput.checked) {
+      disablePopupNewsletter();
+      // if it has been prevent, turn it off  
+    } else {
+      enablepopupNewsletter();
+    }
+  });
+}
+
+
+// header menu sticky when scroll, show scroll to top button
 window.addEventListener('scroll', () => {
   let headerMenu = document.querySelector('.header-menu')
-  if (headerMenu) {
-    headerMenu.classList.toggle('sticky', window.scrollY > 700);
+  let scrollTopBtn = document.querySelector('.scroll-to-top-btn')
+  if (window.scrollY > 700) {
+    scrollTopBtn.classList.add('active');
+    headerMenu.classList.add('sticky');
+  }
+  else {
+    scrollTopBtn.classList.remove('active');
+    headerMenu.classList.remove('sticky');
   }
 })
 
@@ -305,7 +391,7 @@ if (slickList) {
 }
 
 
-// change active nav - Projects Home1
+// change active nav, filter item by category - Projects Home1
 const listNav = document.querySelectorAll('.list-nav')
 const filterItem = document.querySelectorAll('.item-filter')
 
@@ -314,7 +400,7 @@ if (listNav) {
     listNavItem.onclick = function (selectedItem) {
       if (selectedItem.target.classList.contains("nav-item")) {
         // add active class
-        if(listNavItem.querySelector('.active')) {
+        if (listNavItem.querySelector('.active')) {
           listNavItem.querySelector('.active').classList.remove('active')
           selectedItem.target.classList.add('active')
         }
@@ -423,11 +509,12 @@ var swiper = new Swiper(".list-comment-two", {
 });
 
 const slideItem = document.querySelectorAll('.list-comment-two .swiper-slide')
-if(slideItem){
+if (slideItem) {
   slideItem.forEach(item => {
     item.removeAttribute('style')
   })
 }
+
 
 // change switch btn pricing Home2
 const switchBtn = document.querySelector('.switch')
@@ -515,7 +602,7 @@ if (videoModalContainer) {
 }
 
 
-// Testimonial Home4
+// List instagram Home4
 $(".instagram-block .list-image").slick({
   dots: false,
   arrows: false,

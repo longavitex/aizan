@@ -98,5 +98,16 @@ Popup Newsletter: Start
 }
 
 /*
+*** prevent Popup Newsletter
+*/
+body.prevent-popupNewsletter #popup-newsletter-block {
+  opacity: 0;
+  visibility: hidden;
+}
+body.prevent-popupNewsletter #popup-newsletter-block .popup-newsletter-main {
+  top: 0;
+}
+
+/*
 Popup Newsletter: End
 */
