@@ -1,0 +1,27 @@
+/*
+*** Form chatbot Home1: Start
+*/
+.section-form-chat .form-chat-block .content .form-chat {
+  position: relative;
+}
+.section-form-chat .form-chat-block .content .form-chat textarea {
+  width: 100%;
+  height: 60px;
+  padding-right: 72px;
+  padding-left: 20px;
+  background: transparent;
+  line-height: 58px;
+}
+.section-form-chat .form-chat-block .content .form-chat span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--line-dark);
+}
+/*
+*** Form chatbot Home1: End
+*/
