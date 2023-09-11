@@ -254,6 +254,12 @@ Menu header: Start
   .header-menu .right-block a {
     display: none;
   }
+  .header-menu > .container #menu-mobile-block .sub-nav-mobile .mt-24 {
+    margin-top: 24px;
+  }
+  .header-menu > .container #menu-mobile-block .sub-nav-mobile .mt-16 {
+    margin-top: 16px;
+  }
 }
 
 /*

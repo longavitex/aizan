@@ -17,6 +17,11 @@ Bread crum: Start
   .breadcrum {
     margin-top: 60px;
   }
+  .breadcrum .text-nav .heading3 svg {
+    top: -16px;
+    right: -24px;
+    width: 24px;
+  }
 }
 
 /*

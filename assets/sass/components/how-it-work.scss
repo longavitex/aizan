@@ -2,26 +2,21 @@
     .row.mt-40 {
         >div:first-child {
             .feature-item {
-                .icon {
-                    position: relative;
+                position: relative;
 
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        height: 36px;
-                        width: 1px;
-                        background-color: var(--white);
-                        bottom: -62px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                    }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 36px;
+                    width: 1px;
+                    background-color: var(--white);
+                    bottom: -38px;
+                    left: 36px;
                 }
 
                 &:last-child {
-                    .icon {
-                        &::before {
-                            display: none;
-                        }
+                    &::before {
+                        display: none;
                     }
                 }
             }
@@ -40,8 +35,31 @@
         }
     }
 
+    @media (max-width: 991.98px) {
+        .row.mt-40 {
+            >div:first-child {
+                .feature-item {
+                    &::before {
+                        height: 21px;
+                        bottom: -24px;
+                    }
+                }
+            }
+        }
+    }
+
     @media (max-width: 575.98px) {
         .row.mt-40 {
+            >div:first-child {
+                .feature-item {
+                    &::before {
+                        height: 22px;
+                        bottom: -24px;
+                        left: 28px;
+                    }
+                }
+            }
+
             >div:last-child {
                 .bg-img {
                     height: 240px;

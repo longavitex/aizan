@@ -67,7 +67,7 @@
                     &:nth-child(4) {
                         bottom: -48px;
                         left: 50%;
-                        transform: translateX(-50%);    
+                        transform: translateX(-50%);
                     }
 
                     &:nth-child(5) {
@@ -208,6 +208,13 @@
         .heading2 {
             font-size: 44px;
             line-height: 54px;
+        }
+
+        @media (max-width: 575.98px) {
+            .heading2 {
+                font-size: 32px;
+                line-height: 42px;
+            }
         }
     }
 }

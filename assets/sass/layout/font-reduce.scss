@@ -254,18 +254,16 @@
     }
 
     .button {
-        display: inline-flex;
-        padding: 12px 28px;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        border-radius: 68px;
+        padding: 10px 16px;
+        gap: 6px;
+        border-radius: 20px;
         // text
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 26px;
-        text-transform: capitalize;
-        transition: all ease 0.4s;
+        font-size: 14px;
+        line-height: 24px;
+
+        i {
+            font-size: 16px;
+        }
     }
 
     .text-button {
@@ -284,6 +282,14 @@
         font-weight: 700;
         line-height: 20px;
         text-transform: uppercase;
+    }
+
+    .fs-60 {
+        font-size: 42px;
+    }
+
+    .fs-40 {
+        font-size: 32px;
     }
 
     .gap-60 {

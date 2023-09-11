@@ -176,6 +176,17 @@
     margin-top: 0;
   }
 }
+@media (max-width: 575.98px) {
+  .list-service .list .pb-32 {
+    padding-bottom: 8px;
+  }
+  .list-service .list .pt-32 {
+    padding-top: 8px;
+  }
+  .list-service .list .mt-32 {
+    margin-top: 16px;
+  }
+}
 
 /*
 *** List service Home4: End

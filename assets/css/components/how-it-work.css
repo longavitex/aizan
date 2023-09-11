@@ -1,17 +1,16 @@
-.how-it-work .row.mt-40 > div:first-child .feature-item .icon {
+.how-it-work .row.mt-40 > div:first-child .feature-item {
   position: relative;
 }
-.how-it-work .row.mt-40 > div:first-child .feature-item .icon::before {
+.how-it-work .row.mt-40 > div:first-child .feature-item::before {
   content: "";
   position: absolute;
   height: 36px;
   width: 1px;
   background-color: var(--white);
-  bottom: -62px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: -38px;
+  left: 36px;
 }
-.how-it-work .row.mt-40 > div:first-child .feature-item:last-child .icon::before {
+.how-it-work .row.mt-40 > div:first-child .feature-item:last-child::before {
   display: none;
 }
 .how-it-work .row.mt-40 > div:last-child .bg-img {
@@ -22,7 +21,18 @@
   left: 32px;
   bottom: 32px;
 }
+@media (max-width: 991.98px) {
+  .how-it-work .row.mt-40 > div:first-child .feature-item::before {
+    height: 21px;
+    bottom: -24px;
+  }
+}
 @media (max-width: 575.98px) {
+  .how-it-work .row.mt-40 > div:first-child .feature-item::before {
+    height: 22px;
+    bottom: -24px;
+    left: 28px;
+  }
   .how-it-work .row.mt-40 > div:last-child .bg-img {
     height: 240px;
   }

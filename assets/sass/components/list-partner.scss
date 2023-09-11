@@ -66,6 +66,31 @@
             transform: translateX(calc((152px + 230px + 258px + 202px + 263px) * 2 + 120px * 10) * -0.4);
         }
     }
+
+    @keyframes scrollMobile {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(calc(((152px + 230px + 258px + 202px + 263px) * 0.8) * 2 + 120px * 10) * -0.4);
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .list {
+            width: calc(((152px + 230px + 258px + 202px + 263px) * 0.8) * 2 + 30px * 10);
+            animation: scrollMobile 30s linear infinite;
+
+            .item {
+                margin: 0 15px;
+
+                img {
+                    width: 80%;
+                }
+            }
+        }
+    }
 }
 
 /*
@@ -126,8 +151,14 @@
         background-color: var(--purple);
         padding-top: 36px;
         padding-bottom: 36px;
+
+        @media (max-width: 575.98px) {
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
     }
 }
+
 /*
 *** List partner autoplay Home4: End
 */

@@ -225,7 +225,7 @@
 */
 .list-service {
     position: relative;
-    
+
     .list {
         .service-item {
             transition: all ease 0.3s;
@@ -261,6 +261,20 @@
                 &:hover {
                     margin-top: 0;
                 }
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .pb-32 {
+                padding-bottom: 8px;
+            }
+
+            .pt-32 {
+                padding-top: 8px;
+            }
+
+            .mt-32 {
+                margin-top: 16px;
             }
         }
     }

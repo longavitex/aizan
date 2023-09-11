@@ -19,6 +19,16 @@ Bread crum: Start
 
     @media (max-width: 575.98px) {
         margin-top: 60px;
+
+        .text-nav {
+            .heading3 {
+                svg {
+                    top: -16px;
+                    right: -24px;
+                    width: 24px;
+                }
+            }
+        }
     }
 }
 

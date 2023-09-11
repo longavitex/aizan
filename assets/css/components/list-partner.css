@@ -54,6 +54,26 @@
     transform: translateX(-1364px);
   }
 }
+@keyframes scrollMobile {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1187.2px);
+  }
+}
+@media (max-width: 575.98px) {
+  .list-partner-slide .list {
+    width: 2068px;
+    animation: scrollMobile 30s linear infinite;
+  }
+  .list-partner-slide .list .item {
+    margin: 0 15px;
+  }
+  .list-partner-slide .list .item img {
+    width: 80%;
+  }
+}
 
 /*
 *** List partner autoplay Home2: End
@@ -101,6 +121,12 @@
   background-color: var(--purple);
   padding-top: 36px;
   padding-bottom: 36px;
+}
+@media (max-width: 575.98px) {
+  .style-four .list-partner-slide {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }
 
 /*

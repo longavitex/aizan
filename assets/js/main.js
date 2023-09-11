@@ -32,20 +32,12 @@ ScrollReveal().reveal('.scroll-left-to-right1', { delay: 200, origin: 'left' })
 ScrollReveal().reveal('.scroll-left-to-right2', { delay: 300, origin: 'left' })
 ScrollReveal().reveal('.scroll-left-to-right3', { delay: 400, origin: 'left' })
 ScrollReveal().reveal('.scroll-left-to-right4', { delay: 500, origin: 'left' })
-ScrollReveal().reveal('.scroll-left-to-right5', { delay: 600, origin: 'left' })
-ScrollReveal().reveal('.scroll-left-to-right6', { delay: 700, origin: 'left' })
-ScrollReveal().reveal('.scroll-left-to-right7', { delay: 800, origin: 'left' })
-ScrollReveal().reveal('.scroll-left-to-right8', { delay: 900, origin: 'left' })
 
 // Scroll right to left
 ScrollReveal().reveal('.scroll-right-to-left1', { delay: 200, origin: 'right' })
 ScrollReveal().reveal('.scroll-right-to-left2', { delay: 300, origin: 'right' })
 ScrollReveal().reveal('.scroll-right-to-left3', { delay: 400, origin: 'right' })
 ScrollReveal().reveal('.scroll-right-to-left4', { delay: 500, origin: 'right' })
-ScrollReveal().reveal('.scroll-right-to-left5', { delay: 600, origin: 'right' })
-ScrollReveal().reveal('.scroll-right-to-left6', { delay: 700, origin: 'right' })
-ScrollReveal().reveal('.scroll-right-to-left7', { delay: 800, origin: 'right' })
-ScrollReveal().reveal('.scroll-right-to-left8', { delay: 900, origin: 'right' })
 
 // Text slide animation bottom to top 
 ScrollReveal().reveal('.text-scroll-bottom-to-top1', { delay: 400, origin: 'bottom' })
