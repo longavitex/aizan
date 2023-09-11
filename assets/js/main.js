@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
 ScrollReveal({
   distance: '200px',
   duration: 1000,
-  delay: 200,
+  delay: 500,
 })
 
 // Scroll bottom to top 
@@ -46,6 +46,18 @@ ScrollReveal().reveal('.scroll-right-to-left5', { delay: 600, origin: 'right' })
 ScrollReveal().reveal('.scroll-right-to-left6', { delay: 700, origin: 'right' })
 ScrollReveal().reveal('.scroll-right-to-left7', { delay: 800, origin: 'right' })
 ScrollReveal().reveal('.scroll-right-to-left8', { delay: 900, origin: 'right' })
+
+// Text slide animation bottom to top 
+ScrollReveal().reveal('.text-scroll-bottom-to-top1', { delay: 400, origin: 'bottom' })
+ScrollReveal().reveal('.text-scroll-bottom-to-top2', { delay: 600, origin: 'bottom' })
+ScrollReveal().reveal('.text-scroll-bottom-to-top3', { delay: 800, origin: 'bottom' })
+ScrollReveal().reveal('.text-scroll-bottom-to-top4', { delay: 1000, origin: 'bottom' })
+ScrollReveal().reveal('.text-scroll-bottom-to-top5', { delay: 1200, origin: 'bottom' })
+ScrollReveal().reveal('.text-scroll-bottom-to-top6', { delay: 1400, origin: 'bottom' })
+ScrollReveal().reveal('.text-scroll-bottom-to-top7', { delay: 1600, origin: 'bottom' })
+ScrollReveal().reveal('.text-scroll-bottom-to-top8', { delay: 1800, origin: 'bottom' })
+ScrollReveal().reveal('.text-scroll-bottom-to-top9', { delay: 2000, origin: 'bottom' })
+
 
 
 // Pop up newsletter

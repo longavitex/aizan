@@ -190,11 +190,14 @@
   padding: 8px 190px 8px 24px;
   border-radius: 52px;
 }
-.slider-block.style-two .slider-main .container .block-input a {
+.slider-block.style-two .slider-main .container .block-input .block-button {
   position: absolute;
   top: 8px;
   right: 8px;
   bottom: 8px;
+}
+.slider-block.style-two .slider-main .container .block-input .block-button a {
+  height: 100%;
 }
 .slider-block.style-two .slider-main .container .tags .list-tag a {
   display: flex;

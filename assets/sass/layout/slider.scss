@@ -240,11 +240,15 @@
                     border-radius: 52px;
                 }
 
-                a {
+                .block-button {
                     position: absolute;
                     top: 8px;
                     right: 8px;
                     bottom: 8px;
+
+                    a {
+                        height: 100%;
+                    }
                 }
             }
 
