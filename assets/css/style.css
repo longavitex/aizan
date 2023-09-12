@@ -1898,7 +1898,7 @@ Menu header: End
 .slider-block.style-one .slider-main .row > div:last-child .icon svg:first-child {
   position: absolute;
   right: 190px;
-  transform: translateY(-200px);
+  transform: translateY(-214px);
 }
 .slider-block.style-one .slider-main .row > div:last-child .icon svg:last-child {
   position: absolute;
@@ -1960,12 +1960,12 @@ Menu header: End
   .slider-block.style-one .slider-main .row > div:last-child .icon svg:first-child {
     position: absolute;
     right: calc(50% - 87px);
-    transform: translateY(-415px);
+    transform: translateY(-430px);
   }
   .slider-block.style-one .slider-main .row > div:last-child .icon svg:last-child {
     position: absolute;
     left: calc(50% - 340px);
-    transform: translateY(-100px);
+    transform: translateY(-130px);
   }
   .slider-block.style-one .slider-main .row > div:last-child .user-infor {
     top: calc(50% + 230px);
