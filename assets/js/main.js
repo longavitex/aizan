@@ -199,10 +199,13 @@ const chatBox = document.querySelector('.section-form-chat .chatbox')
 const chatInput = document.querySelector('.section-form-chat .form-chat textarea')
 const sendChatBtn = document.querySelector('.section-form-chat .form-chat span')
 
+
 let userMessage;
 // Get api keys on openai
 const API_KEY = "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";
-const inputInitHeight = chatInput.scrollHeight
+if(chatInput) {
+  var inputInitHeight = chatInput.scrollHeight
+}
 
 const createChatLi = (message, className) => {
   // Create a chat <li> element 
@@ -238,7 +241,7 @@ const generateResponse = (incomingChatLi) => {
   // Send POST request to API, get response
   fetch(API_URL, requestOptions)
     .then(res => res.json())
-    .then(data => { 
+    .then(data => {
       messageElement.textContent = data.choices[0].message.content
     })
     .catch(error => {
@@ -251,6 +254,9 @@ const handleChat = () => {
   if (!userMessage) return;
   chatInput.value = '';
   chatInput.style.height = '30px'
+  if (document.body.clientWidth < 576) {
+    chatInput.style.height = '20px'
+  }
   formChat.style.borderRadius = '99px'
 
   // Append the user's message to the chatbox
@@ -263,19 +269,19 @@ const handleChat = () => {
   }, 600)
 }
 
-
-if(chatInput) {
+// Auto height, listen event press Enter on keyboard
+if (chatInput) {
   chatInput.addEventListener('input', () => {
     chatInput.style.height = `${inputInitHeight}px`
     chatInput.style.height = `${chatInput.scrollHeight}px`
 
-    if(chatInput.scrollHeight > 100) {
+    if (chatInput.scrollHeight > 100) {
       formChat.style.borderRadius = '20px'
     }
   })
 
   chatInput.addEventListener('keydown', (e) => {
-    if(e.key === 'Enter' && !e.shiftKey) {
+    if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault()
       handleChat()
     }
@@ -285,6 +291,7 @@ if(chatInput) {
 if (sendChatBtn) {
   sendChatBtn.addEventListener('click', handleChat)
 }
+
 
 
 // Testimonial Home1
@@ -482,6 +489,15 @@ if (listBlog) {
       mouseCursor.style.gap = '12px'
     })
   })
+}
+
+
+// Count number Home2
+if (document.querySelector('.counter .count-number')) {
+  $('.counter .count-number').counterUp({
+    delay: 6,
+    time: 800,
+  });
 }
 
 

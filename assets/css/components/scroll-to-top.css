@@ -36,6 +36,16 @@ Scroll To Top Button: Start
   visibility: visible;
 }
 
+@media (max-width: 575.98px) {
+  .scroll-to-top-btn {
+    width: 36px;
+    height: 36px;
+    right: 20px;
+  }
+  .scroll-to-top-btn.active {
+    bottom: 20px;
+  }
+}
 .style-two .scroll-to-top-btn {
   background-color: rgba(0, 0, 0, 0.5);
 }
