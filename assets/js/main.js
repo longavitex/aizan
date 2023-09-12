@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
     if (preload) {
       preload.classList.add('disable')
     }
-  }, 300)
+  }, 0)
 })
 
 
@@ -193,113 +193,98 @@ if (menuMobileMain) {
 }
 
 
-// change type pricing
-const chooseType = document.querySelector('.choose-type')
-const listPricing = document.querySelectorAll('.list-pricing')
+// Chatbot AI Home1
+const formChat = document.querySelector('.section-form-chat .form-chat')
+const chatBox = document.querySelector('.section-form-chat .chatbox')
+const chatInput = document.querySelector('.section-form-chat .form-chat textarea')
+const sendChatBtn = document.querySelector('.section-form-chat .form-chat span')
 
-if (chooseType) {
-  chooseType.onclick = function (selectedItem) {
-    if (selectedItem.target.classList.contains("button")) {
-      // add active class
-      chooseType.querySelector('.active').classList.remove('active')
-      selectedItem.target.classList.add('active')
+let userMessage;
+// Get api keys on openai
+const API_KEY = "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";
+const inputInitHeight = chatInput.scrollHeight
 
-      //get data-name value
-      let filterName = selectedItem.target.getAttribute('data-name')
+const createChatLi = (message, className) => {
+  // Create a chat <li> element 
+  const chatLi = document.createElement('li')
+  chatLi.classList.add('chat', className)
+  let chatContent = `<p></p>`
+  chatLi.innerHTML = chatContent
+  chatLi.querySelector('p').textContent = message
+  return chatLi;
+}
 
-      listPricing.forEach((item) => {
-        if (filterName === item.getAttribute('data-name')) {
-          item.classList.add('show')
-          item.classList.remove('hide')
-        } else {
-          item.classList.remove('show')
-          item.classList.add('hide')
+const generateResponse = (incomingChatLi) => {
+  const API_URL = 'https://api.openai.com/v1/chat/completions'
+  const messageElement = incomingChatLi.querySelector('p');
+
+  const requestOptions = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${API_KEY}`
+    },
+    body: JSON.stringify({
+      model: "gpt-3.5-turbo",
+      messages: [
+        {
+          role: "user",
+          content: userMessage
         }
-      })
-    }
+      ]
+    })
   }
+
+  // Send POST request to API, get response
+  fetch(API_URL, requestOptions)
+    .then(res => res.json())
+    .then(data => { 
+      messageElement.textContent = data.choices[0].message.content
+    })
+    .catch(error => {
+      messageElement.textContent = 'No connection with OpenAI'
+    })
+}
+
+const handleChat = () => {
+  userMessage = chatInput.value.trim()
+  if (!userMessage) return;
+  chatInput.value = '';
+  chatInput.style.height = '30px'
+  formChat.style.borderRadius = '99px'
+
+  // Append the user's message to the chatbox
+  chatBox.appendChild(createChatLi(userMessage, 'outgoing'))
+
+  setTimeout(() => {
+    const incomingChatLi = createChatLi('Thinking...', 'incoming')
+    chatBox.appendChild(incomingChatLi)
+    generateResponse(incomingChatLi)
+  }, 600)
 }
 
 
-// open answer faqs
-const questionItem = document.querySelectorAll('.question-item')
+if(chatInput) {
+  chatInput.addEventListener('input', () => {
+    chatInput.style.height = `${inputInitHeight}px`
+    chatInput.style.height = `${chatInput.scrollHeight}px`
 
-if (questionItem) {
-  questionItem.forEach((item, index) => {
-    let titleItem = item.querySelector('.question-item-main')
-    let icon = item.querySelector('i')
+    if(chatInput.scrollHeight > 100) {
+      formChat.style.borderRadius = '20px'
+    }
+  })
 
-    titleItem.addEventListener('click', () => {
-      item.classList.toggle('open')
-
-      if (item.classList.contains('open')) {
-        setTimeout(() => {
-          icon.classList.replace('ph-plus', 'ph-minus')
-        }, 200)
-      } else {
-        setTimeout(() => {
-          icon.classList.replace('ph-minus', 'ph-plus')
-        }, 200)
-      }
-
-      removeOpen(index)
-    })
-
-    if (item.classList.contains('open')) {
-      icon.classList.replace('ph-plus', 'ph-minus')
-    } else {
-      icon.classList.replace('ph-minus', 'ph-plus')
+  chatInput.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      handleChat()
     }
   })
 }
 
-function removeOpen(index1) {
-  questionItem.forEach((item2, index2) => {
-    if (index1 != index2) {
-      item2.classList.remove('open')
-      item2.querySelector('i').classList.replace('ph-minus', 'ph-plus')
-    }
-  })
+if (sendChatBtn) {
+  sendChatBtn.addEventListener('click', handleChat)
 }
-
-
-// Like Blog Detail
-const comments = document.querySelectorAll('.blog-detail .blog-comment .comment-item .like')
-
-if (comments) {
-  comments.forEach(cmt => {
-    cmt.addEventListener('click', () => {
-      cmt.classList.toggle('liked')
-      let heartIcon = cmt.querySelector('i')
-      let numberLiked = cmt.querySelector('.text-button-small')
-      let number = parseFloat(numberLiked.innerHTML);
-
-      if (cmt.classList.contains('liked')) {
-        heartIcon.classList.replace('ph', 'ph-fill')
-        number = number + 1
-        numberLiked.innerHTML = number.toString()
-      }
-      else {
-        heartIcon.classList.replace('ph-fill', 'ph')
-        number = number - 1
-        numberLiked.innerHTML = number.toString()
-      }
-    })
-  })
-}
-
-
-// Show, hide reply
-// const showReplyBtn = document.querySelectorAll('.blog-detail .blog-comment .comment-item .cmt .text-button-small')
-// const replies = document.querySelectorAll('.blog-detail .blog-comment .reply')
-
-// if(showReplyBtn) {
-//   showReplyBtn.forEach(btn => {
-//     btn.addEventListener('click', () => {
-
-//     })
-//   })
-// }
 
 
 // Testimonial Home1
@@ -688,3 +673,113 @@ $(".testimonial-block.style-four .container .row .list-testimonial").slick({
     },
   ]
 });
+
+
+// change type pricing
+const chooseType = document.querySelector('.choose-type')
+const listPricing = document.querySelectorAll('.list-pricing')
+
+if (chooseType) {
+  chooseType.onclick = function (selectedItem) {
+    if (selectedItem.target.classList.contains("button")) {
+      // add active class
+      chooseType.querySelector('.active').classList.remove('active')
+      selectedItem.target.classList.add('active')
+
+      //get data-name value
+      let filterName = selectedItem.target.getAttribute('data-name')
+
+      listPricing.forEach((item) => {
+        if (filterName === item.getAttribute('data-name')) {
+          item.classList.add('show')
+          item.classList.remove('hide')
+        } else {
+          item.classList.remove('show')
+          item.classList.add('hide')
+        }
+      })
+    }
+  }
+}
+
+
+// open answer faqs
+const questionItem = document.querySelectorAll('.question-item')
+
+if (questionItem) {
+  questionItem.forEach((item, index) => {
+    let titleItem = item.querySelector('.question-item-main')
+    let icon = item.querySelector('i')
+
+    titleItem.addEventListener('click', () => {
+      item.classList.toggle('open')
+
+      if (item.classList.contains('open')) {
+        setTimeout(() => {
+          icon.classList.replace('ph-plus', 'ph-minus')
+        }, 200)
+      } else {
+        setTimeout(() => {
+          icon.classList.replace('ph-minus', 'ph-plus')
+        }, 200)
+      }
+
+      removeOpen(index)
+    })
+
+    if (item.classList.contains('open')) {
+      icon.classList.replace('ph-plus', 'ph-minus')
+    } else {
+      icon.classList.replace('ph-minus', 'ph-plus')
+    }
+  })
+}
+
+function removeOpen(index1) {
+  questionItem.forEach((item2, index2) => {
+    if (index1 != index2) {
+      item2.classList.remove('open')
+      item2.querySelector('i').classList.replace('ph-minus', 'ph-plus')
+    }
+  })
+}
+
+
+// Like Blog Detail
+const comments = document.querySelectorAll('.blog-detail .blog-comment .comment-item .like')
+
+if (comments) {
+  comments.forEach(cmt => {
+    cmt.addEventListener('click', () => {
+      cmt.classList.toggle('liked')
+      let heartIcon = cmt.querySelector('i')
+      let numberLiked = cmt.querySelector('.text-button-small')
+      let number = parseFloat(numberLiked.innerHTML);
+
+      if (cmt.classList.contains('liked')) {
+        heartIcon.classList.replace('ph', 'ph-fill')
+        number = number + 1
+        numberLiked.innerHTML = number.toString()
+      }
+      else {
+        heartIcon.classList.replace('ph-fill', 'ph')
+        number = number - 1
+        numberLiked.innerHTML = number.toString()
+      }
+    })
+  })
+}
+
+
+// Show, hide reply
+// const showReplyBtn = document.querySelectorAll('.blog-detail .blog-comment .comment-item .cmt .text-button-small')
+// const replies = document.querySelectorAll('.blog-detail .blog-comment .reply')
+
+// if(showReplyBtn) {
+//   showReplyBtn.forEach(btn => {
+//     btn.addEventListener('click', () => {
+
+//     })
+//   })
+// }
+
