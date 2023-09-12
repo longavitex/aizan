@@ -1,3 +1,6 @@
+/*
+*** Our benefit (About Page): Start
+*/
 .our-benefit .list-benefit .row > a .heading6 {
   transition: all ease 0.3s;
 }
@@ -24,3 +27,7 @@
 .our-benefit .list-benefit .row > a:hover .line-dark::before {
   width: 100%;
 }
+
+/*
+*** Our benefit (About Page): End
+*/

@@ -1,3 +1,62 @@
+/**/
+/**/
+/*
+Sections of the same type on each page will be styled into each area. 
+If you want to find the CSS position of a certain section, 
+look at its HTML file structure first (look at their id, class, tag name, ...), 
+then you can search by title in the table of contents or classname, id, ...
+(Press Crtl + F to search).
+*/
+/**/
+/**/
+
+/* 
+*
+*** Table of contents:
+-- Main color
+-- Reset CSS
+-- Custom bootstrap (Container, row)
+-- Main class used in Aizan
+
+-- Preload
+-- Popup Newsletter
+-- Top Nav
+-- Menu
+-- Slider
+-- Breadcrum (Sub pages)
+
+-- Section List Partner
+-- Section Form Chat
+-- Section About
+-- Section List Service
+-- Section How it work
+-- Section Testimonial
+-- Section Projects
+-- Filter Item
+-- Section List Pricing
+-- Section Blog
+-- Section Counter
+-- Section List Instagram
+-- Section List FAQs
+-- Section Form Contact
+-- Form Contact (Contact Page)
+
+-- Section Our benefit (About Page)
+-- Section Our leader (About Page)
+
+-- Blog List (Blog Page)
+-- Blog Detail (Blog Detail Page)
+-- Modal video
+-- Scroll to top
+
+-- Footer
+-- Page Not Found
+-- Reduce font and spacing
+
+*
+*/
+
+
 /*  Main color */
 :root {
     --blue: #3D89FB;
@@ -19,34 +78,38 @@
 @import './base/global.scss';
 
 @import './layout/preload.scss';
+@import './components/popup-newsletter.scss';
 @import './layout/top-nav.scss';
 @import './layout/menu.scss';
 @import './layout/slider.scss';
-@import './layout/footer.scss';
-@import './layout/filter-item.scss';
-
-@import './components/popup-newsletter.scss';
 @import './components/breadcrum.scss';
+
+@import './components/list-partner.scss';
 @import './components/form-chat.scss';
 @import './components/about.scss';
-@import './components/counter.scss';
-@import './components/page-not-found.scss';
-@import './components/blog-list.scss';
-@import './components/blog-detail.scss';
-@import './components/blog-section.scss';
-@import './components/contact.scss';
-@import './components/list-pricing.scss';
-@import './components/list-faqs.scss';
-@import './components/list-partner.scss';
 @import './components/list-service.scss';
 @import './components/how-it-work.scss';
+@import './components/testimonial.scss';
+@import './components/projects.scss';
+@import './layout/filter-item.scss';
+@import './components/list-pricing.scss';
+@import './components/blog-section.scss';
+
+@import './components/counter.scss';
+@import './components/list-instagram.scss';
+@import './components/list-faqs.scss';
+@import './components/form-contact.scss';
+@import './components/contact.scss';
+
 @import './components/our-benefit.scss';
 @import './components/our-leader.scss';
-@import './components/form-contact.scss';
-@import './components/projects.scss';
-@import './components/testimonial.scss';
+
+@import './components/blog-list.scss';
+@import './components/blog-detail.scss';
+
 @import './components/modal-video.scss';
-@import './components/list-instagram.scss';
 @import './components/scroll-to-top.scss';
 
+@import './layout/footer.scss';
+@import './components/page-not-found.scss';
 @import './layout/font-reduce.scss';

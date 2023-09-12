@@ -1,3 +1,6 @@
+/*
+*** Our leader: Start
+*/
 .our-leader .container .list-our-team .item {
   position: relative;
   overflow: hidden;
@@ -45,3 +48,7 @@
 .our-leader .container .list-our-team .item:hover .list-social {
   right: 0;
 }
+
+/*
+*** Our leader: End
+*/

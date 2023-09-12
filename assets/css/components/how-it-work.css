@@ -1,3 +1,6 @@
+/*
+*** How it work: Start
+*/
 .how-it-work .row.mt-40 > div:first-child .feature-item {
   position: relative;
 }
@@ -66,3 +69,7 @@
 .style-purple .col-lg-7 .bg-blue {
   background-color: var(--purple);
 }
+
+/*
+*** How it work: End
+*/
