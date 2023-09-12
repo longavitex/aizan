@@ -1,6 +1,6 @@
 mixin projectItem(props = {})
     -var {classname = '', href="#!", img, category, title} = props
-    div(class=`${classname} item` href=`${href}`)
+    div(class=`${classname} item`)
         .bg-img.bora-20.overflow-hidden
             img(src=`${img}`, alt=`${title}`).w-100
         a(href=`${href}`).infor.p-12

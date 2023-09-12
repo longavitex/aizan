@@ -4,7 +4,7 @@ mixin blogItem(props = {})
         if(style=='style-one')
             a(href=`${href}`).main-item
                 .bg-img.w-100.overflow-hidden
-                    img(src=`${img}`).w-100.h-100.display-block
+                    img(src=`${img}` alt=`${title}`).w-100.h-100.display-block
                 .infor.p-24
                     .heading.flex-item-center.gap-8 
                         .text-button-uppercase!= category
