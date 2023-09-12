@@ -34,6 +34,25 @@ Form contact (Contact page): Start
     }
 }
 
+.map-block {
+    iframe {
+        width: 100%;
+        height: 600px;
+    }
+
+    @media (max-width: 575.98px) {
+        iframe {
+            height: 500px;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        iframe {
+            height: 400px;
+        }
+    }
+}
+
 /*
 Form contact (Contact page): End
 */

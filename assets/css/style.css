@@ -3628,6 +3628,21 @@ Form contact (Contact page): Start
   padding-right: 12px;
 }
 
+.map-block iframe {
+  width: 100%;
+  height: 600px;
+}
+@media (max-width: 575.98px) {
+  .map-block iframe {
+    height: 500px;
+  }
+}
+@media (max-width: 575.98px) {
+  .map-block iframe {
+    height: 400px;
+  }
+}
+
 /*
 Form contact (Contact page): End
 */
