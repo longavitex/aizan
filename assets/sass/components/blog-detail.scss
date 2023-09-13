@@ -44,6 +44,21 @@
                                 }
                             }
                         }
+
+                        .list-reply {
+                            max-height: 0;
+                            opacity: 0;
+                            visibility: hidden;
+                            overflow: hidden;
+                            transition: all ease 0.5s;
+                        }
+
+                        .list-reply.show {
+                            max-height: 1000px;
+                            opacity: 1;
+                            visibility: visible;
+                            transition: all ease 0.5s;
+                        }
                     }
                 }
 

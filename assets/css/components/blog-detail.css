@@ -22,6 +22,19 @@
 .blog-detail .container > .row > div:first-child .blog-comment .list-comment .comment-item .comment-infor .like i {
   transition: all ease 0.3s;
 }
+.blog-detail .container > .row > div:first-child .blog-comment .list-comment .list-reply {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all ease 0.5s;
+}
+.blog-detail .container > .row > div:first-child .blog-comment .list-comment .list-reply.show {
+  max-height: 1000px;
+  opacity: 1;
+  visibility: visible;
+  transition: all ease 0.5s;
+}
 .blog-detail .container > .row > div:first-child .blog-form-contact .row {
   margin-left: -10px;
   margin-right: -10px;

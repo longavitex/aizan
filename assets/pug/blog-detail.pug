@@ -1,6 +1,6 @@
 extends base/layout.pug
 block title
-    title FAQs
+    title Blog Detail
 block header 
     div(class="style-purple")
         include components/header/menu/menu-one.pug
@@ -99,7 +99,7 @@ block content
                                     option(value="Oldest") Oldest
                                     option(value="Best Fit") Best Fit
                         .list-comment.mt-24
-                            .comment-item.pb-24
+                            .comment-item.pb-24&attributes({"data-cmt":"cmt1"})
                                 .heading.flex-between
                                     .left.flex-item-center.gap-16
                                         img.avatar(src="assets/images/avatar/avatar3.png", alt="")
@@ -118,23 +118,24 @@ block content
                                             i.ph.ph-chat.text-white 
                                             .text-button-small.text-placehover.pl-4 Show Replies
                                     .text-button-small.text-placehover.pointer Reply
-                            .comment-item.reply.hide.pb-24.pl-40
-                                .heading.flex-between
-                                    .left.flex-item-center.gap-16
-                                        img.avatar(src="assets/images/avatar/avatar2.png", alt="")
-                                        .infor 
-                                            .text-button Hayley Raymond
-                                            .caption1.text-placehover 1 days ago
-                                    .right 
-                                        i.ph-fill.ph-dots-three-outline.text-placehover
-                                .content.mt-12 Metus vestibulum condimentum condimentum interdum suspendisse nostra id viverra aliquam curae dictum habitant cum venenatis a sem parturient eu ipsum suspendisse morbi suspendisse imperdiet curae commodo class.
-                                .comment-infor.flex-between.mt-12
-                                    .left.flex-item-center.gap-16
-                                        .like.flex-item-center.pointer
-                                            i.ph.ph-heart.text-white 
-                                            .text-button-small.text-placehover.pl-4 20
-                                    .text-button-small.text-placehover.pointer Reply
-                            .comment-item.pt-24.pb-24
+                            .list-reply.pl-40&attributes({"data-cmt":"cmt1"})
+                                .comment-item.pb-24
+                                    .heading.flex-between
+                                        .left.flex-item-center.gap-16
+                                            img.avatar(src="assets/images/avatar/avatar2.png", alt="")
+                                            .infor 
+                                                .text-button Hayley Raymond
+                                                .caption1.text-placehover 1 days ago
+                                        .right 
+                                            i.ph-fill.ph-dots-three-outline.text-placehover
+                                    .content.mt-12 Metus vestibulum condimentum condimentum interdum suspendisse nostra id viverra aliquam curae dictum habitant cum venenatis a sem parturient eu ipsum suspendisse morbi suspendisse imperdiet curae commodo class.
+                                    .comment-infor.flex-between.mt-12
+                                        .left.flex-item-center.gap-16
+                                            .like.flex-item-center.pointer
+                                                i.ph.ph-heart.text-white 
+                                                .text-button-small.text-placehover.pl-4 6
+                                        .text-button-small.text-placehover.pointer Reply
+                            .comment-item.pb-24
                                 .heading.flex-between
                                     .left.flex-item-center.gap-16
                                         img.avatar(src="assets/images/avatar/avatar4.png", alt="")
@@ -148,10 +149,7 @@ block content
                                     .left.flex-item-center.gap-16
                                         .like.flex-item-center.pointer
                                             i.ph.ph-heart.text-white 
-                                            .text-button-small.text-placehover.pl-4 20
-                                        .cmt.flex-item-center.pointer
-                                            i.ph.ph-chat.text-white 
-                                            .text-button-small.text-placehover.pl-4 Hide Replies
+                                            .text-button-small.text-placehover.pl-4 14
                                     .text-button-small.text-placehover.pointer Reply
                     .blog-form-contact.mt-40
                         .heading6 Leave a Comment

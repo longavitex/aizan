@@ -57,6 +57,7 @@
 }
 .section-form-chat .form-chat-block .form-content .form-chat {
   position: relative;
+  border: 1px solid var(--line-dark);
 }
 .section-form-chat .form-chat-block .form-content .form-chat textarea {
   width: 100%;
@@ -79,6 +80,9 @@
 }
 .section-form-chat .form-chat-block .form-content .form-chat span i:hover {
   background: var(--blue);
+}
+.section-form-chat .form-chat-block .form-content .form-chat:focus-within {
+  border: 1px solid var(--line);
 }
 @media (max-width: 991.98px) {
   .section-form-chat .bg-img {

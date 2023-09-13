@@ -201,7 +201,7 @@ const sendChatBtn = document.querySelector('.section-form-chat .form-chat span')
 
 
 let userMessage;
-// Get api keys on openai
+// Get api keys on OpenAI
 const API_KEY = "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";
 if(chatInput) {
   var inputInitHeight = chatInput.scrollHeight
@@ -217,9 +217,11 @@ const createChatLi = (message, className) => {
   return chatLi;
 }
 
+// If you want to answer the right question,
+// change API Key on your OpenAI account 
 const generateResponse = (incomingChatLi) => {
   const API_URL = 'https://api.openai.com/v1/chat/completions'
-  const messageElement = incomingChatLi.querySelector('p');
+  const messageResponse = incomingChatLi.querySelector('p');
 
   const requestOptions = {
     method: "POST",
@@ -242,10 +244,10 @@ const generateResponse = (incomingChatLi) => {
   fetch(API_URL, requestOptions)
     .then(res => res.json())
     .then(data => {
-      messageElement.textContent = data.choices[0].message.content
+      messageResponse.textContent = data.choices[0].message.content
     })
     .catch(error => {
-      messageElement.textContent = 'No connection with OpenAI'
+      messageResponse.textContent = userMessage
     })
 }
 
@@ -263,7 +265,7 @@ const handleChat = () => {
   chatBox.appendChild(createChatLi(userMessage, 'outgoing'))
 
   setTimeout(() => {
-    const incomingChatLi = createChatLi('Thinking...', 'incoming')
+    const incomingChatLi = createChatLi('...', 'incoming')
     chatBox.appendChild(incomingChatLi)
     generateResponse(incomingChatLi)
   }, 600)
@@ -787,15 +789,32 @@ if (comments) {
 }
 
 
-// Show, hide reply
-// const showReplyBtn = document.querySelectorAll('.blog-detail .blog-comment .comment-item .cmt .text-button-small')
-// const replies = document.querySelectorAll('.blog-detail .blog-comment .reply')
+// Show, hide reply Blog Detail
+const showReplyBtn = document.querySelectorAll('.blog-detail .blog-comment .comment-item .cmt')
+const listReply = document.querySelectorAll('.blog-detail .blog-comment .list-reply')
 
-// if(showReplyBtn) {
-//   showReplyBtn.forEach(btn => {
-//     btn.addEventListener('click', () => {
+if(showReplyBtn) {
+  showReplyBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const parentCmt = btn.parentElement.parentElement.parentElement
+      const dataCmt = parentCmt.getAttribute('data-cmt')
 
-//     })
-//   })
-// }
+      listReply.forEach(reply => {
+        const dataReply = reply.getAttribute('data-cmt')
+        
+        if(dataReply == dataCmt) {
+          reply.classList.toggle('show')
+          btn.classList.toggle('show')
+
+          const textShow = btn.querySelector('.text-button-small')
+          if(btn.classList.contains('show')) {
+            textShow.innerHTML = 'Hide Replies'
+          } else {
+            textShow.innerHTML = 'Show Replies'
+          }
+        }
+      })
+    })
+  })
+}
 

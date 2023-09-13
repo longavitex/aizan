@@ -298,20 +298,6 @@ select {
   line-height: 16px;
 }
 
-.button {
-  display: inline-flex;
-  padding: 12px 28px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  border-radius: 68px;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 26px;
-  text-transform: capitalize;
-  transition: all ease 0.4s;
-}
-
 .text-button {
   font-size: 16px;
   font-weight: 700;
@@ -330,22 +316,6 @@ select {
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
-}
-
-.button-blue-hover:hover {
-  background: #0c68be;
-}
-
-.button-yellow-hover:hover {
-  background-color: #ebb41d;
-}
-
-.button-green-hover:hover {
-  background-color: #00ff40;
-}
-
-.button-purple-hover:hover {
-  background-color: #5700c9;
 }
 
 .text-blue {
@@ -1103,6 +1073,81 @@ select {
 /*
 *** Main class used in Aizan: End
 */
+.button {
+  position: relative;
+  display: inline-flex;
+  padding: 12px 28px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 68px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: capitalize;
+  transition: all ease 0.4s;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 6px;
+  top: -2px;
+  left: 0;
+  transition: all ease 0.5s;
+}
+.button:hover::before {
+  animation: moveAroundBtn ease 1s infinite;
+}
+
+@keyframes moveAroundBtn {
+  0% {
+    left: 0;
+    top: -2px;
+    right: unset;
+    bottom: unset;
+  }
+  25% {
+    top: -2px;
+    right: 0;
+    left: unset;
+    bottom: unset;
+  }
+  50% {
+    right: 0;
+    bottom: 0;
+    top: unset;
+    left: unset;
+  }
+  75% {
+    left: 0;
+    bottom: 0;
+    top: unset;
+    right: unset;
+  }
+  100% {
+    left: 0;
+    top: 0;
+    right: unset;
+    bottom: unset;
+  }
+}
+.button-blue-hover:hover {
+  background: #0c68be;
+}
+
+.button-yellow-hover:hover {
+  background-color: #ebb41d;
+}
+
+.button-green-hover:hover {
+  background-color: #00ff40;
+}
+
+.button-purple-hover:hover {
+  background-color: #5700c9;
+}
+
 #preload {
   position: fixed;
   z-index: 10000;
@@ -2798,6 +2843,7 @@ Bread crum: End
 }
 .section-form-chat .form-chat-block .form-content .form-chat {
   position: relative;
+  border: 1px solid var(--line-dark);
 }
 .section-form-chat .form-chat-block .form-content .form-chat textarea {
   width: 100%;
@@ -2820,6 +2866,9 @@ Bread crum: End
 }
 .section-form-chat .form-chat-block .form-content .form-chat span i:hover {
   background: var(--blue);
+}
+.section-form-chat .form-chat-block .form-content .form-chat:focus-within {
+  border: 1px solid var(--line);
 }
 @media (max-width: 991.98px) {
   .section-form-chat .bg-img {
@@ -5220,6 +5269,19 @@ Form contact (Contact page): End
 }
 .blog-detail .container > .row > div:first-child .blog-comment .list-comment .comment-item .comment-infor .like i {
   transition: all ease 0.3s;
+}
+.blog-detail .container > .row > div:first-child .blog-comment .list-comment .list-reply {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all ease 0.5s;
+}
+.blog-detail .container > .row > div:first-child .blog-comment .list-comment .list-reply.show {
+  max-height: 1000px;
+  opacity: 1;
+  visibility: visible;
+  transition: all ease 0.5s;
 }
 .blog-detail .container > .row > div:first-child .blog-form-contact .row {
   margin-left: -10px;
