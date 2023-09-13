@@ -412,10 +412,16 @@ Menu header: Start
 
                                         .explore-block {
                                             a {
-                                                background-color: var(--green);
+                                                span:nth-child(2) {
+                                                    background-color: var(--green);
+                                                }
 
                                                 &:hover {
-                                                    background-color: #00ff40;
+                                                    background-color: #02bd30;
+
+                                                    span:nth-child(2) {
+                                                        background-color: #02bd30;
+                                                    }
                                                 }
                                             }
                                         }
@@ -438,10 +444,14 @@ Menu header: Start
 
                 .right-block {
                     a {
-                        background-color: var(--green);
+                        span:nth-child(2) {
+                            background-color: var(--green);
+                        }
 
                         &:hover {
-                            background-color: #00ff40;
+                            span:nth-child(2) {
+                                background-color: #02bd30;
+                            }
                         }
                     }
                 }
@@ -782,10 +792,14 @@ Menu header: Start
 
                                         .explore-block {
                                             a {
-                                                background-color: var(--purple);
+                                                span:nth-child(2) {
+                                                    background-color: var(--purple);
+                                                }
 
                                                 &:hover {
-                                                    background-color: #5700c9;
+                                                    span:nth-child(2) {
+                                                        background-color: #5700c9;
+                                                    }
                                                 }
                                             }
                                         }
@@ -808,10 +822,14 @@ Menu header: Start
 
                 .right-block {
                     a {
-                        background-color: var(--purple);
+                        span:nth-child(2) {
+                            background-color: var(--purple);
+                        }
 
                         &:hover {
-                            background-color: #5700c9;
+                            span:nth-child(2) {
+                                background-color: #5700c9;
+                            }
                         }
                     }
                 }

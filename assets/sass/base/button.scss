@@ -1,10 +1,8 @@
 .button {
     position: relative;
     display: inline-flex;
-    padding: 12px 28px;
     justify-content: center;
     align-items: center;
-    gap: 8px;
     border-radius: 68px;
     // text
     font-size: 16px;
@@ -13,81 +11,103 @@
     text-transform: capitalize;
     transition: all ease 0.4s;
 
-    &::before {
-        content: "";
+    >span:nth-child(1) {
         position: absolute;
-        height: 2px;
-        width: 6px;
-        // background: linear-gradient(104deg, rgba($color: #437AFB, $alpha: 1.0), rgba($color: #19CDF1, $alpha: 0.8));
+        left: -2px;
+        right: -2px;
         top: -2px;
-        left: 0;
-        transition: all ease 0.5s;
+        bottom: -2px;
+        background: transparent;
+        border-radius: 68px;
+        overflow: hidden;
+        z-index: 0;
+        opacity: 0;
+
+        span {
+            position: absolute;
+            min-width: 110%;
+            min-height: 110%;
+            aspect-ratio: 1/1;
+            top: 50%;
+            left: 50%;
+            background: conic-gradient(from 290deg, transparent 0%, #FFFFFF 50%, transparent 20%);
+            animation: twirl 3s linear infinite;
+            z-index: 0;
+        }
+    }
+
+    span:nth-child(2) {
+        padding: 14px 28px;
+        border-radius: 68px;
+        display: inline-flex;
+        gap: 8px;
+        position: relative;
+        z-index: 2;
     }
 
     &:hover {
-        &::before {
-            animation: moveAroundBtn ease 1s infinite;
+        >span:nth-child(1) {
+            opacity: 1;
         }
     }
 }
 
-@keyframes moveAroundBtn {
+@keyframes twirl {
     0% {
-        left: 0;
-        top: -2px;
-        right: unset;
-        bottom: unset;
-    }
-
-    25% {
-        top: -2px;
-        right: 0;
-        left: unset;
-        bottom: unset;
-    }
-
-    50% {
-        right: 0;
-        bottom: 0;
-        top: unset;
-        left: unset;
-    }
-
-    75% {
-        left: 0;
-        bottom: 0;
-        top: unset;
-        right: unset;
+        transform: translate(-50%, -50%) rotate(0);
     }
 
     100% {
-        left: 0;
-        top: 0;
-        right: unset;
-        bottom: unset;
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 
 .button-blue-hover {
+    .bg-blue {
+        transition: all ease 0.4s;
+    }
+
     &:hover {
-        background: #0c68be;
+        .bg-blue {
+            background-color: #3974ff;
+        }
     }
 }
 
 .button-yellow-hover {
+    .bg-yellow {
+        transition: all ease 0.4s;
+    }
+
     &:hover {
         background-color: #ebb41d;
+
+        .bg-yellow {
+            background-color: #ebb41d;
+        }
     }
 }
 
 .button-green-hover {
+    .bg-green {
+        transition: all ease 0.4s;
+    }
+
     &:hover {
-        background-color: #00ff40;
+        .bg-green {
+            background-color: #02bd30;
+        }
     }
 }
 
 .button-purple-hover {
+    .bg-purple {
+        transition: all ease 0.4s;
+    }
+
     &:hover {
-        background-color: #5700c9;
+        .bg-purple {
+            background-color: #5700c9;
+        }
     }
 }

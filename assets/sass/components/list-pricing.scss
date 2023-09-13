@@ -5,6 +5,10 @@ List pricing: Start
     .container {
         >.row {
             >div:first-child {
+                button {
+                    border-radius: 8px;
+                }
+
                 button.active {
                     background-color: var(--blue);
                 }
@@ -22,11 +26,18 @@ List pricing: Start
                     transition: all ease 0.3s;
 
                     a {
-                        transition: all ease 0.3s;
-                        border: 2px solid var(--blue);
+                        span:nth-child(2) {
+                            border: 2px solid var(--blue);
+                            display: block;
+                            width: 100%;
+                            text-align: center;
+                            background-color: var(--line-dark);
+                        }
 
                         &:hover {
-                            background-color: var(--blue);
+                            span:nth-child(2) {
+                                background-color: var(--blue);
+                            }
                         }
                     }
 
@@ -158,10 +169,14 @@ List pricing: Start
                 .list-pricing {
                     .pricing-item {
                         a {
-                            border: 2px solid var(--purple);
+                            span:nth-child(2) {
+                                border: 2px solid var(--purple);
+                            }
 
                             &:hover {
-                                background-color: var(--purple);
+                                span:nth-child(2) {
+                                    background-color: var(--purple);
+                                }
                             }
                         }
 
@@ -238,6 +253,8 @@ Section Pricing Home2: Start
 
                 a {
                     border: 2px solid var(--green);
+                    padding-top: 16px;
+                    padding-bottom: 16px;
 
                     &:hover {
                         background-color: var(--green);
@@ -320,11 +337,15 @@ Section Pricing Home3: Start
                 .list-pricing-year {
                     .pricing-item {
                         a {
-                            border: 2px solid var(--yellow);
+                            span:nth-child(2) {
+                                border: 2px solid var(--yellow);
+                            }
 
                             &:hover {
-                                color: var(--on-surface);
-                                background-color: var(--yellow);
+                                span:nth-child(2) {
+                                    color: var(--on-surface);
+                                    background-color: var(--yellow);
+                                }
                             }
                         }
 

@@ -68,6 +68,8 @@
   background-color: var(--purple);
 }
 .blog-detail .container > .row > div:last-child .newsletter input {
+  padding-top: 14px;
+  padding-bottom: 14px;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;

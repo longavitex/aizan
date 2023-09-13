@@ -110,10 +110,16 @@
   background-color: var(--purple);
   color: var(--white);
 }
+.style-service .form-contact .button.bg-yellow .bg-yellow {
+  background-color: var(--purple);
+}
 .style-service .form-contact .button.bg-yellow i {
   color: var(--white);
 }
 .style-service .form-contact .button.bg-yellow:hover {
+  background-color: #5700c9;
+}
+.style-service .form-contact .button.bg-yellow:hover .bg-yellow {
   background-color: #5700c9;
 }
 

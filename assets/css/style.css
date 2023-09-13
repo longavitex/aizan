@@ -1076,10 +1076,8 @@ select {
 .button {
   position: relative;
   display: inline-flex;
-  padding: 12px 28px;
   justify-content: center;
   align-items: center;
-  gap: 8px;
   border-radius: 68px;
   font-size: 16px;
   font-weight: 700;
@@ -1087,64 +1085,77 @@ select {
   text-transform: capitalize;
   transition: all ease 0.4s;
 }
-.button::before {
-  content: "";
+.button > span:nth-child(1) {
   position: absolute;
-  height: 2px;
-  width: 6px;
+  left: -2px;
+  right: -2px;
   top: -2px;
-  left: 0;
-  transition: all ease 0.5s;
+  bottom: -2px;
+  background: transparent;
+  border-radius: 68px;
+  overflow: hidden;
+  z-index: 0;
+  opacity: 0;
 }
-.button:hover::before {
-  animation: moveAroundBtn ease 1s infinite;
+.button > span:nth-child(1) span {
+  position: absolute;
+  min-width: 110%;
+  min-height: 110%;
+  aspect-ratio: 1/1;
+  top: 50%;
+  left: 50%;
+  background: conic-gradient(from 290deg, transparent 0%, #FFFFFF 50%, transparent 20%);
+  animation: twirl 3s linear infinite;
+  z-index: 0;
+}
+.button span:nth-child(2) {
+  padding: 14px 28px;
+  border-radius: 68px;
+  display: inline-flex;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+}
+.button:hover > span:nth-child(1) {
+  opacity: 1;
 }
 
-@keyframes moveAroundBtn {
+@keyframes twirl {
   0% {
-    left: 0;
-    top: -2px;
-    right: unset;
-    bottom: unset;
-  }
-  25% {
-    top: -2px;
-    right: 0;
-    left: unset;
-    bottom: unset;
-  }
-  50% {
-    right: 0;
-    bottom: 0;
-    top: unset;
-    left: unset;
-  }
-  75% {
-    left: 0;
-    bottom: 0;
-    top: unset;
-    right: unset;
+    transform: translate(-50%, -50%) rotate(0);
   }
   100% {
-    left: 0;
-    top: 0;
-    right: unset;
-    bottom: unset;
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-.button-blue-hover:hover {
-  background: #0c68be;
+.button-blue-hover .bg-blue {
+  transition: all ease 0.4s;
+}
+.button-blue-hover:hover .bg-blue {
+  background-color: #3974ff;
 }
 
+.button-yellow-hover .bg-yellow {
+  transition: all ease 0.4s;
+}
 .button-yellow-hover:hover {
   background-color: #ebb41d;
 }
-
-.button-green-hover:hover {
-  background-color: #00ff40;
+.button-yellow-hover:hover .bg-yellow {
+  background-color: #ebb41d;
 }
 
-.button-purple-hover:hover {
+.button-green-hover .bg-green {
+  transition: all ease 0.4s;
+}
+.button-green-hover:hover .bg-green {
+  background-color: #02bd30;
+}
+
+.button-purple-hover .bg-purple {
+  transition: all ease 0.4s;
+}
+.button-purple-hover:hover .bg-purple {
   background-color: #5700c9;
 }
 
@@ -1691,20 +1702,23 @@ Menu header: Start
 .style-two .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .list-pages a:hover .text-button {
   color: var(--green);
 }
-.style-two .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a {
+.style-two .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a span:nth-child(2) {
   background-color: var(--green);
 }
 .style-two .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a:hover {
-  background-color: #00ff40;
+  background-color: #02bd30;
+}
+.style-two .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a:hover span:nth-child(2) {
+  background-color: #02bd30;
 }
 .style-two .header-menu > .container .header-main .logo svg g path:first-child {
   fill: var(--green);
 }
-.style-two .header-menu > .container .header-main .right-block a {
+.style-two .header-menu > .container .header-main .right-block a span:nth-child(2) {
   background-color: var(--green);
 }
-.style-two .header-menu > .container .header-main .right-block a:hover {
-  background-color: #00ff40;
+.style-two .header-menu > .container .header-main .right-block a:hover span:nth-child(2) {
+  background-color: #02bd30;
 }
 .style-two .header-menu > .container #menu-mobile-block .logo svg g path:first-child {
   fill: var(--green);
@@ -1856,19 +1870,19 @@ Menu header: Start
 .style-purple .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .list-pages a:hover .text-button {
   color: var(--purple);
 }
-.style-purple .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a {
+.style-purple .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a span:nth-child(2) {
   background-color: var(--purple);
 }
-.style-purple .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a:hover {
+.style-purple .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a:hover span:nth-child(2) {
   background-color: #5700c9;
 }
 .style-purple .header-menu > .container .header-main .logo svg g path:first-child {
   fill: var(--purple);
 }
-.style-purple .header-menu > .container .header-main .right-block a {
+.style-purple .header-menu > .container .header-main .right-block a span:nth-child(2) {
   background-color: var(--purple);
 }
-.style-purple .header-menu > .container .header-main .right-block a:hover {
+.style-purple .header-menu > .container .header-main .right-block a:hover span:nth-child(2) {
   background-color: #5700c9;
 }
 .style-purple .header-menu > .container #menu-mobile-block .logo svg g path:first-child {
@@ -1913,6 +1927,10 @@ Menu header: End
   top: 50%;
   transform: translateY(-50%);
   left: 15px;
+}
+.slider-block.style-one .slider-main .row > div:first-child .button span:nth-child(2) {
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 .slider-block.style-one .slider-main .row > div:last-child {
   position: absolute;
@@ -2910,6 +2928,10 @@ Bread crum: End
 /*
 *** About us Home1: Start
 */
+.about-us.style-one .container .row > div:first-child .button span:nth-child(2) {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
 .about-us.style-one .container .row > div:last-child {
   position: relative;
   display: flex;
@@ -4201,6 +4223,9 @@ Shared Animation Filter Item: End
 /*
 List pricing: Start
 */
+.section-pricing .container > .row > div:first-child button {
+  border-radius: 8px;
+}
 .section-pricing .container > .row > div:first-child button.active {
   background-color: var(--blue);
 }
@@ -4214,13 +4239,16 @@ List pricing: Start
   cursor: pointer;
   transition: all ease 0.3s;
 }
-.section-pricing .container > .row .list-pricing .pricing-item a,
-.section-pricing .container > .row .list-pricing-year .pricing-item a {
-  transition: all ease 0.3s;
+.section-pricing .container > .row .list-pricing .pricing-item a span:nth-child(2),
+.section-pricing .container > .row .list-pricing-year .pricing-item a span:nth-child(2) {
   border: 2px solid var(--blue);
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: var(--line-dark);
 }
-.section-pricing .container > .row .list-pricing .pricing-item a:hover,
-.section-pricing .container > .row .list-pricing-year .pricing-item a:hover {
+.section-pricing .container > .row .list-pricing .pricing-item a:hover span:nth-child(2),
+.section-pricing .container > .row .list-pricing-year .pricing-item a:hover span:nth-child(2) {
   background-color: var(--blue);
 }
 .section-pricing .container > .row .list-pricing .pricing-item i.ph-x,
@@ -4313,10 +4341,10 @@ List pricing: Start
 .style-pricing .section-pricing .container > .row > div:first-child button.active {
   background-color: var(--purple);
 }
-.style-pricing .section-pricing .container > .row .list-pricing .pricing-item a {
+.style-pricing .section-pricing .container > .row .list-pricing .pricing-item a span:nth-child(2) {
   border: 2px solid var(--purple);
 }
-.style-pricing .section-pricing .container > .row .list-pricing .pricing-item a:hover {
+.style-pricing .section-pricing .container > .row .list-pricing .pricing-item a:hover span:nth-child(2) {
   background-color: var(--purple);
 }
 .style-pricing .section-pricing .container > .row .list-pricing .pricing-item i.ph-x {
@@ -4371,6 +4399,8 @@ Section Pricing Home2: Start
 .section-pricing.style-two .container .list-pricing .pricing-item a,
 .section-pricing.style-two .container .list-pricing-year .pricing-item a {
   border: 2px solid var(--green);
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 .section-pricing.style-two .container .list-pricing .pricing-item a:hover,
 .section-pricing.style-two .container .list-pricing-year .pricing-item a:hover {
@@ -4430,12 +4460,12 @@ Section Pricing Home3: Start
   background-color: var(--yellow);
   color: var(--on-surface);
 }
-.style-three .section-pricing .container > .row .list-pricing .pricing-item a,
-.style-three .section-pricing .container > .row .list-pricing-year .pricing-item a {
+.style-three .section-pricing .container > .row .list-pricing .pricing-item a span:nth-child(2),
+.style-three .section-pricing .container > .row .list-pricing-year .pricing-item a span:nth-child(2) {
   border: 2px solid var(--yellow);
 }
-.style-three .section-pricing .container > .row .list-pricing .pricing-item a:hover,
-.style-three .section-pricing .container > .row .list-pricing-year .pricing-item a:hover {
+.style-three .section-pricing .container > .row .list-pricing .pricing-item a:hover span:nth-child(2),
+.style-three .section-pricing .container > .row .list-pricing-year .pricing-item a:hover span:nth-child(2) {
   color: var(--on-surface);
   background-color: var(--yellow);
 }
@@ -5003,10 +5033,16 @@ Our Blog Home1: End
   background-color: var(--purple);
   color: var(--white);
 }
+.style-service .form-contact .button.bg-yellow .bg-yellow {
+  background-color: var(--purple);
+}
 .style-service .form-contact .button.bg-yellow i {
   color: var(--white);
 }
 .style-service .form-contact .button.bg-yellow:hover {
+  background-color: #5700c9;
+}
+.style-service .form-contact .button.bg-yellow:hover .bg-yellow {
   background-color: #5700c9;
 }
 
@@ -5316,6 +5352,8 @@ Form contact (Contact page): End
   background-color: var(--purple);
 }
 .blog-detail .container > .row > div:last-child .newsletter input {
+  padding-top: 14px;
+  padding-bottom: 14px;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;

@@ -141,12 +141,20 @@
             background-color: var(--purple);
             color: var(--white);
 
+            .bg-yellow {
+                background-color: var(--purple);
+            }
+
             i {
                 color: var(--white);
             }
 
             &:hover {
                 background-color: #5700c9;
+
+                .bg-yellow {
+                    background-color: #5700c9;
+                }
             }
         }
     }

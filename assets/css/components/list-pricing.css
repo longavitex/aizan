@@ -1,6 +1,9 @@
 /*
 List pricing: Start
 */
+.section-pricing .container > .row > div:first-child button {
+  border-radius: 8px;
+}
 .section-pricing .container > .row > div:first-child button.active {
   background-color: var(--blue);
 }
@@ -14,13 +17,16 @@ List pricing: Start
   cursor: pointer;
   transition: all ease 0.3s;
 }
-.section-pricing .container > .row .list-pricing .pricing-item a,
-.section-pricing .container > .row .list-pricing-year .pricing-item a {
-  transition: all ease 0.3s;
+.section-pricing .container > .row .list-pricing .pricing-item a span:nth-child(2),
+.section-pricing .container > .row .list-pricing-year .pricing-item a span:nth-child(2) {
   border: 2px solid var(--blue);
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: var(--line-dark);
 }
-.section-pricing .container > .row .list-pricing .pricing-item a:hover,
-.section-pricing .container > .row .list-pricing-year .pricing-item a:hover {
+.section-pricing .container > .row .list-pricing .pricing-item a:hover span:nth-child(2),
+.section-pricing .container > .row .list-pricing-year .pricing-item a:hover span:nth-child(2) {
   background-color: var(--blue);
 }
 .section-pricing .container > .row .list-pricing .pricing-item i.ph-x,
@@ -113,10 +119,10 @@ List pricing: Start
 .style-pricing .section-pricing .container > .row > div:first-child button.active {
   background-color: var(--purple);
 }
-.style-pricing .section-pricing .container > .row .list-pricing .pricing-item a {
+.style-pricing .section-pricing .container > .row .list-pricing .pricing-item a span:nth-child(2) {
   border: 2px solid var(--purple);
 }
-.style-pricing .section-pricing .container > .row .list-pricing .pricing-item a:hover {
+.style-pricing .section-pricing .container > .row .list-pricing .pricing-item a:hover span:nth-child(2) {
   background-color: var(--purple);
 }
 .style-pricing .section-pricing .container > .row .list-pricing .pricing-item i.ph-x {
@@ -171,6 +177,8 @@ Section Pricing Home2: Start
 .section-pricing.style-two .container .list-pricing .pricing-item a,
 .section-pricing.style-two .container .list-pricing-year .pricing-item a {
   border: 2px solid var(--green);
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 .section-pricing.style-two .container .list-pricing .pricing-item a:hover,
 .section-pricing.style-two .container .list-pricing-year .pricing-item a:hover {
@@ -230,12 +238,12 @@ Section Pricing Home3: Start
   background-color: var(--yellow);
   color: var(--on-surface);
 }
-.style-three .section-pricing .container > .row .list-pricing .pricing-item a,
-.style-three .section-pricing .container > .row .list-pricing-year .pricing-item a {
+.style-three .section-pricing .container > .row .list-pricing .pricing-item a span:nth-child(2),
+.style-three .section-pricing .container > .row .list-pricing-year .pricing-item a span:nth-child(2) {
   border: 2px solid var(--yellow);
 }
-.style-three .section-pricing .container > .row .list-pricing .pricing-item a:hover,
-.style-three .section-pricing .container > .row .list-pricing-year .pricing-item a:hover {
+.style-three .section-pricing .container > .row .list-pricing .pricing-item a:hover span:nth-child(2),
+.style-three .section-pricing .container > .row .list-pricing-year .pricing-item a:hover span:nth-child(2) {
   color: var(--on-surface);
   background-color: var(--yellow);
 }
