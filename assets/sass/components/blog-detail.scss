@@ -21,6 +21,25 @@
                     }
                 }
 
+                .blog-content {
+                    .quote-block {
+                        .text-button {
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                height: 1px;
+                                width: 16px;
+                                background: var(--placehover);
+                            }
+                        }
+                    }
+                }
+
                 .blog-comment {
                     select {
                         -webkit-appearance: auto;
@@ -57,7 +76,7 @@
                             max-height: 1000px;
                             opacity: 1;
                             visibility: visible;
-                            transition: all ease 0.5s;
+                            transition: all ease 0.8s;
                         }
                     }
                 }

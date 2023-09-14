@@ -25,13 +25,6 @@
                 top: 50%;
                 transform: translateY(-50%);
                 left: 15px;
-
-                .button {
-                    span:nth-child(2) {
-                        padding-top: 16px;
-                        padding-bottom: 16px;
-                    }
-                }
             }
 
             >div:last-child {
@@ -211,6 +204,10 @@
             .row {
                 padding-top: 50px;
                 padding-bottom: 60px;
+
+                .mt-40 {
+                    margin-top: 20px;
+                }
             }
         }
     }
@@ -252,9 +249,13 @@
                     top: 8px;
                     right: 8px;
                     bottom: 8px;
-
+                    
                     a {
                         height: 100%;
+
+                        span:nth-child(2) {
+                            padding: 16px 32px;
+                        }
                     }
                 }
             }
@@ -286,37 +287,37 @@
                     &:nth-child(1) {
                         left: 10px;
                         top: 200px;
-                        animation: slide_1 20s ease-in-out alternate infinite;
+                        animation: slide_1 18s ease-in-out alternate infinite;
                     }
 
                     &:nth-child(2) {
                         left: -60px;
                         bottom: 300px;
-                        animation: slide_2 25s ease-in-out alternate infinite;
+                        animation: slide_2 15s ease-in-out alternate infinite;
                     }
 
                     &:nth-child(3) {
                         left: 400px;
                         bottom: 100px;
-                        animation: slide_1 25s ease-in-out alternate infinite;
+                        animation: slide_1 15s ease-in-out alternate infinite;
                     }
 
                     &:nth-child(4) {
                         right: 400px;
                         bottom: 120px;
-                        animation: slide_2 20s ease-in-out alternate infinite;
+                        animation: slide_2 18s ease-in-out alternate infinite;
                     }
 
                     &:nth-child(5) {
                         right: 0px;
                         top: 160px;
-                        animation: slide_1 25s ease-in-out alternate infinite;
+                        animation: slide_1 20s ease-in-out alternate infinite;
                     }
 
                     &:nth-child(6) {
                         right: -20px;
                         bottom: 340px;
-                        animation: slide_2 25s ease-in-out alternate infinite;
+                        animation: slide_2 15s ease-in-out alternate infinite;
                     }
                 }
 
@@ -376,7 +377,7 @@
                 padding-bottom: 60px;
 
                 .block-input {
-                    height: 50px;
+                    height: 54px;
                     padding-left: 15px;
                     padding-right: 15px;
 
@@ -394,6 +395,10 @@
 
                         a {
                             border-radius: 24px;
+
+                            span:nth-child(2) {
+                                padding: 10px 16px;
+                            }
                         }
                     }
                 }
@@ -540,6 +545,12 @@
                 -webkit-text-fill-color: transparent;
             }
 
+            .block-button {
+                a {
+                    padding: 16px 32px;
+                }
+            }
+
             .tags {
                 .list-tag {
                     a {
@@ -595,7 +606,7 @@
                         height: 124px;
                         left: 50px;
                         bottom: 200px;
-                        animation: slide_1 25s ease-in-out alternate infinite;
+                        animation: slide_1 18s ease-in-out alternate infinite;
 
                         svg {
                             position: absolute;
@@ -609,7 +620,7 @@
                         height: 104px;
                         right: 80px;
                         bottom: 150px;
-                        animation: slide_2 25s ease-in-out alternate infinite;
+                        animation: slide_2 15s ease-in-out alternate infinite;
 
                         svg {
                             position: absolute;
@@ -623,7 +634,7 @@
                         height: 88px;
                         right: 60px;
                         top: 200px;
-                        animation: slide_2 20s ease-in-out alternate infinite;
+                        animation: slide_2 14s ease-in-out alternate infinite;
 
                         svg {
                             position: absolute;
@@ -674,6 +685,14 @@
                 .list-cate {
                     .item {
                         display: none;
+                    }
+                }
+            }
+
+            @media (max-width: 575.98px) {
+                .block-button {
+                    a {
+                        padding: 14px 16px;
                     }
                 }
             }
@@ -753,7 +772,7 @@
                     position: absolute;
                     top: 186px;
                     left: 30px;
-                    animation: slide_1 25s ease-in-out alternate infinite;
+                    animation: slide_1 15s ease-in-out alternate infinite;
 
                     i {
                         background: linear-gradient(180deg, #7D3CF3 0%, #392264 100%);
@@ -767,7 +786,7 @@
                     height: 112px;
                     top: 464px;
                     left: -80px;
-                    animation: slide_2 20s ease-in-out alternate infinite;
+                    animation: slide_2 10s ease-in-out alternate infinite;
 
                     &::before {
                         content: "";
@@ -795,7 +814,7 @@
                     position: absolute;
                     bottom: 128px;
                     left: 120px;
-                    animation: moveX 15s ease-in-out alternate infinite;
+                    animation: moveX 10s ease-in-out alternate infinite;
 
                     .text-button-small {
                         white-space: nowrap;
@@ -811,7 +830,7 @@
                     position: absolute;
                     top: 164px;
                     right: 180px;
-                    animation: slide_2 25s ease-in-out alternate infinite;
+                    animation: slide_2 12s ease-in-out alternate infinite;
 
                     &::before {
                         content: "";
@@ -834,7 +853,7 @@
                     position: absolute;
                     top: 400px;
                     right: -80px;
-                    animation: slide_1 20s ease-in-out alternate infinite;
+                    animation: slide_1 10s ease-in-out alternate infinite;
 
                     i {
                         opacity: 0.8;
@@ -847,7 +866,7 @@
                     position: absolute;
                     right: -20px;
                     bottom: 120px;
-                    animation: moveY 20s ease-in-out alternate infinite;
+                    animation: moveY 15s ease-in-out alternate infinite;
 
                     .avatar {
                         img {

@@ -11,6 +11,77 @@ Page not found: Start
     overflow-x: hidden;
 
     .row {
+        >div:first-child {
+            position: relative;
+
+            .bg-img {
+                position: relative;
+
+                svg {
+                    position: absolute;
+
+                    &:nth-child(2) {
+                        left: 130px;
+                        bottom: 170px;
+                        animation: bounceIn 3s ease-in-out alternate infinite;
+                    }
+
+                    &:last-child {
+                        left: 165px;
+                        bottom: 190px;
+                        animation: bounceIn 3s ease-in-out alternate infinite;
+                    }
+                }
+            }
+
+            .text-content {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                top: 80px;
+                left: 30%;
+                transform: translateX(-50%);
+
+                span {
+                    font-size: 50px;
+                    font-weight: 900;
+
+                    &:nth-child(1) {
+                        animation: bounceCustom 6s linear 4s infinite;
+                    }
+
+                    &:nth-child(2) {
+                        animation: bounceCustom 6s linear 4.1s infinite;
+                    }
+
+                    &:nth-child(3) {
+                        animation: bounceCustom 6s linear 4.2s infinite;
+                    }
+
+                    &:nth-child(4) {
+                        padding-left: 20px;
+                        animation: bounceCustom 6s linear 4.3s infinite;
+                    }
+                    
+                    &:nth-child(5) {
+                        animation: bounceCustom 6s linear 4.4s infinite;
+                    }
+
+                    &:nth-child(6) {
+                        animation: bounceCustom 6s linear 4.5s infinite;
+                    }
+
+                    &:nth-child(7) {
+                        animation: bounceCustom 6s linear 4.6s infinite;
+                    }
+
+                    &:nth-child(8) {
+                        animation: bounceCustom 6s linear 4.7s infinite;
+                    }
+                }
+            }
+        }
+
         >div:last-child {
             padding-left: 90px;
 
@@ -33,6 +104,7 @@ Page not found: Start
 
         @media (max-width: 991.98px) {
             padding: 32px 0;
+
             >div:last-child {
                 padding-left: 15px;
 
@@ -41,6 +113,59 @@ Page not found: Start
                 }
             }
         }
+    }
+}
+
+@keyframes bounceCustom {
+
+    0%,
+    5%,
+    13% {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+
+    8%,
+    10% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: translate3d(0, -30px, 0) scaleY(1.1);
+        transform: translate3d(0, -30px, 0) scaleY(1.1)
+    }
+
+    16% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: translate3d(0, -15px, 0) scaleY(1.05);
+        transform: translate3d(0, -15px, 0) scaleY(1.05)
+    }
+
+    20% {
+        -webkit-transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+        transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+        -webkit-transform: translateZ(0) scaleY(.95);
+        transform: translateZ(0) scaleY(.95)
+    }
+
+    24% {
+        -webkit-transform: translate3d(0, -4px, 0) scaleY(1.02);
+        transform: translate3d(0, -4px, 0) scaleY(1.02)
+    }
+
+    25% {
+        -webkit-animation-timing-function: unset;
+        animation-timing-function: unset;
+        -webkit-transform: unset;
+        transform: unset;
+    }
+
+    100% {
+        -webkit-animation-timing-function: unset;
+        animation-timing-function: unset;
+        -webkit-transform: unset;
+        transform: unset;
     }
 }
 /*

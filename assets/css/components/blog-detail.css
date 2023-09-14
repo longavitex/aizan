@@ -11,6 +11,19 @@
   padding-left: 8px;
   border-left: 1px solid var(--line-dark);
 }
+.blog-detail .container > .row > div:first-child .blog-content .quote-block .text-button {
+  position: relative;
+}
+.blog-detail .container > .row > div:first-child .blog-content .quote-block .text-button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+  width: 16px;
+  background: var(--placehover);
+}
 .blog-detail .container > .row > div:first-child .blog-comment select {
   -webkit-appearance: auto;
   padding-right: 2px;
@@ -33,7 +46,7 @@
   max-height: 1000px;
   opacity: 1;
   visibility: visible;
-  transition: all ease 0.5s;
+  transition: all ease 0.8s;
 }
 .blog-detail .container > .row > div:first-child .blog-form-contact .row {
   margin-left: -10px;

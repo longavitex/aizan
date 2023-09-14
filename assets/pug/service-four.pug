@@ -6,8 +6,25 @@ block header
         include components/header/menu/menu-one.pug
 block content
     include mixins/breadcrum.pug
-    +breadcrum({classname: 'pt-80 pb-80', nav:'Home', nav1:'Services', heading:'Our Services', subHeading:"Explore our range of cutting-edge services designed to elevate your business. From digital marketing and branding to AI-driven solutions."})
-    include components/home4/list-service.pug
+    +breadcrum({classname: 'pt-80 pb-80', nav:'Home', nav1:'Services', heading:'Business Agency', subHeading:"Navigate the complex landscape of modern business with our strategic expertise. Discover new avenues for growth and innovation as we work together to drive your business forward"})
+    
+    include mixins/serviceItem.pug
+    div(class="style-service")
+        .service-block.list-service.style-one.pt-100.pb-100
+            .container 
+                .heading.text-center 
+                    .heading3.text-center Find an AI solution for your business
+                    .body2.text-placehover.mt-12.text-center Experience the future of communication with our AI-powered chat solution.
+                .list.row.row-gap-32.mt-40
+                    .col-lg-3.col-sm-6.scroll-bottom-to-top1
+                        +serviceItem({classname:'pl-32 pr-32 pt-24 pb-24 bora-24 h-100', style:'style-one', icon:'icon-flash icon-white fs-60', title:'AI-Powered Chatbots', desc:"Implement intelligent chatbots that can handle customer inquiries, provide"})
+                    .col-lg-3.col-sm-6.scroll-bottom-to-top2
+                        +serviceItem({classname:'pl-32 pr-32 pt-24 pb-24 bora-24 h-100', style:'style-one', icon:'icon-box-group icon-white fs-60', title:'Embracing Multilingual', desc:"Expand your reach and cater to a global audience with chat services available"})
+                    .col-lg-3.col-sm-6.scroll-bottom-to-top3
+                        +serviceItem({classname:'pl-32 pr-32 pt-24 pb-24 bora-24 h-100', style:'style-one', icon:'icon-chart-box icon-white fs-60', title:'Integration Capabilities', desc:"Seamlessly integrate AI chat services into your existing systems"})
+                    .col-lg-3.col-sm-6.scroll-bottom-to-top4
+                        +serviceItem({classname:'pl-32 pr-32 pt-24 pb-24 bora-24 h-100', style:'style-one', icon:'icon-hand-shake-line icon-white fs-60', title:'Proactive Engagement', desc:"Initiate proactive conversations with customers based on their"})
+
     include components/partners.pug
     .counter-block.style-three.pt-100.pb-100
         .container 

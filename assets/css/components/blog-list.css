@@ -11,12 +11,24 @@
 }
 .blog-list .container > .row > div .blog-item .heading5 {
   transition: all ease 0.3s;
+  position: relative;
+  display: inline-block;
+}
+.blog-list .container > .row > div .blog-item .heading5::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--white);
+  transition: all ease 0.4s;
 }
 .blog-list .container > .row > div .blog-item:hover .bg-img img {
   transform: scale(1.08);
 }
-.blog-list .container > .row > div .blog-item:hover .heading5 {
-  color: var(--purple);
+.blog-list .container > .row > div .blog-item:hover .heading5::before {
+  width: 100%;
 }
 @media (max-width: 449.98px) {
   .blog-list .container > .row > div .blog-item .cmt {

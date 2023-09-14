@@ -304,7 +304,7 @@ $(".testimonial-block.style-one .container .row .list-avatar .avatar").slick({
   nextArrow: '.next-btn',
   slidesToShow: 5,
   slidesToScroll: 5,
-  touchThreshold: 100,
+  touchThreshold: 1000,
   swipe: true,
   swipeToSlide: true,
   autoplay: false,
@@ -427,7 +427,8 @@ $(".list-blog .container .list").slick({
   arrows: false,
   slidesToShow: 3,
   slidesToScroll: 4,
-  touchThreshold: 100,
+  touchThreshold: 1000,
+  waitForAnimate: false,
   swipe: true,
   swipeToSlide: true,
   autoplay: false,
@@ -499,6 +500,7 @@ if (document.querySelector('.counter .count-number')) {
   $('.counter .count-number').counterUp({
     delay: 6,
     time: 800,
+    scrollSpyOnce: true,
   });
 }
 
@@ -615,7 +617,8 @@ $(".instagram-block .list-image").slick({
   arrows: false,
   slidesToShow: 6,
   slidesToScroll: 6,
-  touchThreshold: 100,
+  touchThreshold: 1000,
+  waitForAnimate: false,
   swipe: true,
   swipeToSlide: true,
   autoplay: true,
@@ -666,7 +669,8 @@ $(".testimonial-block.style-four .container .row .list-testimonial").slick({
   nextArrow: '.next-btn',
   slidesToShow: 1,
   slidesToScroll: 2,
-  touchThreshold: 100,
+  touchThreshold: 1000,
+  waitForAnimate: false,
   swipe: true,
   swipeToSlide: true,
   autoplay: false,

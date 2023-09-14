@@ -1116,6 +1116,9 @@ select {
   position: relative;
   z-index: 2;
 }
+.button span:nth-child(2):has(i) {
+  padding: 16px 28px;
+}
 .button:hover > span:nth-child(1) {
   opacity: 1;
 }
@@ -1159,6 +1162,29 @@ select {
   background-color: #5700c9;
 }
 
+@media (max-width: 991.98px) {
+  .button span:nth-child(1) {
+    display: none;
+  }
+}
+@media (max-width: 575.98px) {
+  .button {
+    gap: 6px;
+    border-radius: 40px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .button span:nth-child(2) {
+    padding: 10px 16px;
+    border-radius: 40px;
+  }
+  .button span:nth-child(2) i {
+    font-size: 16px;
+  }
+  .button span:nth-child(2):has(i) {
+    padding: 14px 16px;
+  }
+}
 #preload {
   position: fixed;
   z-index: 10000;
@@ -1174,31 +1200,18 @@ select {
   justify-content: center;
   background-color: var(--black-surface);
 }
-#preload .main-content .logo svg {
-  width: 200px;
-  height: 120px;
-  stroke: var(--white);
-  stroke-width: 2px;
-  stroke-dasharray: 2000;
-  animation: drawLogo 3s ease-in-out 0.1s infinite;
+#preload .main-content .circle:nth-child(1) {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: relative;
 }
-#preload .main-content .heading3 {
-  color: var(--on-surface);
-  white-space: nowrap;
-  -webkit-text-stroke: 2px var(--blue);
-  display: block;
-}
-#preload .main-content .heading3 span {
-  animation: opacityAnimate ease 1s infinite;
-}
-#preload .main-content .heading3 span:nth-child(1) {
-  animation-delay: 0.2s;
-}
-#preload .main-content .heading3 span:nth-child(2) {
-  animation-delay: 0.4s;
-}
-#preload .main-content .heading3 span:nth-child(3) {
-  animation-delay: 0.6s;
+#preload .main-content .circle:nth-child(1) span {
+  width: 58px;
+  height: 58px;
+  background-color: var(--black-surface);
+  position: relative;
+  z-index: 1;
 }
 
 #preload.disable {
@@ -1928,10 +1941,6 @@ Menu header: End
   transform: translateY(-50%);
   left: 15px;
 }
-.slider-block.style-one .slider-main .row > div:first-child .button span:nth-child(2) {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
 .slider-block.style-one .slider-main .row > div:last-child {
   position: absolute;
   top: 40%;
@@ -2067,6 +2076,9 @@ Menu header: End
     padding-top: 50px;
     padding-bottom: 60px;
   }
+  .slider-block.style-one .slider-main .row .mt-40 {
+    margin-top: 20px;
+  }
 }
 
 /*
@@ -2106,6 +2118,9 @@ Menu header: End
 .slider-block.style-two .slider-main .container .block-input .block-button a {
   height: 100%;
 }
+.slider-block.style-two .slider-main .container .block-input .block-button a span:nth-child(2) {
+  padding: 16px 32px;
+}
 .slider-block.style-two .slider-main .container .tags .list-tag a {
   display: flex;
   padding: 8px 20px;
@@ -2126,32 +2141,32 @@ Menu header: End
 .slider-block.style-two .slider-main .container .list-avatar img:nth-child(1) {
   left: 10px;
   top: 200px;
-  animation: slide_1 20s ease-in-out alternate infinite;
+  animation: slide_1 18s ease-in-out alternate infinite;
 }
 .slider-block.style-two .slider-main .container .list-avatar img:nth-child(2) {
   left: -60px;
   bottom: 300px;
-  animation: slide_2 25s ease-in-out alternate infinite;
+  animation: slide_2 15s ease-in-out alternate infinite;
 }
 .slider-block.style-two .slider-main .container .list-avatar img:nth-child(3) {
   left: 400px;
   bottom: 100px;
-  animation: slide_1 25s ease-in-out alternate infinite;
+  animation: slide_1 15s ease-in-out alternate infinite;
 }
 .slider-block.style-two .slider-main .container .list-avatar img:nth-child(4) {
   right: 400px;
   bottom: 120px;
-  animation: slide_2 20s ease-in-out alternate infinite;
+  animation: slide_2 18s ease-in-out alternate infinite;
 }
 .slider-block.style-two .slider-main .container .list-avatar img:nth-child(5) {
   right: 0px;
   top: 160px;
-  animation: slide_1 25s ease-in-out alternate infinite;
+  animation: slide_1 20s ease-in-out alternate infinite;
 }
 .slider-block.style-two .slider-main .container .list-avatar img:nth-child(6) {
   right: -20px;
   bottom: 340px;
-  animation: slide_2 25s ease-in-out alternate infinite;
+  animation: slide_2 15s ease-in-out alternate infinite;
 }
 @media (max-width: 1479.98px) {
   .slider-block.style-two .slider-main .container .list-avatar img:nth-child(1) {
@@ -2198,7 +2213,7 @@ Menu header: End
     padding-bottom: 60px;
   }
   .slider-block.style-two .slider-main .container .block-input {
-    height: 50px;
+    height: 54px;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -2215,6 +2230,9 @@ Menu header: End
   }
   .slider-block.style-two .slider-main .container .block-input .block-button a {
     border-radius: 24px;
+  }
+  .slider-block.style-two .slider-main .container .block-input .block-button a span:nth-child(2) {
+    padding: 10px 16px;
   }
   .slider-block.style-two .slider-main .container .tags {
     row-gap: 16px;
@@ -2324,6 +2342,9 @@ Menu header: End
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.slider-block.style-two.style-three .slider-main .container .block-button a {
+  padding: 16px 32px;
+}
 .slider-block.style-two.style-three .slider-main .container .tags .list-tag a:hover {
   background-color: var(--yellow);
   color: var(--on-surface);
@@ -2364,7 +2385,7 @@ Menu header: End
   height: 124px;
   left: 50px;
   bottom: 200px;
-  animation: slide_1 25s ease-in-out alternate infinite;
+  animation: slide_1 18s ease-in-out alternate infinite;
 }
 .slider-block.style-two.style-three .slider-main .container .list-cate .item:nth-child(1) svg {
   position: absolute;
@@ -2376,7 +2397,7 @@ Menu header: End
   height: 104px;
   right: 80px;
   bottom: 150px;
-  animation: slide_2 25s ease-in-out alternate infinite;
+  animation: slide_2 15s ease-in-out alternate infinite;
 }
 .slider-block.style-two.style-three .slider-main .container .list-cate .item:nth-child(2) svg {
   position: absolute;
@@ -2388,7 +2409,7 @@ Menu header: End
   height: 88px;
   right: 60px;
   top: 200px;
-  animation: slide_2 20s ease-in-out alternate infinite;
+  animation: slide_2 14s ease-in-out alternate infinite;
 }
 .slider-block.style-two.style-three .slider-main .container .list-cate .item:nth-child(3) svg {
   position: absolute;
@@ -2424,6 +2445,11 @@ Menu header: End
 @media (max-width: 1023.98px) {
   .slider-block.style-two.style-three .slider-main .container .list-cate .item {
     display: none;
+  }
+}
+@media (max-width: 575.98px) {
+  .slider-block.style-two.style-three .slider-main .container .block-button a {
+    padding: 14px 16px;
   }
 }
 
@@ -2486,7 +2512,7 @@ Menu header: End
   position: absolute;
   top: 186px;
   left: 30px;
-  animation: slide_1 25s ease-in-out alternate infinite;
+  animation: slide_1 15s ease-in-out alternate infinite;
 }
 .slider-block.style-two.style-four .slider-main .container .list-sub-icons .check-icon i {
   background: linear-gradient(180deg, #7D3CF3 0%, #392264 100%);
@@ -2498,7 +2524,7 @@ Menu header: End
   height: 112px;
   top: 464px;
   left: -80px;
-  animation: slide_2 20s ease-in-out alternate infinite;
+  animation: slide_2 10s ease-in-out alternate infinite;
 }
 .slider-block.style-two.style-four .slider-main .container .list-sub-icons .avatar-block::before {
   content: "";
@@ -2523,7 +2549,7 @@ Menu header: End
   position: absolute;
   bottom: 128px;
   left: 120px;
-  animation: moveX 15s ease-in-out alternate infinite;
+  animation: moveX 10s ease-in-out alternate infinite;
 }
 .slider-block.style-two.style-four .slider-main .container .list-sub-icons .five-star-block .text-button-small {
   white-space: nowrap;
@@ -2537,7 +2563,7 @@ Menu header: End
   position: absolute;
   top: 164px;
   right: 180px;
-  animation: slide_2 25s ease-in-out alternate infinite;
+  animation: slide_2 12s ease-in-out alternate infinite;
 }
 .slider-block.style-two.style-four .slider-main .container .list-sub-icons .switch-btn::before {
   content: "";
@@ -2558,7 +2584,7 @@ Menu header: End
   position: absolute;
   top: 400px;
   right: -80px;
-  animation: slide_1 20s ease-in-out alternate infinite;
+  animation: slide_1 10s ease-in-out alternate infinite;
 }
 .slider-block.style-two.style-four .slider-main .container .list-sub-icons .double-star i {
   opacity: 0.8;
@@ -2569,7 +2595,7 @@ Menu header: End
   position: absolute;
   right: -20px;
   bottom: 120px;
-  animation: moveY 20s ease-in-out alternate infinite;
+  animation: moveY 15s ease-in-out alternate infinite;
 }
 .slider-block.style-two.style-four .slider-main .container .list-sub-icons .comment .avatar img {
   width: 74px;
@@ -2928,10 +2954,6 @@ Bread crum: End
 /*
 *** About us Home1: Start
 */
-.about-us.style-one .container .row > div:first-child .button span:nth-child(2) {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
 .about-us.style-one .container .row > div:last-child {
   position: relative;
   display: flex;
@@ -3253,7 +3275,7 @@ Bread crum: End
   left: 0;
   bottom: 0;
   width: 0;
-  height: 1px;
+  height: 2px;
   background-color: var(--white);
   transition: all ease 0.3s;
 }
@@ -3432,6 +3454,16 @@ Bread crum: End
 
 /*
 *** List service Home4: End
+*/
+/*
+*** Style service page (service-one.html): Start
+*/
+.style-service .list-service.style-one .list .service-item:hover {
+  background-color: var(--purple);
+}
+
+/*
+*** Style service page (service-one.html): End
 */
 /*
 *** How it work: Start
@@ -4260,6 +4292,10 @@ List pricing: Start
   background-color: var(--on-surface);
   border: 2px solid var(--blue);
 }
+.section-pricing .container > .row .list-pricing .pricing-item:hover a span:nth-child(2),
+.section-pricing .container > .row .list-pricing-year .pricing-item:hover a span:nth-child(2) {
+  background-color: var(--blue);
+}
 .section-pricing .container .list-more-feature .row {
   margin-left: 0;
   margin-right: 0;
@@ -4417,6 +4453,13 @@ Section Pricing Home2: Start
   background-color: var(--white);
   border: 2px solid var(--green);
 }
+@media (max-width: 575.98px) {
+  .section-pricing.style-two .container .list-pricing .pricing-item a,
+  .section-pricing.style-two .container .list-pricing-year .pricing-item a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
 @keyframes showList {
   from {
     opacity: 0;
@@ -4490,7 +4533,7 @@ Our Blog Home1: Start
   border-radius: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
-  transition: all linear 0.2s;
+  transition: all linear 0.1s;
   width: 70px;
   height: 70px;
   opacity: 0;
@@ -5191,12 +5234,24 @@ Form contact (Contact page): End
 }
 .blog-list .container > .row > div .blog-item .heading5 {
   transition: all ease 0.3s;
+  position: relative;
+  display: inline-block;
+}
+.blog-list .container > .row > div .blog-item .heading5::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--white);
+  transition: all ease 0.4s;
 }
 .blog-list .container > .row > div .blog-item:hover .bg-img img {
   transform: scale(1.08);
 }
-.blog-list .container > .row > div .blog-item:hover .heading5 {
-  color: var(--purple);
+.blog-list .container > .row > div .blog-item:hover .heading5::before {
+  width: 100%;
 }
 @media (max-width: 449.98px) {
   .blog-list .container > .row > div .blog-item .cmt {
@@ -5295,6 +5350,19 @@ Form contact (Contact page): End
   padding-left: 8px;
   border-left: 1px solid var(--line-dark);
 }
+.blog-detail .container > .row > div:first-child .blog-content .quote-block .text-button {
+  position: relative;
+}
+.blog-detail .container > .row > div:first-child .blog-content .quote-block .text-button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+  width: 16px;
+  background: var(--placehover);
+}
 .blog-detail .container > .row > div:first-child .blog-comment select {
   -webkit-appearance: auto;
   padding-right: 2px;
@@ -5317,7 +5385,7 @@ Form contact (Contact page): End
   max-height: 1000px;
   opacity: 1;
   visibility: visible;
-  transition: all ease 0.5s;
+  transition: all ease 0.8s;
 }
 .blog-detail .container > .row > div:first-child .blog-form-contact .row {
   margin-left: -10px;
@@ -5705,6 +5773,62 @@ Page not found: Start
   bottom: 0;
   overflow-x: hidden;
 }
+.page-not-found-block .row > div:first-child {
+  position: relative;
+}
+.page-not-found-block .row > div:first-child .bg-img {
+  position: relative;
+}
+.page-not-found-block .row > div:first-child .bg-img svg {
+  position: absolute;
+}
+.page-not-found-block .row > div:first-child .bg-img svg:nth-child(2) {
+  left: 130px;
+  bottom: 170px;
+  animation: bounceIn 3s ease-in-out alternate infinite;
+}
+.page-not-found-block .row > div:first-child .bg-img svg:last-child {
+  left: 165px;
+  bottom: 190px;
+  animation: bounceIn 3s ease-in-out alternate infinite;
+}
+.page-not-found-block .row > div:first-child .text-content {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 80px;
+  left: 30%;
+  transform: translateX(-50%);
+}
+.page-not-found-block .row > div:first-child .text-content span {
+  font-size: 50px;
+  font-weight: 900;
+}
+.page-not-found-block .row > div:first-child .text-content span:nth-child(1) {
+  animation: bounceCustom 6s linear 4s infinite;
+}
+.page-not-found-block .row > div:first-child .text-content span:nth-child(2) {
+  animation: bounceCustom 6s linear 4.1s infinite;
+}
+.page-not-found-block .row > div:first-child .text-content span:nth-child(3) {
+  animation: bounceCustom 6s linear 4.2s infinite;
+}
+.page-not-found-block .row > div:first-child .text-content span:nth-child(4) {
+  padding-left: 20px;
+  animation: bounceCustom 6s linear 4.3s infinite;
+}
+.page-not-found-block .row > div:first-child .text-content span:nth-child(5) {
+  animation: bounceCustom 6s linear 4.4s infinite;
+}
+.page-not-found-block .row > div:first-child .text-content span:nth-child(6) {
+  animation: bounceCustom 6s linear 4.5s infinite;
+}
+.page-not-found-block .row > div:first-child .text-content span:nth-child(7) {
+  animation: bounceCustom 6s linear 4.6s infinite;
+}
+.page-not-found-block .row > div:first-child .text-content span:nth-child(8) {
+  animation: bounceCustom 6s linear 4.7s infinite;
+}
 .page-not-found-block .row > div:last-child {
   padding-left: 90px;
 }
@@ -5732,6 +5856,48 @@ Page not found: Start
   }
 }
 
+@keyframes bounceCustom {
+  0%, 5%, 13% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  8%, 10% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0) scaleY(1.1);
+    transform: translate3d(0, -30px, 0) scaleY(1.1);
+  }
+  16% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0) scaleY(1.05);
+    transform: translate3d(0, -15px, 0) scaleY(1.05);
+  }
+  20% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translateZ(0) scaleY(0.95);
+    transform: translateZ(0) scaleY(0.95);
+  }
+  24% {
+    -webkit-transform: translate3d(0, -4px, 0) scaleY(1.02);
+    transform: translate3d(0, -4px, 0) scaleY(1.02);
+  }
+  25% {
+    -webkit-animation-timing-function: unset;
+    animation-timing-function: unset;
+    -webkit-transform: unset;
+    transform: unset;
+  }
+  100% {
+    -webkit-animation-timing-function: unset;
+    animation-timing-function: unset;
+    -webkit-transform: unset;
+    transform: unset;
+  }
+}
 /*
 Page not found: End
 */
@@ -5932,16 +6098,6 @@ Page not found: End
   .caption2 {
     font-size: 12px;
     line-height: 16px;
-  }
-  .button {
-    padding: 10px 16px;
-    gap: 6px;
-    border-radius: 20px;
-    font-size: 14px;
-    line-height: 24px;
-  }
-  .button i {
-    font-size: 16px;
   }
   .text-button {
     font-size: 14px;

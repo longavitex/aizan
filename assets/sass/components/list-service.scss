@@ -14,7 +14,7 @@
                     left: 0;
                     bottom: 0;
                     width: 0;
-                    height: 1px;
+                    height: 2px;
                     background-color: var(--white);
                     transition: all ease 0.3s;
                 }
@@ -282,4 +282,23 @@
 
 /*
 *** List service Home4: End
+*/
+
+/*
+*** Style service page (service-one.html): Start
+*/
+.style-service {
+    .list-service.style-one {
+        .list {
+            .service-item {
+                &:hover {
+                    background-color: var(--purple);
+                }
+            }
+        }
+    }
+}
+
+/*
+*** Style service page (service-one.html): End
 */

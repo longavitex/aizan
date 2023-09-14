@@ -196,16 +196,6 @@
     font-size: 12px;
     line-height: 16px;
   }
-  .button {
-    padding: 10px 16px;
-    gap: 6px;
-    border-radius: 20px;
-    font-size: 14px;
-    line-height: 24px;
-  }
-  .button i {
-    font-size: 16px;
-  }
   .text-button {
     font-size: 14px;
     line-height: 24px;
