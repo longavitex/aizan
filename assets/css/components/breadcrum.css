@@ -4,6 +4,27 @@ Bread crum: Start
 .breadcrum {
   background-color: #29292C;
   margin-top: 80px;
+  position: relative;
+}
+.breadcrum .bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.breadcrum .bg-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.breadcrum .container .heading-nav {
+  position: relative;
+  z-index: 1;
+}
+.breadcrum .text-nav {
+  z-index: 1;
 }
 .breadcrum .text-nav .heading3 {
   position: relative;
@@ -12,6 +33,10 @@ Bread crum: Start
   position: absolute;
   top: -12px;
   right: -40px;
+}
+.breadcrum .text-nav .sub-heading {
+  position: relative;
+  z-index: 1;
 }
 @media (max-width: 575.98px) {
   .breadcrum {

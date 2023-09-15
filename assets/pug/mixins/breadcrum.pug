@@ -1,6 +1,8 @@
 mixin breadcrum(props = {})
-    -var {classname = '', link2=false, href2="#!", nav1, nav2, heading, subHeading} = props
+    -var {classname = '', img, link2=false, href2="#!", nav1, nav2, heading, subHeading} = props
     div(class=`breadcrum ${classname}`)
+        .bg-img 
+            img(src="assets/images/slider/breadcrum.png", alt="")
         .container 
             .row.flex-center
                 .col-lg-7.col-md-8.col-sm-10

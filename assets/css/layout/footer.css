@@ -12,6 +12,28 @@ Footer: Start
   left: 50%;
   transform: translate(-50%);
 }
+#footer .footer-block .heading .footer-navigate ul li a {
+  position: relative;
+}
+#footer .footer-block .heading .footer-navigate ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: all ease 0.4s;
+}
+#footer .footer-block .heading .footer-navigate ul li:hover a::before {
+  width: 100%;
+}
+#footer .footer-block .heading .list-social .item {
+  transition: all ease 0.3s;
+}
+#footer .footer-block .heading .list-social .item:hover {
+  background-color: #3974ff;
+}
 #footer .footer-block .company-contact .mail span {
   text-transform: lowercase;
 }

@@ -14,23 +14,240 @@
     background-color: var(--black-surface);
 
     .main-content {
+        width: 80px;
+        height: 80px;
+        position: relative;
+
         .circle {
             &:nth-child(1) {
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
                 position: relative;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                animation: circleScrollMinus 1s linear 0s infinite;
 
                 &::before {
-                    
+                    content: "";
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    right: 0;
+                    bottom: 0;
+                    border-radius: 0 0 200px 0;
+                    border-right: 3px solid var(--purple);
+                    border-bottom: 3px solid var(--purple);
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    left: 0;
+                    top: 0;
+                    border-radius: 200px 0 0 0;
+                    border-left: 3px solid var(--purple);
+                    border-top: 3px solid var(--purple);
                 }
 
                 span {
-                    width: 58px;
-                    height: 58px;
-                    background-color: var(--black-surface);
-                    position: relative;
-                    z-index: 1;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: #cde8ff;
+                    filter: blur(60px);
+                }
+
+                .circle-child {
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        right: 0;
+                        bottom: 0;
+                        border-radius: 0 0 200px 0;
+                        border-right: 3px solid var(--purple);
+                        border-bottom: 3px solid var(--purple);
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        left: 0;
+                        top: 0;
+                        border-radius: 200px 0 0 0;
+                        border-left: 3px solid var(--purple);
+                        border-top: 3px solid var(--purple);
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                transform: rotate(90deg);
+                animation: circleScroll2 1s linear 0s infinite;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    right: 0;
+                    bottom: 0;
+                    border-radius: 0 0 200px 0;
+                    border-right: 3px solid #eeafffce;
+                    border-bottom: 3px solid #eeafffce;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    left: 0;
+                    top: 0;
+                    border-radius: 200px 0 0 0;
+                    border-left: 3px solid #eeafffce;
+                    border-top: 3px solid #eeafffce;
+                }
+            }
+        }
+    }
+}
+
+.style-green {
+    #preload .main-content {
+        .circle {
+            &:nth-child(1) {
+                &::before {
+                    border-right: 3px solid var(--green);
+                    border-bottom: 3px solid var(--green);
+                }
+
+                &::after {
+                    border-left: 3px solid var(--green);
+                    border-top: 3px solid var(--green);
+                }
+
+                .circle-child {
+                    &::before {
+                        border-right: 3px solid var(--green);
+                        border-bottom: 3px solid var(--green);
+                    }
+
+                    &::after {
+                        border-left: 3px solid var(--green);
+                        border-top: 3px solid var(--green);
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                &::before {
+                    border-right: 3px solid #65946c;
+                    border-bottom: 3px solid #65946c;
+                }
+
+                &::after {
+                    border-left: 3px solid #65946c;
+                    border-top: 3px solid #65946c;
+                }
+            }
+        }
+    }
+}
+
+.style-yellow {
+    #preload .main-content {
+        .circle {
+            &:nth-child(1) {
+                &::before {
+                    border-right: 3px solid var(--yellow);
+                    border-bottom: 3px solid var(--yellow);
+                }
+
+                &::after {
+                    border-left: 3px solid var(--yellow);
+                    border-top: 3px solid var(--yellow);
+                }
+
+                .circle-child {
+                    &::before {
+                        border-right: 3px solid var(--yellow);
+                        border-bottom: 3px solid var(--yellow);
+                    }
+
+                    &::after {
+                        border-left: 3px solid var(--yellow);
+                        border-top: 3px solid var(--yellow);
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                &::before {
+                    border-right: 3px solid #fffced;
+                    border-bottom: 3px solid #fffced;
+                }
+
+                &::after {
+                    border-left: 3px solid #fffced;
+                    border-top: 3px solid #fffced;
+                }
+            }
+        }
+    }
+}
+
+.style-blue {
+    #preload .main-content {
+        .circle {
+            &:nth-child(1) {
+                &::before {
+                    border-right: 3px solid var(--blue);
+                    border-bottom: 3px solid var(--blue);
+                }
+
+                &::after {
+                    border-left: 3px solid var(--blue);
+                    border-top: 3px solid var(--blue);
+                }
+
+                .circle-child {
+                    &::before {
+                        border-right: 3px solid var(--blue);
+                        border-bottom: 3px solid var(--blue);
+                    }
+
+                    &::after {
+                        border-left: 3px solid var(--blue);
+                        border-top: 3px solid var(--blue);
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                &::before {
+                    border-right: 3px solid #969be2;
+                    border-bottom: 3px solid #969be2;
+                }
+
+                &::after {
+                    border-left: 3px solid #969be2;
+                    border-top: 3px solid #969be2;
                 }
             }
         }
@@ -40,6 +257,26 @@
 #preload.disable {
     opacity: 0;
     visibility: hidden;
+}
+
+@keyframes circleScroll2 {
+    0% {
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes fillColor1 {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
 }
 
 @keyframes drawLogo {

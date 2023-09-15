@@ -203,7 +203,7 @@ const sendChatBtn = document.querySelector('.section-form-chat .form-chat span')
 let userMessage;
 // Get api keys on OpenAI
 const API_KEY = "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";
-if(chatInput) {
+if (chatInput) {
   var inputInitHeight = chatInput.scrollHeight
 }
 
@@ -611,6 +611,31 @@ if (videoModalContainer) {
 }
 
 
+// Change cursor on hover text slider Home3
+const textHeadingHome3 = document.querySelector('.slider-block.style-three .text-heading')
+const textHeadingClip = document.querySelector('.slider-block.style-three .text-heading .heading1:nth-child(2)')
+
+if (textHeadingHome3) {
+  textHeadingHome3.addEventListener('mousemove', (e) => {
+    mouseCursor.style.setProperty('--x', e.pageX + 'px')
+    mouseCursor.style.setProperty('--y', e.pageY + 'px')
+
+    const spaceLeft = ((document.body.clientWidth - 1290) / 2)
+    textHeadingClip.style.setProperty('--x', e.pageX + 'px')
+    textHeadingClip.style.setProperty('--y', e.pageY + 'px')
+    textHeadingClip.style.clipPath = 'circle(100px at calc(var(--x) - ' + spaceLeft + 'px) calc(var(--y) - 240px))'
+
+    if (document.body.clientWidth < 1290) {
+      textHeadingClip.style.clipPath = 'circle(100px at calc(var(--x) - 15px) calc(var(--y) - 240px))'
+    }
+
+    textHeadingClip.addEventListener('mouseout', (e) => {
+      textHeadingClip.style.clipPath = 'circle(0)'
+    })
+  })
+}
+
+
 // List instagram Home4
 $(".instagram-block .list-image").slick({
   dots: false,
@@ -797,7 +822,7 @@ if (comments) {
 const showReplyBtn = document.querySelectorAll('.blog-detail .blog-comment .comment-item .cmt')
 const listReply = document.querySelectorAll('.blog-detail .blog-comment .list-reply')
 
-if(showReplyBtn) {
+if (showReplyBtn) {
   showReplyBtn.forEach(btn => {
     btn.addEventListener('click', () => {
       const parentCmt = btn.parentElement.parentElement.parentElement
@@ -805,13 +830,13 @@ if(showReplyBtn) {
 
       listReply.forEach(reply => {
         const dataReply = reply.getAttribute('data-cmt')
-        
-        if(dataReply == dataCmt) {
+
+        if (dataReply == dataCmt) {
           reply.classList.toggle('show')
           btn.classList.toggle('show')
 
           const textShow = btn.querySelector('.text-button-small')
-          if(btn.classList.contains('show')) {
+          if (btn.classList.contains('show')) {
             textShow.innerHTML = 'Hide Replies'
           } else {
             textShow.innerHTML = 'Show Replies'

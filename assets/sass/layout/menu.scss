@@ -9,6 +9,7 @@ Menu header: Start
     width: 100%;
     z-index: 10;
     transition: all linear 0.5s;
+    border-bottom: 1px solid var(--line-dark);
 
     >.container {
         height: 100%;
@@ -140,6 +141,14 @@ Menu header: Start
                                             gap: 11px;
                                             flex-wrap: wrap;
                                             justify-content: center;
+
+                                            a {
+                                                transition: all ease 0.2s;
+
+                                                &:hover {
+                                                    background-color: #3974ff;
+                                                }
+                                            }
                                         }
 
                                         .phone {
@@ -792,11 +801,15 @@ Menu header: Start
 
                                         .explore-block {
                                             a {
+                                                background-color: var(--purple);
+
                                                 span:nth-child(2) {
                                                     background-color: var(--purple);
                                                 }
 
                                                 &:hover {
+                                                    background-color: #5700c9;
+
                                                     span:nth-child(2) {
                                                         background-color: #5700c9;
                                                     }
