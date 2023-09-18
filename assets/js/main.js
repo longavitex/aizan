@@ -611,6 +611,7 @@ if (videoModalContainer) {
 }
 
 
+
 // Change cursor on hover text slider Home3
 const textHeadingHome3 = document.querySelector('.slider-block.style-three .text-heading')
 const textHeadingClip = document.querySelector('.slider-block.style-three .text-heading .heading1:nth-child(2)')

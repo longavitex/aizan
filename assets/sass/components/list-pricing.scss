@@ -371,6 +371,12 @@ Section Pricing Home3: Start
                         &:hover {
                             background-color: var(--on-surface);
                             border: 2px solid var(--yellow);
+
+                            a {
+                                span:nth-child(2) {
+                                    background-color: var(--yellow);
+                                }
+                            }
                         }
                     }
                 }
