@@ -171,8 +171,11 @@
                 }
 
                 .bg-img {
+                    overflow: hidden;
+
                     img {
                         filter: grayscale(0.1);
+                        transition: all ease 0.5s;
                     }
                 }
 
@@ -180,7 +183,7 @@
                     .bg-img {
                         img {
                             filter: saturate(1.5) contrast(1);
-                            transform: scale(1);
+                            transform: translateZ(0) scale(1.1);
                         }
                     }
                 }
