@@ -192,6 +192,12 @@ List pricing: Start
 
                         &:hover {
                             border: 2px solid var(--purple);
+
+                            a {
+                                span:nth-child(2) {
+                                    background-color: var(--purple);
+                                }
+                            }
                         }
                     }
                 }

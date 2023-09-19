@@ -135,6 +135,9 @@ List pricing: Start
 .style-pricing .section-pricing .container > .row .list-pricing .pricing-item:hover {
   border: 2px solid var(--purple);
 }
+.style-pricing .section-pricing .container > .row .list-pricing .pricing-item:hover a span:nth-child(2) {
+  background-color: var(--purple);
+}
 
 /*
 List pricing: End

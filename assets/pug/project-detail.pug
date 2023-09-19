@@ -1,0 +1,108 @@
+extends base/layout.pug
+block title
+    title Project Detail
+block header
+    div(class="style-purple")
+        include components/header/menu/menu-one.pug
+block content
+    include mixins/breadcrum.pug
+    +breadcrum({classname: 'pt-80 pb-80', nav:'Home', nav1:'Project', nav2:'Services Detail', heading:'Project Detail', subHeading:"We offer a variety of pricing packages to meet the unique needs of our freelancers. Contact us today to discuss which package is right for you."})
+    .project-detail-block.pt-100.pb-100 
+        .container 
+            .row.row-gap-40
+                .heading
+                    .text-button-uppercase.pt-6.pb-6.pl-16.pr-16.bg-purple.bora-16.d-inline-block Creative
+                    .heading3.mt-12 A Look at How the Brand Stays Ahead of the Competition
+                .paragraph
+                    .heading5 About the Project
+                    .body2.text-placehover.mt-16 Welcome to AI Digital Agency, where we believe in reaching diverse audiences and global markets as the key to success in the digital age. Our "Embracing Multilingual Support" service is specially designed to help your business overcome language barriers, connect with new customer segments, and expand your international reach.
+                .list-img
+                    .row.row-gap-32
+                        .col-sm-6 
+                            img(src="assets/images/components/bg-project1.png", alt="").w-100.bora-16
+                        .col-sm-6 
+                            img(src="assets/images/components/bg-project2.png", alt="").w-100.bora-16
+                .col-12
+                    .quote-block.bg-line-dark.p-32.bora-16 
+                        .body2 “ Praesent interdum lacus ac est viverra hendrerit. Aliquam dapibus, ante vitae mattis gravida, purus sapien interdum magna, convallis volutpat est turpis pulvinar dui. Aenean eu turpis est. In hac habitasse platea dictumst. Integer at lobortis metus. Proin molestie eget massa vel gravida. Suspendisse nec ante vel augue consectetur mollis.”
+                        .fw-700.mt-16 Maverick Nguyen
+                .more-infor
+                    .line-dark
+                    .list.row.row-gap-32.flex-between.pt-40.pb-40
+                        .col-xxl-3.col-lg-4.col-md-6.col-sm-8.pr-0
+                            .item
+                                .flex-item-center.gap-16.pb-24
+                                    .heading4 +40%
+                                    .text-placehover Ecommerce <br>growth
+                        .col-xxl-3.col-lg-4.col-md-6.col-sm-8.pl-8.pr-8 
+                            .item
+                                .flex-item-center.gap-16.pb-24
+                                    .heading4 236%
+                                    .text-placehover Increase in <br>organic sessions
+                        .col-xxl-3.col-lg-4.col-md-6.col-sm-8.pl-0
+                            .item
+                                .flex-item-center.gap-16.pb-24
+                                    .heading4 142%
+                                    .text-placehover Increase in organic contact submissions
+                    .line-dark
+                .more-feature
+                    .row.row-gap-40
+                        .col-lg-6 
+                            .heading4 We are creating modern 
+                            .list-service.mt-24
+                                .service-item.flex-item-center
+                                    i.ph-bold.ph-check.text-purple.fs-24 
+                                    .heading7.pl-12 Free Live Chat Software
+                                .service-item.flex-item-center.mt-12
+                                    i.ph-bold.ph-check.text-purple.fs-24 
+                                    .heading7.pl-12 Real Time Language Translation
+                                .service-item.flex-item-center.mt-12
+                                    i.ph-bold.ph-check.text-purple.fs-24 
+                                    .heading7.pl-12 18,000+ Websites Used Aizan
+                        .col-lg-6.pl-0.pl-col-lg-0 
+                            .heading4 This Is One Amazing App!
+                            .body2.text-placehover.mt-24 Praesent interdum lacus ac est viverra hendrerit. Aliquam dapibus, ante vitae mattis gravida, purus sapien interdum magna, convallis volutpat est turpis pulvinar dui. Aenean eu turpis est. In hac habitasse platea dictumst. Integer at lobortis metus. Proin molestie eget massa vel gravida. Suspendisse nec ante vel augue consectetur mollis.
+                .service-used 
+                    .row.row-gap-40.flex-between
+                        .col-xxl-4.col-lg-5
+                            .heading4 Service Used
+                            .list.mt-32 
+                                .item.flex-item-center
+                                    .icon
+                                        i.icon-chart-box.icon-white.fs-48
+                                    .infor.pl-40 
+                                        .heading7 Analytics and Insights
+                                        .text-placehover.mt-12 Gain valuable insights into customer behavior, preferences
+                                .item.flex-item-center.mt-24
+                                    .icon
+                                        i.icon-box-group.icon-white.fs-48
+                                    .infor.pl-40 
+                                        .heading7 Multilingual Support
+                                        .text-placehover.mt-12 Expand your reach and cater to a global audience ...
+                        .col-lg-6.pl-0.pl-col-lg-0
+                            img(src="assets/images/components/bg-project3.png", alt="").w-100.bora-24
+    include mixins/projectItem.pug
+    .projects-block.list-blog.style-four.pb-100
+        .container
+            .heading.flex-between 
+                .left
+                    .heading3 See more projects!
+                    .body2.text-placehover.mt-12 Experience the future of communication with our AI-powered chat solution
+                a(href="blog.html") 
+                    u.fw-700.text-purple-hover View All
+            .row.list.mt-40
+                .project-item
+                    +projectItem({classname:'', href: 'project-detail.html', img:'assets/images/projects/1.png', category:'Marketting', title:'AI maketing management'})
+                .project-item
+                    +projectItem({classname:'', href: 'project-detail.html', img:'assets/images/projects/2.png', category:'Business', title:'AI business management'})
+                .project-item
+                    +projectItem({classname:'', href: 'project-detail.html', img:'assets/images/projects/4.png', category:'Finance', title:'AI financial management'})
+                .project-item
+                    +projectItem({classname:'', href: 'project-detail.html', img:'assets/images/projects/6.png', category:'Marketting', title:'AI financial management'})
+            
+    include components/preload.pug
+    include components/popup-newsletter.pug
+    include components/scroll-to-top.pug
+block footer 
+    div(class="style-four")
+        include components/footer.pug
