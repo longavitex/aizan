@@ -249,6 +249,10 @@ Section Pricing Home3: Start
   background-color: var(--yellow);
   color: var(--on-surface);
 }
+.style-three .section-pricing .container > .row .list-pricing .pricing-item a,
+.style-three .section-pricing .container > .row .list-pricing-year .pricing-item a {
+  transition: all ease 0.1s;
+}
 .style-three .section-pricing .container > .row .list-pricing .pricing-item a span:nth-child(2),
 .style-three .section-pricing .container > .row .list-pricing-year .pricing-item a span:nth-child(2) {
   border: 2px solid var(--yellow);
@@ -262,6 +266,10 @@ Section Pricing Home3: Start
 .style-three .section-pricing .container > .row .list-pricing-year .pricing-item:hover {
   background-color: var(--on-surface);
   border: 2px solid var(--yellow);
+}
+.style-three .section-pricing .container > .row .list-pricing .pricing-item:hover a,
+.style-three .section-pricing .container > .row .list-pricing-year .pricing-item:hover a {
+  color: var(--on-surface);
 }
 .style-three .section-pricing .container > .row .list-pricing .pricing-item:hover a span:nth-child(2),
 .style-three .section-pricing .container > .row .list-pricing-year .pricing-item:hover a span:nth-child(2) {

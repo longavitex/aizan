@@ -356,6 +356,8 @@ Section Pricing Home3: Start
                 .list-pricing-year {
                     .pricing-item {
                         a {
+                            transition: all ease 0.1s;
+
                             span:nth-child(2) {
                                 border: 2px solid var(--yellow);
                             }
@@ -373,6 +375,8 @@ Section Pricing Home3: Start
                             border: 2px solid var(--yellow);
 
                             a {
+                                color: var(--on-surface);
+
                                 span:nth-child(2) {
                                     background-color: var(--yellow);
                                 }
