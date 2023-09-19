@@ -136,6 +136,18 @@ Menu header: Start
                                         }
                                     }
 
+                                    .banner-infor {
+                                        position: relative;
+                                        height: calc(100% - 96px);
+
+                                        .text-content {
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 0;
+                                            transform: translateY(-50%);
+                                        }
+                                    }
+
                                     .explore-block {
                                         .list-social {
                                             gap: 11px;
@@ -257,8 +269,22 @@ Menu header: Start
                             .list-home,
                             .explore-block,
                             .list-pages,
-                            .list-partners {
+                            .banner-infor {
                                 padding: 16px 24px;
+                            }
+
+                            .banner-infor {
+                                position: relative;
+
+                                .bg-img {
+                                    position: absolute;
+                                    top: 16px;
+                                    bottom: 16px;
+                                    left: 24px;
+                                    right: 24px;
+                                    border-radius: 16px;
+                                    overflow: hidden;
+                                }
                             }
 
                             .list-social {
@@ -419,6 +445,7 @@ Menu header: Start
                                             }
                                         }
 
+                                        .banner-infor,
                                         .explore-block {
                                             a {
                                                 span:nth-child(2) {
@@ -633,6 +660,16 @@ Menu header: Start
                 }
             }
 
+            .list-social {
+                a {
+                    i {
+                        &::before {
+                            color: var(--on-surface);
+                        }
+                    }
+                }
+            }
+
             .bg-blue {
                 background-color: var(--yellow);
             }
@@ -799,6 +836,7 @@ Menu header: Start
                                             }
                                         }
 
+                                        .banner-infor,
                                         .explore-block {
                                             a {
                                                 background-color: var(--purple);

@@ -104,6 +104,16 @@ Menu header: Start
 .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .list-pages a:hover .text-button {
   color: var(--blue);
 }
+.header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .banner-infor {
+  position: relative;
+  height: calc(100% - 96px);
+}
+.header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .banner-infor .text-content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
 .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block .list-social {
   gap: 11px;
   flex-wrap: wrap;
@@ -196,8 +206,20 @@ Menu header: Start
 .header-menu > .container #menu-mobile-block .menu-mobile-main ul li .sub-nav-mobile .list-home,
 .header-menu > .container #menu-mobile-block .menu-mobile-main ul li .sub-nav-mobile .explore-block,
 .header-menu > .container #menu-mobile-block .menu-mobile-main ul li .sub-nav-mobile .list-pages,
-.header-menu > .container #menu-mobile-block .menu-mobile-main ul li .sub-nav-mobile .list-partners {
+.header-menu > .container #menu-mobile-block .menu-mobile-main ul li .sub-nav-mobile .banner-infor {
   padding: 16px 24px;
+}
+.header-menu > .container #menu-mobile-block .menu-mobile-main ul li .sub-nav-mobile .banner-infor {
+  position: relative;
+}
+.header-menu > .container #menu-mobile-block .menu-mobile-main ul li .sub-nav-mobile .banner-infor .bg-img {
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  left: 24px;
+  right: 24px;
+  border-radius: 16px;
+  overflow: hidden;
 }
 .header-menu > .container #menu-mobile-block .menu-mobile-main ul li .sub-nav-mobile .list-social {
   flex-wrap: wrap;
@@ -288,12 +310,15 @@ Menu header: Start
 .style-two .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .list-pages a:hover .text-button {
   color: var(--green);
 }
+.style-two .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .banner-infor a span:nth-child(2),
 .style-two .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a span:nth-child(2) {
   background-color: var(--green);
 }
+.style-two .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .banner-infor a:hover,
 .style-two .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a:hover {
   background-color: #02bd30;
 }
+.style-two .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .banner-infor a:hover span:nth-child(2),
 .style-two .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a:hover span:nth-child(2) {
   background-color: #02bd30;
 }
@@ -386,6 +411,9 @@ Menu header: Start
 .header-menu.style-three > .container #menu-mobile-block .logo svg g path:first-child {
   fill: var(--yellow);
 }
+.header-menu.style-three > .container #menu-mobile-block .list-social a i::before {
+  color: var(--on-surface);
+}
 .header-menu.style-three > .container #menu-mobile-block .bg-blue {
   background-color: var(--yellow);
 }
@@ -456,15 +484,19 @@ Menu header: Start
 .style-purple .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .list-pages a:hover .text-button {
   color: var(--purple);
 }
+.style-purple .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .banner-infor a,
 .style-purple .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a {
   background-color: var(--purple);
 }
+.style-purple .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .banner-infor a span:nth-child(2),
 .style-purple .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a span:nth-child(2) {
   background-color: var(--purple);
 }
+.style-purple .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .banner-infor a:hover,
 .style-purple .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a:hover {
   background-color: #5700c9;
 }
+.style-purple .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .banner-infor a:hover span:nth-child(2),
 .style-purple .header-menu > .container .header-main .menu-main > ul li .sub-nav .sub-nav-main .row .explore-block a:hover span:nth-child(2) {
   background-color: #5700c9;
 }

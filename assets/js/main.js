@@ -247,7 +247,7 @@ const generateResponse = (incomingChatLi) => {
       messageResponse.textContent = data.choices[0].message.content
     })
     .catch(error => {
-      messageResponse.textContent = userMessage
+      messageResponse.textContent = 'Answer: ' + userMessage
     })
 }
 
@@ -637,7 +637,7 @@ if (textHeadingHome3) {
 }
 
 
-// List instagram Home4
+// List instagram Home2
 $(".instagram-block .list-image").slick({
   dots: false,
   arrows: false,
@@ -648,6 +648,7 @@ $(".instagram-block .list-image").slick({
   swipe: true,
   swipeToSlide: true,
   autoplay: true,
+  autoplaySpeed: 2000,
   pauseOnFocus: true,
   pauseOnHover: true,
   pauseOnDotsHover: false,

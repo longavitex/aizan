@@ -293,7 +293,7 @@
 }
 @media (max-width: 575.98px) {
   .slider-block.style-two .slider-main .container {
-    padding-top: 130px;
+    padding-top: 120px;
     padding-bottom: 60px;
   }
   .slider-block.style-two .slider-main .container .block-input {
@@ -592,6 +592,9 @@
   }
 }
 @media (max-width: 575.98px) {
+  .slider-block.style-two.style-three .slider-main .container {
+    padding-top: 120px;
+  }
   .slider-block.style-two.style-three .slider-main .container .block-button a {
     padding: 12px 16px;
   }
