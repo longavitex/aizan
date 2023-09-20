@@ -147,17 +147,17 @@ Footer: Start
     }
 }
 
-.style-two {
-    .logo {
-        svg {
-            path:nth-child(1) {
-                fill: var(--green);
+#footer {
+    .style-two {
+        .logo {
+            svg {
+                path:nth-child(1) {
+                    fill: var(--green);
+                }
             }
         }
-    }
 
-    .list-social {
-        .item {
+        .footer-block .heading .list-social .item {
             background-color: var(--green);
 
             &:hover {
@@ -167,50 +167,54 @@ Footer: Start
     }
 }
 
-.style-three {
-    .footer-block {
-        .logo {
-            svg {
-                path:nth-child(1) {
-                    fill: var(--yellow);
-                }
-            }
-        }
-
-        .list-social {
-            .item {
-                background-color: var(--yellow);
-
-                i {
-                    &::before {
-                        color: var(--on-surface);
+#footer {
+    .style-three {
+        .footer-block {
+            .logo {
+                svg {
+                    path:nth-child(1) {
+                        fill: var(--yellow);
                     }
                 }
+            }
 
-                &:hover {
-                    background-color: #ebb41d;
+            .heading .list-social {
+                .item {
+                    background-color: var(--yellow);
+
+                    i {
+                        &::before {
+                            color: var(--on-surface);
+                        }
+                    }
+
+                    &:hover {
+                        background-color: #ebb41d;
+                    }
                 }
             }
         }
     }
 }
 
-.style-four {
-    .footer-block {
-        .logo {
-            svg {
-                path:nth-child(1) {
-                    fill: var(--purple);
+#footer {
+    .style-four {
+        .footer-block {
+            .logo {
+                svg {
+                    path:nth-child(1) {
+                        fill: var(--purple);
+                    }
                 }
             }
-        }
 
-        .list-social {
-            .item {
-                background-color: var(--purple);
+            .heading .list-social {
+                .item {
+                    background-color: var(--purple);
 
-                &:hover {
-                    background-color: #5700c9;
+                    &:hover {
+                        background-color: #5700c9;
+                    }
                 }
             }
         }
