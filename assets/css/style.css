@@ -2132,6 +2132,46 @@ Menu header: Start
   color: var(--purple);
 }
 
+.style-purple.style-service .header-menu > .container .header-main .menu-main > ul li > a.active::before {
+  width: 0;
+}
+.style-purple.style-service .header-menu > .container .header-main .menu-main > ul li:hover > a::before {
+  width: 100%;
+}
+.style-purple.style-service .header-menu > .container .header-main .menu-main > ul li:nth-child(2) > a::before {
+  width: 100%;
+}
+
+.style-purple.style-pages .header-menu > .container .header-main .menu-main > ul li > a.active::before {
+  width: 0;
+}
+.style-purple.style-pages .header-menu > .container .header-main .menu-main > ul li:hover > a::before {
+  width: 100%;
+}
+.style-purple.style-pages .header-menu > .container .header-main .menu-main > ul li:nth-child(3) > a::before {
+  width: 100%;
+}
+
+.style-purple.style-blog .header-menu > .container .header-main .menu-main > ul li > a.active::before {
+  width: 0;
+}
+.style-purple.style-blog .header-menu > .container .header-main .menu-main > ul li:hover > a::before {
+  width: 100%;
+}
+.style-purple.style-blog .header-menu > .container .header-main .menu-main > ul li:nth-child(4) > a::before {
+  width: 100%;
+}
+
+.style-purple.style-contact .header-menu > .container .header-main .menu-main > ul li > a.active::before {
+  width: 0;
+}
+.style-purple.style-contact .header-menu > .container .header-main .menu-main > ul li:hover > a::before {
+  width: 100%;
+}
+.style-purple.style-contact .header-menu > .container .header-main .menu-main > ul li:nth-child(5) > a::before {
+  width: 100%;
+}
+
 /*
 *** Menu Style Subpage: End
 */

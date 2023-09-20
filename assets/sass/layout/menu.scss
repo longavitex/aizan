@@ -911,6 +911,158 @@ Menu header: Start
     }
 }
 
+.style-purple.style-service {
+    .header-menu {
+        >.container {
+            .header-main {
+                .menu-main {
+                    >ul {
+                        li {
+                            >a {
+                                &.active {
+                                    &::before {
+                                        width: 0;
+                                    }
+                                }
+                            }
+
+                            &:hover {
+                                >a {
+                                    &::before {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                >a {
+                                    &::before {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.style-purple.style-pages {
+    .header-menu {
+        >.container {
+            .header-main {
+                .menu-main {
+                    >ul {
+                        li {
+                            >a {
+                                &.active {
+                                    &::before {
+                                        width: 0;
+                                    }
+                                }
+                            }
+
+                            &:hover {
+                                >a {
+                                    &::before {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                >a {
+                                    &::before {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.style-purple.style-blog {
+    .header-menu {
+        >.container {
+            .header-main {
+                .menu-main {
+                    >ul {
+                        li {
+                            >a {
+                                &.active {
+                                    &::before {
+                                        width: 0;
+                                    }
+                                }
+                            }
+
+                            &:hover {
+                                >a {
+                                    &::before {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(4) {
+                                >a {
+                                    &::before {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.style-purple.style-contact {
+    .header-menu {
+        >.container {
+            .header-main {
+                .menu-main {
+                    >ul {
+                        li {
+                            >a {
+                                &.active {
+                                    &::before {
+                                        width: 0;
+                                    }
+                                }
+                            }
+
+                            &:hover {
+                                >a {
+                                    &::before {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(5) {
+                                >a {
+                                    &::before {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 /*
 *** Menu Style Subpage: End
 */
